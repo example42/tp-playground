@@ -1,0 +1,16 @@
+# Package status
+nfs-utils-1.3.0-0.el7.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  nfs.service
+nfs-server.service - NFS Server
+   Loaded: loaded (/usr/lib/systemd/system/nfs-server.service; disabled)
+   Active: [1;32mactive (exited)[0m since Wed 2015-02-04 06:14:30 EST; 2s ago
+  Process: 27797 ExecStart=/usr/sbin/rpc.nfsd $RPCNFSDARGS $RPCNFSDCOUNT (code=exited, status=0/SUCCESS)
+  Process: 27794 ExecStartPre=/usr/sbin/exportfs -r (code=exited, status=0/SUCCESS)
+  Process: 27788 ExecStartPre=/usr/libexec/nfs-utils/scripts/nfs-server.preconfig (code=exited, status=0/SUCCESS)
+ Main PID: 27797 (code=exited, status=0/SUCCESS)
+   CGroup: /system.slice/nfs-server.service
+
+Feb 04 06:14:30 centos7.example42.com systemd[1]: Starting NFS Server...
+Feb 04 06:14:30 centos7.example42.com systemd[1]: Started NFS Server.

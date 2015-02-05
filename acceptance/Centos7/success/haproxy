@@ -1,0 +1,18 @@
+# Package status
+haproxy-1.5.2-3.el7_0.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  haproxy.service
+haproxy.service - HAProxy Load Balancer
+   Loaded: loaded (/usr/lib/systemd/system/haproxy.service; enabled)
+   Active: [1;32mactive (running)[0m since Wed 2015-02-04 06:04:23 EST; 2s ago
+ Main PID: 11303 (haproxy-systemd)
+   CGroup: /system.slice/haproxy.service
+           ├─11303 /usr/sbin/haproxy-systemd-wrapper -f /etc/haproxy/haproxy.cfg -p /run/haproxy.pid
+           ├─11304 /usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg -p /run/haproxy.pid -Ds
+           └─11307 /usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg -p /run/haproxy.pid -Ds
+
+Feb 04 06:04:23 centos7.example42.com systemd[1]: Starting HAProxy Load Balancer...
+Feb 04 06:04:23 centos7.example42.com systemd[1]: Started HAProxy Load Balancer.
+Feb 04 06:04:23 centos7.example42.com haproxy-systemd-wrapper[11303]: haproxy-systemd-wrapper: executing /usr/sbin/ha...-Ds
+Hint: Some lines were ellipsized, use -l to show in full.

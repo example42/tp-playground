@@ -1,0 +1,4 @@
+# Package status
+package { 'pam':
+  ensure => '1.1.6-3.3.1',
+}

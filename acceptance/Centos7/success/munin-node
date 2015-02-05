@@ -1,0 +1,16 @@
+# Package status
+munin-node-2.0.25-1.el7.noarch
+
+# Service status
+Redirecting to /bin/systemctl status  munin-node.service
+munin-node.service - Munin Node Server.
+   Loaded: loaded (/usr/lib/systemd/system/munin-node.service; enabled)
+   Active: [1;32mactive (running)[0m since Wed 2015-02-04 06:12:37 EST; 2s ago
+     Docs: man:munin-node
+ Main PID: 24358 (munin-node)
+   CGroup: /system.slice/munin-node.service
+           └─24358 /usr/bin/perl -wT /usr/sbin/munin-node
+
+Feb 04 06:12:36 centos7.example42.com systemd[1]: Starting Munin Node Server....
+Feb 04 06:12:37 centos7.example42.com systemd[1]: PID file /var/run/munin/munin-node.pid not readable (yet?) after start.
+Feb 04 06:12:37 centos7.example42.com systemd[1]: Started Munin Node Server..

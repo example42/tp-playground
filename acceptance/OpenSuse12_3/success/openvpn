@@ -1,0 +1,15 @@
+# Package status
+package { 'openvpn':
+  ensure => '2.2.2-9.9.1',
+}
+
+# Service status
+openvpn.service - LSB: OpenVPN tunnel
+	  Loaded: loaded (/etc/init.d/openvpn)
+	  Active: [1;32mactive (exited)[0m since Mon, 2015-02-02 11:09:29 GMT; 3s ago
+	 Process: 6721 ExecStart=/etc/init.d/openvpn start (code=exited, status=6)
+	  CGroup: name=systemd:/system/openvpn.service
+
+Feb 02 11:09:29 opensuse12-3.example42.com systemd[1]: Starting LSB: OpenVPN tunnel...
+Feb 02 11:09:29 opensuse12-3.example42.com openvpn[6721]: Starting OpenVPN -- not configured..unused
+Feb 02 11:09:29 opensuse12-3.example42.com systemd[1]: Started LSB: OpenVPN tunnel.

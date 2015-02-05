@@ -1,0 +1,15 @@
+# Package status
+package { 'autofs':
+  ensure => '5.0.7-10.2.1',
+}
+
+# Service status
+autofs.service - Automounts filesystems on demand
+	  Loaded: loaded (/usr/lib/systemd/system/autofs.service; enabled)
+	  Active: [1;32mactive (running)[0m since Tue, 2015-01-27 20:18:18 GMT; 3s ago
+	Main PID: 19389 (automount)
+	  CGroup: name=systemd:/system/autofs.service
+		  └ 19389 /usr/sbin/automount -p /var/run/automount.pid
+
+Jan 27 20:18:18 opensuse12-3.example42.com systemd[1]: Starting Automounts filesystems on demand...
+Jan 27 20:18:18 opensuse12-3.example42.com systemd[1]: Started Automounts filesystems on demand.

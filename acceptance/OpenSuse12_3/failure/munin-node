@@ -1,0 +1,7 @@
+# Package status
+package { 'munin-node':
+  ensure => 'absent',
+}
+
+# Service status
+service: no such service munin-node

@@ -1,0 +1,14 @@
+# Package status
+freeradius-3.0.1-6.el7.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  radiusd.service
+radiusd.service - FreeRADIUS high performance RADIUS server.
+   Loaded: loaded (/usr/lib/systemd/system/radiusd.service; enabled)
+   Active: [1;32mactive (running)[0m since Wed 2015-02-04 06:03:33 EST; 2s ago
+ Main PID: 9611 (radiusd)
+   CGroup: /system.slice/radiusd.service
+           └─9611 /usr/sbin/radiusd -d /etc/raddb
+
+Feb 04 06:03:33 centos7.example42.com systemd[1]: Starting FreeRADIUS high performance RADIUS server....
+Feb 04 06:03:33 centos7.example42.com systemd[1]: Started FreeRADIUS high performance RADIUS server..

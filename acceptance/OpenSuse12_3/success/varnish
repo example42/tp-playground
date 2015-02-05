@@ -1,0 +1,24 @@
+# Package status
+package { 'varnish':
+  ensure => '3.0.3-2.10.1',
+}
+
+# Service status
+varnish.service - Varnish HTTP accelerator/reverse proxy
+	  Loaded: loaded (/usr/lib/systemd/system/varnish.service; enabled)
+	  Active: [1;32mactive (running)[0m since Mon, 2015-02-02 11:16:42 GMT; 3s ago
+	Main PID: 5751 (varnishd)
+	  CGroup: name=systemd:/system/varnish.service
+		  ├ 5751 /usr/sbin/varnishd -f /etc/varnish/vcl.conf -T:6082 -s file,/var/cache/varnish,1M -u varnish -P /var/run/varnishd.pid -F
+		  └ 5774 /usr/sbin/varnishd -f /etc/varnish/vcl.conf -T:6082 -s file,/var/cache/varnish,1M -u varnish -P /var/run/varnishd.pid -F
+
+Feb 02 11:16:42 opensuse12-3.example42.com systemd[1]: Starting Varnish HTTP accelerator/reverse proxy...
+Feb 02 11:16:42 opensuse12-3.example42.com systemd[1]: Started Varnish HTTP accelerator/reverse proxy.
+Feb 02 11:16:42 opensuse12-3.example42.com varnishd[5751]: [1;39mPlatform: Linux,3.7.10-1.11-default,x86_64,-sfile,-smalloc,-hcritbit[0m
+Feb 02 11:16:42 opensuse12-3.example42.com varnishd[5751]: bind(): Address already in use
+Feb 02 11:16:42 opensuse12-3.example42.com varnishd[5751]: child (5774) Started
+Feb 02 11:16:42 opensuse12-3.example42.com varnishd[5751]: [1;39mchild (5774) Started[0m
+Feb 02 11:16:42 opensuse12-3.example42.com varnishd[5751]: Child (5774) said Child starts
+Feb 02 11:16:42 opensuse12-3.example42.com varnishd[5751]: [1;39mChild (5774) said Child starts[0m
+Feb 02 11:16:42 opensuse12-3.example42.com varnishd[5751]: Child (5774) said SMF.s0 mmap'ed 1048576 bytes of 1048576
+Feb 02 11:16:42 opensuse12-3.example42.com varnishd[5751]: [1;39mChild (5774) said SMF.s0 mmap'ed 1048576 bytes of 1048576[0m

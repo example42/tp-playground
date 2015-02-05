@@ -1,0 +1,17 @@
+# Package status
+monit-5.6-1.el7.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  monit.service
+monit.service - Pro-active monitoring utility for unix systems
+   Loaded: loaded (/usr/lib/systemd/system/monit.service; enabled)
+   Active: [1;32mactive (running)[0m since Wed 2015-02-04 06:10:57 EST; 2s ago
+ Main PID: 21637 (monit)
+   CGroup: /system.slice/monit.service
+           └─21637 /usr/bin/monit -I
+
+Feb 04 06:10:57 centos7.example42.com systemd[1]: Starting Pro-active monitoring utility for unix systems...
+Feb 04 06:10:57 centos7.example42.com systemd[1]: Started Pro-active monitoring utility for unix systems.
+Feb 04 06:10:57 centos7.example42.com monit[21637]: monit: generated unique Monit id 51e37fbe5d7be0184acffe8d3433a0...t.id'
+Feb 04 06:10:57 centos7.example42.com monit[21637]: Starting monit daemon with http interface at [localhost:2812]
+Hint: Some lines were ellipsized, use -l to show in full.

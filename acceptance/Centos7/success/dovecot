@@ -1,0 +1,19 @@
+# Package status
+dovecot-2.2.10-4.el7_0.1.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  dovecot.service
+dovecot.service - Dovecot IMAP/POP3 email server
+   Loaded: loaded (/usr/lib/systemd/system/dovecot.service; enabled)
+   Active: [1;32mactive (running)[0m since Wed 2015-02-04 06:00:50 EST; 2s ago
+ Main PID: 6679 (dovecot)
+   CGroup: /system.slice/dovecot.service
+           ├─6679 /usr/sbin/dovecot -F
+           ├─6696 dovecot/anvil
+           ├─6697 dovecot/log
+           └─6700 dovecot/config
+
+Feb 04 06:00:50 centos7.example42.com systemd[1]: Started Dovecot IMAP/POP3 email server.
+Feb 04 06:00:50 centos7.example42.com dovecot[6679]: [1;31mmaster: Error: setrlimit(RLIMIT_NPROC, 5214): Operation not permitted[0m
+Feb 04 06:00:50 centos7.example42.com dovecot[6679]: master: Dovecot v2.2.10 starting up for imap, pop3, lmtp (core ...led)
+Hint: Some lines were ellipsized, use -l to show in full.

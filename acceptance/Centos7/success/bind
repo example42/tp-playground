@@ -1,0 +1,23 @@
+# Package status
+bind-9.9.4-14.el7_0.1.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  named.service
+named.service - Berkeley Internet Name Domain (DNS)
+   Loaded: loaded (/usr/lib/systemd/system/named.service; enabled)
+   Active: [1;32mactive (running)[0m since Wed 2015-02-04 05:56:34 EST; 2s ago
+ Main PID: 32697 (named)
+   CGroup: /system.slice/named.service
+           └─32697 /usr/sbin/named -u named
+
+Feb 04 05:56:35 centos7.example42.com named[32697]: error (network unreachable) resolving 'ns.isc.afilias-nst.info/...35#53
+Feb 04 05:56:35 centos7.example42.com named[32697]: error (network unreachable) resolving 'ns.isc.afilias-nst.info/...35#53
+Feb 04 05:56:35 centos7.example42.com named[32697]: error (network unreachable) resolving './NS/IN': 2001:7fe::53#53
+Feb 04 05:56:35 centos7.example42.com named[32697]: error (network unreachable) resolving 'ns.isc.afilias-nst.info/...35#53
+Feb 04 05:56:35 centos7.example42.com named[32697]: error (network unreachable) resolving 'ns.isc.afilias-nst.info/...35#53
+Feb 04 05:56:35 centos7.example42.com named[32697]: error (network unreachable) resolving 'ns.isc.afilias-nst.info/...53#53
+Feb 04 05:56:35 centos7.example42.com named[32697]: error (network unreachable) resolving 'ns.isc.afilias-nst.info/...53#53
+Feb 04 05:56:35 centos7.example42.com named[32697]: error (network unreachable) resolving 'ns.isc.afilias-nst.info/...:1#53
+Feb 04 05:56:35 centos7.example42.com named[32697]: error (network unreachable) resolving 'ns.isc.afilias-nst.info/...:1#53
+Feb 04 05:56:35 centos7.example42.com named[32697]: error (network unreachable) resolving 'ns1.isc.ultradns.net/AAA...e8#53
+Hint: Some lines were ellipsized, use -l to show in full.

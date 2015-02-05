@@ -1,0 +1,17 @@
+# Package status
+collectd-5.4.1-1.el7.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  collectd.service
+collectd.service - Collectd
+   Loaded: loaded (/usr/lib/systemd/system/collectd.service; enabled)
+   Active: [1;32mactive (running)[0m since Wed 2015-02-04 05:59:05 EST; 2s ago
+ Main PID: 3837 (collectd)
+   CGroup: /system.slice/collectd.service
+           └─3837 /usr/sbin/collectd -C /etc/collectd.conf -f
+
+Feb 04 05:59:05 centos7.example42.com systemd[1]: Started Collectd.
+Feb 04 05:59:05 centos7.example42.com collectd[3837]: Initialization complete, entering read-loop.
+Feb 04 05:59:05 centos7.example42.com collectd[3837]: [1;39mplugin_dispatch_values: No write callback has been registered....red.[0m
+Feb 04 05:59:05 centos7.example42.com collectd[3837]: Filter subsystem: Built-in target `write': Dispatching value t...ins.
+Hint: Some lines were ellipsized, use -l to show in full.

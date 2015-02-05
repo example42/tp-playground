@@ -1,0 +1,19 @@
+# Package status
+package { 'lighttpd':
+  ensure => '1.4.35-6.9.1',
+}
+
+# Service status
+lighttpd.service - LSB: lighttpd
+	  Loaded: loaded (/etc/init.d/lighttpd)
+	  Active: [1;31mfailed[0m (Result: exit-code) since Tue, 2015-01-27 20:26:06 GMT; 4s ago
+	 Process: 11239 ExecStart=/etc/init.d/lighttpd start [1;31m(code=exited, status=7)[0m
+	  CGroup: name=systemd:/system/lighttpd.service
+
+Jan 27 20:26:06 opensuse12-3.example42.com systemd[1]: Starting LSB: lighttpd...
+Jan 27 20:26:06 opensuse12-3.example42.com lighttpd[11239]: Starting lighttpd 2015-01-27 20:26:06: (network.c.283) warning: please use server.use-ipv6 only for hostnames, not without serve...ONLY changes
+Jan 27 20:26:06 opensuse12-3.example42.com lighttpd[11239]: 2015-01-27 20:26:06: (network.c.409) can't bind to port:  80 Address already in use
+Jan 27 20:26:06 opensuse12-3.example42.com startproc[11245]: [1;39mstartproc:  exit status of parent of /usr/sbin/lighttpd: 255[0m
+Jan 27 20:26:06 opensuse12-3.example42.com lighttpd[11239]: ..failed
+Jan 27 20:26:06 opensuse12-3.example42.com systemd[1]: [1;31mFailed to start LSB: lighttpd.[0m
+Jan 27 20:26:06 opensuse12-3.example42.com systemd[1]: [1;39mUnit lighttpd.service entered failed state[0m

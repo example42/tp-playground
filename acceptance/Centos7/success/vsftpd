@@ -1,0 +1,14 @@
+# Package status
+vsftpd-3.0.2-9.el7.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  vsftpd.service
+vsftpd.service - Vsftpd ftp daemon
+   Loaded: loaded (/usr/lib/systemd/system/vsftpd.service; enabled)
+   Active: [1;32mactive (running)[0m since Wed 2015-02-04 06:33:19 EST; 2s ago
+ Main PID: 17249 (vsftpd)
+   CGroup: /system.slice/vsftpd.service
+           └─17249 /usr/sbin/vsftpd /etc/vsftpd/vsftpd.conf
+
+Feb 04 06:33:19 centos7.example42.com systemd[1]: Starting Vsftpd ftp daemon...
+Feb 04 06:33:19 centos7.example42.com systemd[1]: Started Vsftpd ftp daemon.

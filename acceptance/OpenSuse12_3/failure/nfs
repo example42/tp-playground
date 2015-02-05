@@ -1,0 +1,13 @@
+
+# Service status
+nfs.service - LSB: NFS client services
+	  Loaded: loaded (/etc/init.d/nfs)
+	  Active: [1;31mfailed[0m (Result: exit-code) since Tue, 2015-01-27 20:30:55 GMT; 2s ago
+	 Process: 31573 ExecStart=/etc/init.d/nfs start [1;31m(code=exited, status=3)[0m
+	  CGroup: name=systemd:/system/nfs.service
+
+Jan 27 20:30:55 opensuse12-3.example42.com systemd[1]: Starting LSB: NFS client services...
+Jan 27 20:30:55 opensuse12-3.example42.com nfs[31573]: Starting NFS client services:portmap/rpcbind is not running
+Jan 27 20:30:55 opensuse12-3.example42.com nfs[31573]: ..missing
+Jan 27 20:30:55 opensuse12-3.example42.com systemd[1]: [1;31mFailed to start LSB: NFS client services.[0m
+Jan 27 20:30:55 opensuse12-3.example42.com systemd[1]: [1;39mUnit nfs.service entered failed state[0m

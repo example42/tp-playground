@@ -1,0 +1,7 @@
+# Package status
+package { 'haproxy':
+  ensure => 'absent',
+}
+
+# Service status
+service: no such service haproxy

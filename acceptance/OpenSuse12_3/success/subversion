@@ -1,0 +1,4 @@
+# Package status
+package { 'subversion':
+  ensure => '1.7.19-2.40.1',
+}

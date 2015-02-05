@@ -1,0 +1,22 @@
+# Package status
+ntp-4.2.6p5-19.el7.centos.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  ntpd.service
+ntpd.service - Network Time Service
+   Loaded: loaded (/usr/lib/systemd/system/ntpd.service; enabled)
+   Active: [1;32mactive (running)[0m since Wed 2015-02-04 06:15:49 EST; 2s ago
+ Main PID: 30350 (ntpd)
+   CGroup: /system.slice/ntpd.service
+           └─30350 /usr/sbin/ntpd -u ntp:ntp -g
+
+Feb 04 06:15:49 centos7.example42.com ntpd[30350]: 0.0.0.0 c01d 0d kern kernel time sync enabled
+Feb 04 06:15:49 centos7.example42.com ntpd[30350]: ntp_io: estimated max descriptors: 1024, initial socket boundary: 16
+Feb 04 06:15:49 centos7.example42.com ntpd[30350]: Listen and drop on 0 v4wildcard 0.0.0.0 UDP 123
+Feb 04 06:15:49 centos7.example42.com ntpd[30350]: Listen and drop on 1 v6wildcard :: UDP 123
+Feb 04 06:15:49 centos7.example42.com ntpd[30350]: Listen normally on 2 lo 127.0.0.1 UDP 123
+Feb 04 06:15:49 centos7.example42.com ntpd[30350]: Listen normally on 3 enp0s3 10.0.2.15 UDP 123
+Feb 04 06:15:49 centos7.example42.com ntpd[30350]: Listen normally on 4 virbr0 192.168.122.1 UDP 123
+Feb 04 06:15:49 centos7.example42.com ntpd[30350]: Listen normally on 5 lo ::1 UDP 123
+Feb 04 06:15:49 centos7.example42.com ntpd[30350]: Listen normally on 6 enp0s3 fe80::a00:27ff:feea:9bb5 UDP 123
+Feb 04 06:15:49 centos7.example42.com ntpd[30350]: Listening on routing socket on fd #23 for interface updates

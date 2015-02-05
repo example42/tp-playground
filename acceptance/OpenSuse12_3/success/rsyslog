@@ -1,0 +1,14 @@
+# Package status
+package { 'rsyslog':
+  ensure => '7.2.7-2.5.1',
+}
+
+# Service status
+rsyslog.service - System Logging Service
+	  Loaded: loaded (/usr/lib/systemd/system/rsyslog.service; enabled)
+	  Active: [1;32mactive (running)[0m since Sat, 2015-01-24 20:06:02 GMT; 1 weeks and 1 days ago
+	Main PID: 378 (rsyslogd)
+	  CGroup: name=systemd:/system/rsyslog.service
+		  └ 378 /usr/sbin/rsyslogd -n
+
+Jan 24 20:06:02 vagrant-opensuse-123-64.vagrantup.com systemd[1]: Started System Logging Service.

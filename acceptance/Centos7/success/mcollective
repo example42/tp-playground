@@ -1,0 +1,15 @@
+# Package status
+mcollective-2.7.0-1.el7.noarch
+
+# Service status
+Redirecting to /bin/systemctl status  mcollective.service
+mcollective.service - The Marionette Collective
+   Loaded: loaded (/usr/lib/systemd/system/mcollective.service; enabled)
+   Active: [1;32mactive (running)[0m since Wed 2015-02-04 06:09:44 EST; 2s ago
+ Main PID: 19548 (mcollectived)
+   CGroup: /system.slice/mcollective.service
+           └─19548 /usr/bin/ruby /usr/sbin/mcollectived --config=/etc/mcollective/server.cfg --pidfile=/var/run/mcollect...
+
+Feb 04 06:09:44 centos7.example42.com systemd[1]: Starting The Marionette Collective...
+Feb 04 06:09:44 centos7.example42.com systemd[1]: PID file /var/run/mcollective.pid not readable (yet?) after start.
+Feb 04 06:09:44 centos7.example42.com systemd[1]: Started The Marionette Collective.

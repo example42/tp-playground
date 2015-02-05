@@ -1,0 +1,7 @@
+# Package status
+package { 'elasticsearch':
+  ensure => 'absent',
+}
+
+# Service status
+service: no such service elasticsearch

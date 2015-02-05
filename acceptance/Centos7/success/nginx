@@ -1,0 +1,18 @@
+# Package status
+nginx-1.6.2-4.el7.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  nginx.service
+nginx.service - The nginx HTTP and reverse proxy server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled)
+   Active: [1;32mactive (running)[0m since Wed 2015-02-04 06:14:58 EST; 2s ago
+ Main PID: 28494 (nginx)
+   CGroup: /system.slice/nginx.service
+           ├─28494 nginx: master process /usr/sbin/nginx
+           └─28495 nginx: worker process
+
+Feb 04 06:14:58 centos7.example42.com systemd[1]: Starting The nginx HTTP and reverse proxy server...
+Feb 04 06:14:58 centos7.example42.com nginx[28490]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Feb 04 06:14:58 centos7.example42.com nginx[28490]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Feb 04 06:14:58 centos7.example42.com systemd[1]: Failed to read PID from file /run/nginx.pid: Invalid argument
+Feb 04 06:14:58 centos7.example42.com systemd[1]: Started The nginx HTTP and reverse proxy server.

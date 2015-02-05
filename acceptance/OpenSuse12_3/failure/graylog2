@@ -1,0 +1,7 @@
+# Package status
+package { 'graylog2-server':
+  ensure => 'absent',
+}
+
+# Service status
+service: no such service graylog2-server

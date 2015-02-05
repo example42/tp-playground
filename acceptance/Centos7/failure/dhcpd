@@ -1,0 +1,21 @@
+# Package status
+dhcp-4.2.5-27.el7.centos.2.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  dhcpd.service
+dhcpd.service - DHCPv4 Server Daemon
+   Loaded: loaded (/usr/lib/systemd/system/dhcpd.service; disabled)
+   Active: [1;31mfailed[0m (Result: exit-code) since Wed 2015-02-04 06:00:07 EST; 2s ago
+     Docs: man:dhcpd(8)
+           man:dhcpd.conf(5)
+  Process: 5535 ExecStart=/usr/sbin/dhcpd -f -cf /etc/dhcp/dhcpd.conf -user dhcpd -group dhcpd --no-pid [1;31m(code=exited, status=1/FAILURE)[0m
+ Main PID: 5535 (code=exited, status=1/FAILURE)
+
+Feb 04 06:00:07 centos7.example42.com dhcpd[5535]: [1;31m** Ignoring requests on enp0s3.  If this is not what[0m
+Feb 04 06:00:07 centos7.example42.com dhcpd[5535]: [1;31myou want, please write a subnet declaration[0m
+Feb 04 06:00:07 centos7.example42.com dhcpd[5535]: [1;31min your dhcpd.conf file for the network segment[0m
+Feb 04 06:00:07 centos7.example42.com dhcpd[5535]: [1;31mto which interface enp0s3 is attached. **[0m
+Feb 04 06:00:07 centos7.example42.com dhcpd[5535]: Feb 04 06:00:07 centos7.example42.com dhcpd[5535]: Feb 04 06:00:07 centos7.example42.com dhcpd[5535]: [1;31mNot configured to listen on any interfaces![0m
+Feb 04 06:00:07 centos7.example42.com systemd[1]: [1;39mdhcpd.service: main process exited, code=exited, status=1/FAILURE[0m
+Feb 04 06:00:07 centos7.example42.com systemd[1]: [1;31mFailed to start DHCPv4 Server Daemon.[0m
+Feb 04 06:00:07 centos7.example42.com systemd[1]: [1;39mUnit dhcpd.service entered failed state.[0m

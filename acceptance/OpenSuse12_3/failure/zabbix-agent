@@ -1,0 +1,7 @@
+# Package status
+package { 'zabbix-agent':
+  ensure => 'absent',
+}
+
+# Service status
+service: no such service zabbix-agent

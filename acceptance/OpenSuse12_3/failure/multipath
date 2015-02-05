@@ -1,0 +1,7 @@
+# Package status
+package { 'multipath':
+  ensure => 'absent',
+}
+
+# Service status
+service: no such service multipathd

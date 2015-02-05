@@ -1,0 +1,7 @@
+# Package status
+package { 'sysstat':
+  ensure => '10.0.5-6.6.1',
+}
+
+# Service status
+service: no such service sysstat

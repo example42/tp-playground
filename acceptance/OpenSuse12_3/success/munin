@@ -1,0 +1,4 @@
+# Package status
+package { 'munin':
+  ensure => 'absent',
+}

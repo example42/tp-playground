@@ -1,0 +1,14 @@
+# Package status
+puppet-3.7.4-1.el7.noarch
+
+# Service status
+Redirecting to /bin/systemctl status  puppet.service
+puppet.service - Puppet agent
+   Loaded: loaded (/usr/lib/systemd/system/puppet.service; enabled)
+   Active: [1;32mactive (running)[0m since Wed 2015-02-04 06:25:00 EST; 2s ago
+ Main PID: 5102 (puppet)
+   CGroup: /system.slice/puppet.service
+           └─5102 /usr/bin/ruby /usr/bin/puppet agent --no-daemonize
+
+Feb 04 06:25:00 centos7.example42.com systemd[1]: Starting Puppet agent...
+Feb 04 06:25:00 centos7.example42.com systemd[1]: Started Puppet agent.

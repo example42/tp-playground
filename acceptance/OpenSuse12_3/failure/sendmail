@@ -1,0 +1,10 @@
+# Package status
+package { 'sendmail':
+  ensure => 'absent',
+}
+
+# Service status
+sendmail.service
+	  Loaded: [1;31merror[0m (Reason: No such file or directory)
+	  Active: inactive (dead)
+

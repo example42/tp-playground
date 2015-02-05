@@ -1,0 +1,22 @@
+# Package status
+package { 'xinetd':
+  ensure => '2.3.14-163.4.1',
+}
+
+# Service status
+xinetd.service - LSB: Starts the xinet daemon. Be aware that xinetd doesn't start if no service is configured to run under it. To enable xinetd services go to YaST Network Services (xinetd) section.
+	  Loaded: loaded (/etc/init.d/xinetd)
+	  Active: [1;31mfailed[0m (Result: exit-code) since Mon, 2015-02-02 11:17:36 GMT; 3s ago
+	 Process: 9863 ExecStart=/etc/init.d/xinetd start [1;31m(code=exited, status=7)[0m
+	  CGroup: name=systemd:/system/xinetd.service
+
+Feb 02 11:17:35 opensuse12-3.example42.com xinetd[9871]: Reading included configuration file: /etc/xinetd.d/proftpd [file=/etc/xinetd.d/proftpd] [line=16]
+Feb 02 11:17:35 opensuse12-3.example42.com xinetd[9871]: Reading included configuration file: /etc/xinetd.d/servers [file=/etc/xinetd.d/servers] [line=16]
+Feb 02 11:17:35 opensuse12-3.example42.com xinetd[9871]: Reading included configuration file: /etc/xinetd.d/services [file=/etc/xinetd.d/services] [line=14]
+Feb 02 11:17:35 opensuse12-3.example42.com xinetd[9871]: Reading included configuration file: /etc/xinetd.d/systat [file=/etc/xinetd.d/systat] [line=14]
+Feb 02 11:17:35 opensuse12-3.example42.com xinetd[9871]: Reading included configuration file: /etc/xinetd.d/time [file=/etc/xinetd.d/time] [line=17]
+Feb 02 11:17:35 opensuse12-3.example42.com xinetd[9871]: Reading included configuration file: /etc/xinetd.d/time-udp [file=/etc/xinetd.d/time-udp] [line=15]
+Feb 02 11:17:35 opensuse12-3.example42.com xinetd[9871]: [1;31m9871 {init_services} no services. Exiting...[0m
+Feb 02 11:17:36 opensuse12-3.example42.com xinetd[9863]: Starting INET services. (xinetd)..failed
+Feb 02 11:17:36 opensuse12-3.example42.com systemd[1]: [1;31mFailed to start LSB: Starts the xinet daemon. Be aware that xinetd doesn't start if no service is configured to run under it. To enab...d) section..[0m
+Feb 02 11:17:36 opensuse12-3.example42.com systemd[1]: [1;39mUnit xinetd.service entered failed state[0m

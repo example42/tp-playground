@@ -1,0 +1,7 @@
+# Package status
+package { 'rsync':
+  ensure => '3.0.9-17.1.1',
+}
+
+# Service status
+service: no such service rsync

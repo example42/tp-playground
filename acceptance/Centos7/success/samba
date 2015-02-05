@@ -1,0 +1,18 @@
+# Package status
+samba-4.1.1-37.el7_0.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  smb.service
+smb.service - Samba SMB Daemon
+   Loaded: loaded (/usr/lib/systemd/system/smb.service; enabled)
+   Active: [1;32mactive (running)[0m since Wed 2015-02-04 06:29:16 EST; 2s ago
+ Main PID: 10017 (smbd)
+   Status: "smbd: ready to serve connections..."
+   CGroup: /system.slice/smb.service
+           ├─10017 /usr/sbin/smbd
+           └─10021 /usr/sbin/smbd
+
+Feb 04 06:29:16 centos7.example42.com smbd[10017]: [1;31m[2015/02/04 06:29:16.590355,  0] ../lib/util/become_daemon.c:136...eady)[0m
+Feb 04 06:29:16 centos7.example42.com systemd[1]: Started Samba SMB Daemon.
+Feb 04 06:29:16 centos7.example42.com smbd[10021]: [1;31mSTATUS=daemon 'smbd' finished starting up and ready to serve con...SSFUL[0m
+Hint: Some lines were ellipsized, use -l to show in full.

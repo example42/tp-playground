@@ -1,0 +1,24 @@
+# Package status
+xinetd-2.3.15-12.el7.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  xinetd.service
+xinetd.service - Xinetd A Powerful Replacement For Inetd
+   Loaded: loaded (/usr/lib/systemd/system/xinetd.service; enabled)
+   Active: [1;32mactive (running)[0m since Wed 2015-02-04 06:33:53 EST; 2s ago
+  Process: 18383 ExecStart=/usr/sbin/xinetd -stayalive -pidfile /var/run/xinetd.pid $EXTRAOPTIONS (code=exited, status=0/SUCCESS)
+ Main PID: 18384 (xinetd)
+   CGroup: /system.slice/xinetd.service
+           └─18384 /usr/sbin/xinetd -stayalive -pidfile /var/run/xinetd.pid
+
+Feb 04 06:33:53 centos7.example42.com xinetd[18384]: removing daytime
+Feb 04 06:33:53 centos7.example42.com xinetd[18384]: removing discard
+Feb 04 06:33:53 centos7.example42.com xinetd[18384]: removing discard
+Feb 04 06:33:53 centos7.example42.com xinetd[18384]: removing echo
+Feb 04 06:33:53 centos7.example42.com xinetd[18384]: removing echo
+Feb 04 06:33:53 centos7.example42.com xinetd[18384]: removing tcpmux
+Feb 04 06:33:53 centos7.example42.com xinetd[18384]: removing time
+Feb 04 06:33:53 centos7.example42.com xinetd[18384]: removing time
+Feb 04 06:33:53 centos7.example42.com xinetd[18384]: [1;39mxinetd Version 2.3.15 started with libwrap loadavg labeled-netw... in.[0m
+Feb 04 06:33:53 centos7.example42.com xinetd[18384]: [1;39mStarted working: 0 available services[0m
+Hint: Some lines were ellipsized, use -l to show in full.

@@ -1,0 +1,22 @@
+# Package status
+rabbitmq-server-3.3.5-4.el7.noarch
+
+# Service status
+Redirecting to /bin/systemctl status  rabbitmq-server.service
+rabbitmq-server.service - RabbitMQ broker
+   Loaded: loaded (/usr/lib/systemd/system/rabbitmq-server.service; disabled)
+   Active: [1;31mfailed[0m (Result: exit-code) since Wed 2015-02-04 06:27:57 EST; 2s ago
+  Process: 7614 ExecStop=/usr/lib/rabbitmq/bin/rabbitmqctl stop [1;31m(code=exited, status=2)[0m
+  Process: 7586 ExecStart=/usr/lib/rabbitmq/bin/rabbitmq-server [1;31m(code=exited, status=1/FAILURE)[0m
+ Main PID: 7586 (code=exited, status=1/FAILURE)
+
+Feb 04 06:27:57 centos7.example42.com rabbitmqctl[7614]: * epmd reports: node 'rabbit' not running at all
+Feb 04 06:27:57 centos7.example42.com rabbitmqctl[7614]: no other nodes on centos7
+Feb 04 06:27:57 centos7.example42.com rabbitmqctl[7614]: * suggestion: start the node
+Feb 04 06:27:57 centos7.example42.com rabbitmqctl[7614]: current node details:
+Feb 04 06:27:57 centos7.example42.com rabbitmqctl[7614]: - node name: rabbitmqctl7614@centos7
+Feb 04 06:27:57 centos7.example42.com rabbitmqctl[7614]: - home dir: /var/lib/rabbitmq
+Feb 04 06:27:57 centos7.example42.com rabbitmqctl[7614]: - cookie hash: LcfeXIF40LeNOo95l+K2fg==
+Feb 04 06:27:57 centos7.example42.com systemd[1]: [1;39mrabbitmq-server.service: control process exited, code=exited status=2[0m
+Feb 04 06:27:57 centos7.example42.com systemd[1]: [1;31mFailed to start RabbitMQ broker.[0m
+Feb 04 06:27:57 centos7.example42.com systemd[1]: [1;39mUnit rabbitmq-server.service entered failed state.[0m

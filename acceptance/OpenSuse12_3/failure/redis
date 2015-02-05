@@ -1,0 +1,17 @@
+# Package status
+package { 'redis':
+  ensure => '2.4.15-3.1.1',
+}
+
+# Service status
+redis.service - LSB: Redis server
+	  Loaded: loaded (/etc/init.d/redis)
+	  Active: [1;31mfailed[0m (Result: exit-code) since Mon, 2015-02-02 11:13:10 GMT; 3s ago
+	 Process: 22937 ExecStart=/etc/init.d/redis start [1;31m(code=exited, status=1/FAILURE)[0m
+	  CGroup: name=systemd:/system/redis.service
+
+Feb 02 11:13:10 opensuse12-3.example42.com systemd[1]: Starting LSB: Redis server...
+Feb 02 11:13:10 opensuse12-3.example42.com redis[22937]: Starting Redis server 'bin'... /etc/redis/bin.conf not found
+Feb 02 11:13:10 opensuse12-3.example42.com redis[22937]: ..failed
+Feb 02 11:13:10 opensuse12-3.example42.com systemd[1]: [1;31mFailed to start LSB: Redis server.[0m
+Feb 02 11:13:10 opensuse12-3.example42.com systemd[1]: [1;39mUnit redis.service entered failed state[0m

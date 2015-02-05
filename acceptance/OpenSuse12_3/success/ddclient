@@ -1,0 +1,15 @@
+# Package status
+package { 'ddclient':
+  ensure => '3.8.1-6.1.1',
+}
+
+# Service status
+ddclient.service - LSB: ddclient a daemon to update dynamic DNS entries
+	  Loaded: loaded (/etc/init.d/ddclient)
+	  Active: [1;32mactive (exited)[0m since Tue, 2015-01-27 20:21:00 GMT; 4s ago
+	 Process: 27914 ExecStart=/etc/init.d/ddclient start (code=exited, status=0/SUCCESS)
+	  CGroup: name=systemd:/system/ddclient.service
+
+Jan 27 20:21:00 opensuse12-3.example42.com systemd[1]: Starting LSB: ddclient a daemon to update dynamic DNS entries...
+Jan 27 20:21:00 opensuse12-3.example42.com ddclient[27914]: Starting ddclient daemon :..done
+Jan 27 20:21:00 opensuse12-3.example42.com systemd[1]: Started LSB: ddclient a daemon to update dynamic DNS entries.

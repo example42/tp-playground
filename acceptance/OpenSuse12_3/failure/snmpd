@@ -1,0 +1,11 @@
+# Package status
+package { 'snmpd':
+  ensure => 'absent',
+}
+
+# Service status
+snmpd.service - LSB: Net-SNMP agent
+	  Loaded: loaded (/etc/init.d/snmpd)
+	  Active: inactive (dead)
+	  CGroup: name=systemd:/system/snmpd.service
+

@@ -1,0 +1,7 @@
+# Package status
+package { 'openntpd':
+  ensure => 'absent',
+}
+
+# Service status
+service: no such service openntpd

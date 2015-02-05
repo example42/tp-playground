@@ -1,0 +1,14 @@
+# Package status
+rsyslog-7.4.7-7.el7_0.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  rsyslog.service
+rsyslog.service - System Logging Service
+   Loaded: loaded (/usr/lib/systemd/system/rsyslog.service; enabled)
+   Active: [1;32mactive (running)[0m since Wed 2015-02-04 06:06:45 EST; 22min ago
+ Main PID: 15462 (rsyslogd)
+   CGroup: /system.slice/rsyslog.service
+           └─15462 /usr/sbin/rsyslogd -n
+
+Feb 04 06:06:45 centos7.example42.com systemd[1]: Starting System Logging Service...
+Feb 04 06:06:45 centos7.example42.com systemd[1]: Started System Logging Service.

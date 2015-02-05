@@ -1,0 +1,4 @@
+# Package status
+package { 'logrotate':
+  ensure => '3.8.1-20.1.1',
+}

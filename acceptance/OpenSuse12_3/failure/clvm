@@ -1,0 +1,7 @@
+# Package status
+package { 'lvm2-cluster':
+  ensure => 'absent',
+}
+
+# Service status
+service: no such service clvmd

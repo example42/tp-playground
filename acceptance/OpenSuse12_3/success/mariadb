@@ -1,0 +1,24 @@
+# Package status
+package { 'mariadb':
+  ensure => '5.5.33-1.16.1',
+}
+
+# Service status
+mysql.service - LSB: Start the MySQL database server
+	  Loaded: loaded (/etc/init.d/mysql)
+	  Active: [1;32mactive (running)[0m since Tue, 2015-01-27 20:27:23 GMT; 3s ago
+	 Process: 15614 ExecStart=/etc/init.d/mysql start (code=exited, status=0/SUCCESS)
+	  CGroup: name=systemd:/system/mysql.service
+		  ├ 15746 /bin/sh /usr/bin/mysqld_safe --mysqld=mysqld --user=mysql --pid-file=/var/run/mysql/mysqld.pid --socket=/var/run/mysql/mysql.sock --datadir=/var/lib/mysql
+		  └ 16096 /usr/sbin/mysqld --basedir=/usr --datadir=/var/lib/mysql --plugin-dir=/usr/lib64/mysql/plugin --user=mysql --log-error=/var/log/mysql/mysqld.log --pid-file=/var/run/mysql/my...
+
+Jan 27 20:27:21 opensuse12-3.example42.com mysql[15614]: Please report any problems with the '/usr/bin/mysqlbug' script!
+Jan 27 20:27:21 opensuse12-3.example42.com mysql[15614]: The latest information about MariaDB is available at http://mariadb.org/.
+Jan 27 20:27:21 opensuse12-3.example42.com mysql[15614]: You can find additional information about the MySQL part at:
+Jan 27 20:27:21 opensuse12-3.example42.com mysql[15614]: http://dev.mysql.com
+Jan 27 20:27:21 opensuse12-3.example42.com mysql[15614]: Support MariaDB development by buying support/new features from
+Jan 27 20:27:21 opensuse12-3.example42.com mysql[15614]: Monty Program Ab. You can contact us about this at sales@montyprogram.com.
+Jan 27 20:27:21 opensuse12-3.example42.com mysql[15614]: Alternatively consider joining our community based development effort:
+Jan 27 20:27:21 opensuse12-3.example42.com mysql[15614]: http://kb.askmonty.org/en/contributing-to-the-mariadb-project/
+Jan 27 20:27:23 opensuse12-3.example42.com mysql[15614]: Starting service MySQL ..done
+Jan 27 20:27:23 opensuse12-3.example42.com systemd[1]: Started LSB: Start the MySQL database server.

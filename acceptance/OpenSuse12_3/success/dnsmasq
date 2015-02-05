@@ -1,0 +1,23 @@
+# Package status
+package { 'dnsmasq':
+  ensure => '2.65-2.5.1',
+}
+
+# Service status
+dnsmasq.service - DNS caching server.
+	  Loaded: loaded (/usr/lib/systemd/system/dnsmasq.service; enabled)
+	  Active: [1;32mactive (running)[0m since Tue, 2015-01-27 20:21:37 GMT; 3s ago
+	Main PID: 29788 (dnsmasq)
+	  CGroup: name=systemd:/system/dnsmasq.service
+		  └ 29788 /usr/sbin/dnsmasq --log-async --enable-dbus --keep-in-foreground
+
+Jan 27 20:21:37 opensuse12-3.example42.com systemd[1]: Starting DNS caching server....
+Jan 27 20:21:37 opensuse12-3.example42.com dnsmasq[29786]: dnsmasq: syntax check OK.
+Jan 27 20:21:37 opensuse12-3.example42.com systemd[1]: Started DNS caching server..
+Jan 27 20:21:37 opensuse12-3.example42.com dnsmasq[29788]: started, version 2.65 cachesize 2000
+Jan 27 20:21:37 opensuse12-3.example42.com dnsmasq[29788]: compile time options: IPv6 GNU-getopt no-DBus i18n IDN DHCP DHCPv6 no-Lua TFTP no-conntrack
+Jan 27 20:21:37 opensuse12-3.example42.com dnsmasq[29788]: DBus support enabled: connected to system bus
+Jan 27 20:21:37 opensuse12-3.example42.com dnsmasq[29788]: asynchronous logging enabled, queue limit is 5 messages
+Jan 27 20:21:37 opensuse12-3.example42.com dnsmasq[29788]: reading /etc/resolv.conf
+Jan 27 20:21:37 opensuse12-3.example42.com dnsmasq[29788]: using nameserver 10.0.2.3#53
+Jan 27 20:21:37 opensuse12-3.example42.com dnsmasq[29788]: read /etc/hosts - 7 addresses

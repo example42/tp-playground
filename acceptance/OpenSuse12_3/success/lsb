@@ -1,0 +1,4 @@
+# Package status
+package { 'lsb-release':
+  ensure => '2.0-18.1.1',
+}

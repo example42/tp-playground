@@ -1,0 +1,4 @@
+# Package status
+package { 'vim-common':
+  ensure => 'absent',
+}

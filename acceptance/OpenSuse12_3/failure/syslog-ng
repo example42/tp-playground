@@ -1,0 +1,10 @@
+# Package status
+package { 'syslog-ng':
+  ensure => 'absent',
+}
+
+# Service status
+syslog-ng.service
+	  Loaded: [1;31merror[0m (Reason: No such file or directory)
+	  Active: inactive (dead)
+

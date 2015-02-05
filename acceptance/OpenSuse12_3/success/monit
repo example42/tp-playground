@@ -1,0 +1,23 @@
+# Package status
+package { 'monit':
+  ensure => '5.5-2.1.1',
+}
+
+# Service status
+monit.service - LSB: Manages and monitors processes, files, directories, devices
+	  Loaded: loaded (/etc/init.d/monit)
+	  Active: [1;32mactive (running)[0m since Tue, 2015-01-27 20:28:34 GMT; 3s ago
+	 Process: 20947 ExecStart=/etc/init.d/monit start (code=exited, status=0/SUCCESS)
+	  CGroup: name=systemd:/system/monit.service
+		  └ 20962 /usr/bin/monit -c /etc/monitrc -p /var/run/monit/monit.pid -s /var/run/monit/monit.state
+
+Jan 27 20:28:34 opensuse12-3.example42.com monit[20962]: Starting monit HTTP server at [localhost:2812]
+Jan 27 20:28:34 opensuse12-3.example42.com monit[20962]: monit HTTP server started
+Jan 27 20:28:34 opensuse12-3.example42.com monit[20962]: 'opensuse12-3.example42.com' Monit started
+Jan 27 20:28:34 opensuse12-3.example42.com monit[20962]: [1;31mCannot open a connection to the mailserver 'localhost:25' -- Transport endpoint is not connected[0m
+Jan 27 20:28:34 opensuse12-3.example42.com monit[20962]: [1;31mNo mail servers are available[0m
+Jan 27 20:28:34 opensuse12-3.example42.com monit[20962]: [1;31mCannot open a connection to the mailserver 'localhost:25' -- Transport endpoint is not connected[0m
+Jan 27 20:28:34 opensuse12-3.example42.com monit[20962]: [1;31mNo mail servers are available[0m
+Jan 27 20:28:34 opensuse12-3.example42.com monit[20962]: [1;31mAlert handler failed, retry scheduled for next cycle[0m
+Jan 27 20:28:34 opensuse12-3.example42.com monit[20947]: ..done
+Jan 27 20:28:34 opensuse12-3.example42.com systemd[1]: Started LSB: Manages and monitors processes, files, directories, devices.

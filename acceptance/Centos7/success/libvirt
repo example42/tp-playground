@@ -1,0 +1,15 @@
+# Package status
+libvirt-1.1.1-29.el7_0.4.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  libvirtd.service
+libvirtd.service - Virtualization daemon
+   Loaded: loaded (/usr/lib/systemd/system/libvirtd.service; enabled)
+   Active: [1;32mactive (running)[0m since Wed 2015-02-04 06:06:45 EST; 3s ago
+ Main PID: 15476 (libvirtd)
+   CGroup: /system.slice/libvirtd.service
+           ├─15476 /usr/sbin/libvirtd
+           └─15624 /usr/bin/python -Es /usr/bin/firewall-cmd --direct --passthrough ipv4 --table filter --insert FORWARD...
+
+Feb 04 06:06:45 centos7.example42.com systemd[1]: Starting Virtualization daemon...
+Feb 04 06:06:45 centos7.example42.com systemd[1]: Started Virtualization daemon.

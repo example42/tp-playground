@@ -1,0 +1,23 @@
+# Package status
+package { 'ntp':
+  ensure => '4.2.6p5-9.3.1',
+}
+
+# Service status
+ntp.service - LSB: Network time protocol daemon (ntpd)
+	  Loaded: loaded (/etc/init.d/ntp)
+	  Active: [1;32mactive (running)[0m since Tue, 2015-01-27 20:31:55 GMT; 3s ago
+	 Process: 3685 ExecStart=/etc/init.d/ntp start (code=exited, status=0/SUCCESS)
+	  CGroup: name=systemd:/system/ntp.service
+		  └ 3697 /usr/sbin/ntpd -p /var/run/ntp/ntpd.pid -g -u ntp:ntp -c /etc/ntp.conf
+
+Jan 27 20:31:55 opensuse12-3.example42.com ntpd[3697]: [1;39mproto: precision = 0.132 usec[0m
+Jan 27 20:31:55 opensuse12-3.example42.com ntp[3685]: Starting network time protocol daemon (NTPD)..done
+Jan 27 20:31:55 opensuse12-3.example42.com systemd[1]: Started LSB: Network time protocol daemon (ntpd).
+Jan 27 20:31:55 opensuse12-3.example42.com ntpd[3697]: ntp_io: estimated max descriptors: 1024, initial socket boundary: 16
+Jan 27 20:31:55 opensuse12-3.example42.com ntpd[3697]: Listen and drop on 0 v4wildcard 0.0.0.0 UDP 123
+Jan 27 20:31:55 opensuse12-3.example42.com ntpd[3697]: Listen and drop on 1 v6wildcard :: UDP 123
+Jan 27 20:31:55 opensuse12-3.example42.com ntpd[3697]: Listen normally on 2 lo 127.0.0.1 UDP 123
+Jan 27 20:31:55 opensuse12-3.example42.com ntpd[3697]: Listen normally on 3 eth0 10.0.2.15 UDP 123
+Jan 27 20:31:55 opensuse12-3.example42.com ntpd[3697]: peers refreshed
+Jan 27 20:31:55 opensuse12-3.example42.com ntpd[3697]: Listening on routing socket on fd #20 for interface updates

@@ -1,0 +1,7 @@
+# Package status
+package { 'bind':
+  ensure => '9.9.4P2-2.15.1',
+}
+
+# Service status
+service: no such service bind

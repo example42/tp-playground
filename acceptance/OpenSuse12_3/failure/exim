@@ -1,0 +1,7 @@
+# Package status
+package { 'exim':
+  ensure => 'absent',
+}
+
+# Service status
+service: no such service exim

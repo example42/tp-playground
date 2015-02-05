@@ -1,0 +1,15 @@
+# Package status
+package { 'dhcp-server':
+  ensure => '4.2.5.P1-0.2.4.1',
+}
+
+# Service status
+dhcpd.service - LSB: ISC DHCP 4.x Server
+	  Loaded: loaded (/etc/init.d/dhcpd)
+	  Active: [1;32mactive (exited)[0m since Tue, 2015-01-27 20:21:19 GMT; 3s ago
+	 Process: 28838 ExecStart=/etc/init.d/dhcpd start (code=exited, status=6)
+	  CGroup: name=systemd:/system/dhcpd.service
+
+Jan 27 20:21:19 opensuse12-3.example42.com systemd[1]: Starting LSB: ISC DHCP 4.x Server...
+Jan 27 20:21:19 opensuse12-3.example42.com dhcpd[28838]: Starting ISC DHCPv4 4.x Server ... set DHCPD_INTERFACE in /etc/sysconfig/dhcpd..skipped
+Jan 27 20:21:19 opensuse12-3.example42.com systemd[1]: Started LSB: ISC DHCP 4.x Server.

@@ -1,0 +1,20 @@
+# Package status
+activemq-5.9.1-2.el7.noarch
+
+# Service status
+Redirecting to /bin/systemctl status  activemq.service
+activemq.service - ActiveMQ
+   Loaded: loaded (/usr/lib/systemd/system/activemq.service; enabled)
+   Active: [1;32mactive (running)[0m since Wed 2015-02-04 05:53:51 EST; 3s ago
+ Main PID: 29802 (java)
+   CGroup: /system.slice/activemq.service
+           ‣ 29802 java -Xms512m -Xmx512m -Djava.util.logging.config.file=logging.properties -Dhawtio.realm=activemq -Dh...
+
+Feb 04 05:53:51 centos7.example42.com activemq[29785]: INFO: Loading '/etc/sysconfig/activemq'
+Feb 04 05:53:51 centos7.example42.com activemq[29785]: INFO: Using java 'java'
+Feb 04 05:53:51 centos7.example42.com activemq[29785]: INFO: Starting - inspect logfiles specified in logging.proper...ails
+Feb 04 05:53:51 centos7.example42.com activemq[29785]: INFO: changing to user 'activemq' to invoke java
+Feb 04 05:53:51 centos7.example42.com su[29792]: [1;39m(to activemq) root on none[0m
+Feb 04 05:53:51 centos7.example42.com activemq[29785]: INFO: pidfile created : '/var/run/activemq/activemq.pid' (pid...02')
+Feb 04 05:53:51 centos7.example42.com systemd[1]: Started ActiveMQ.
+Hint: Some lines were ellipsized, use -l to show in full.

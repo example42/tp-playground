@@ -1,0 +1,22 @@
+# Package status
+package { 'libvirt':
+  ensure => '1.0.2-1.26.1',
+}
+
+# Service status
+libvirtd.service - Virtualization daemon
+	  Loaded: loaded (/usr/lib/systemd/system/libvirtd.service; enabled)
+	  Active: [1;32mactive (running)[0m since Tue, 2015-01-27 20:25:47 GMT; 4s ago
+	Main PID: 10216 (libvirtd)
+	  CGroup: name=systemd:/system/libvirtd.service
+		  └ 10216 /usr/sbin/libvirtd --listen
+
+Jan 27 20:25:47 opensuse12-3.example42.com systemd[1]: Starting Virtualization daemon...
+Jan 27 20:25:47 opensuse12-3.example42.com systemd[1]: Started Virtualization daemon.
+Jan 27 20:25:47 opensuse12-3.example42.com libvirtd[10216]: [1;31mlibvirt version: 1.0.2[0m
+Jan 27 20:25:47 opensuse12-3.example42.com libvirtd[10216]: [1;39mopen("/var/run/libvirt/network/nwfilter.ltmp"): No such file or directory[0m
+Jan 27 20:25:47 opensuse12-3.example42.com libvirtd[10216]: [1;39minvalid argument: Failed to parse user 'qemu'[0m
+Jan 27 20:25:47 opensuse12-3.example42.com libvirtd[10216]: [1;31mUser qemu does not exist! Continuing...[0m
+Jan 27 20:25:47 opensuse12-3.example42.com libvirtd[10216]: [1;39minvalid argument: Failed to parse group 'qemu'[0m
+Jan 27 20:25:47 opensuse12-3.example42.com libvirtd[10216]: [1;31mGroup qemu does not exist! Continuing...[0m
+Jan 27 20:25:47 opensuse12-3.example42.com libvirtd[10216]: [1;31mConfigured security driver "none" disables default policy to create confined guests[0m

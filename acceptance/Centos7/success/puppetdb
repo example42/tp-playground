@@ -1,0 +1,13 @@
+# Package status
+puppetdb-2.2.2-1.el7.noarch
+
+# Service status
+Redirecting to /bin/systemctl status  puppetdb.service
+puppetdb.service - puppetdb Daemon
+   Loaded: loaded (/usr/lib/systemd/system/puppetdb.service; enabled)
+   Active: [1;32mactive (running)[0m since Wed 2015-02-04 06:26:05 EST; 4s ago
+ Main PID: 5629 (java)
+   CGroup: /system.slice/puppetdb.service
+           └─5629 java -Xmx192m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/var/log/puppetdb/puppetdb-oom.hprof -D...
+
+Feb 04 06:26:05 centos7.example42.com systemd[1]: Started puppetdb Daemon.

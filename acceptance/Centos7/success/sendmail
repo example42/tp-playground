@@ -1,0 +1,21 @@
+# Package status
+package sendmailsendmail-cf is not installed
+
+# Service status
+Redirecting to /bin/systemctl status  sendmail.service
+sendmail.service - Sendmail Mail Transport Agent
+   Loaded: loaded (/usr/lib/systemd/system/sendmail.service; enabled)
+   Active: [1;32mactive (running)[0m since Wed 2015-02-04 06:29:55 EST; 2s ago
+  Process: 10940 ExecStart=/usr/sbin/sendmail -bd $SENDMAIL_OPTS $SENDMAIL_OPTARG (code=exited, status=0/SUCCESS)
+  Process: 10934 ExecStartPre=/etc/mail/make aliases (code=exited, status=0/SUCCESS)
+  Process: 10932 ExecStartPre=/etc/mail/make (code=exited, status=0/SUCCESS)
+ Main PID: 10948 (sendmail)
+   CGroup: /system.slice/sendmail.service
+           └─10948 sendmail: accepting connections
+
+Feb 04 06:29:50 centos7.example42.com systemd[1]: PID file /run/sendmail.pid not readable (yet?) after start.
+Feb 04 06:29:50 centos7.example42.com sendmail[10948]: starting daemon (8.14.7): SMTP+queueing@01:00:00
+Feb 04 06:29:50 centos7.example42.com sendmail[10948]: [1;31mNOQUEUE: SYSERR(root): opendaemonsocket: daemon MTA: cannot b... use[0m
+Feb 04 06:29:50 centos7.example42.com sendmail[10948]: [1;31mdaemon MTA: problem creating SMTP socket[0m
+Feb 04 06:29:55 centos7.example42.com systemd[1]: Started Sendmail Mail Transport Agent.
+Hint: Some lines were ellipsized, use -l to show in full.

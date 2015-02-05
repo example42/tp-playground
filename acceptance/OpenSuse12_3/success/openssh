@@ -1,0 +1,23 @@
+# Package status
+package { 'openssh':
+  ensure => '6.1p1-3.1.1',
+}
+
+# Service status
+sshd.service - OpenSSH Daemon
+	  Loaded: loaded (/usr/lib/systemd/system/sshd.service; enabled)
+	  Active: [1;32mactive (running)[0m since Sat, 2015-01-24 20:06:04 GMT; 1 weeks and 1 days ago
+	Main PID: 1349 (sshd)
+	  CGroup: name=systemd:/system/sshd.service
+		  └ 1349 /usr/sbin/sshd -D
+
+Feb 02 11:08:56 opensuse12-3.example42.com sshd[4356]: Accepted publickey for vagrant from 10.0.2.2 port 61970 ssh2
+Feb 02 11:08:56 opensuse12-3.example42.com sshd[4356]: pam_unix(sshd:session): session opened for user vagrant by (uid=0)
+Feb 02 11:09:05 opensuse12-3.example42.com sshd[4885]: Accepted publickey for vagrant from 10.0.2.2 port 61984 ssh2
+Feb 02 11:09:05 opensuse12-3.example42.com sshd[4885]: pam_unix(sshd:session): session opened for user vagrant by (uid=0)
+Feb 02 11:09:08 opensuse12-3.example42.com sshd[4999]: Accepted publickey for vagrant from 10.0.2.2 port 61985 ssh2
+Feb 02 11:09:08 opensuse12-3.example42.com sshd[4999]: pam_unix(sshd:session): session opened for user vagrant by (uid=0)
+Feb 02 11:09:13 opensuse12-3.example42.com sshd[5519]: Accepted publickey for vagrant from 10.0.2.2 port 61986 ssh2
+Feb 02 11:09:13 opensuse12-3.example42.com sshd[5519]: pam_unix(sshd:session): session opened for user vagrant by (uid=0)
+Feb 02 11:09:18 opensuse12-3.example42.com sshd[6041]: Accepted publickey for vagrant from 10.0.2.2 port 61987 ssh2
+Feb 02 11:09:18 opensuse12-3.example42.com sshd[6041]: pam_unix(sshd:session): session opened for user vagrant by (uid=0)

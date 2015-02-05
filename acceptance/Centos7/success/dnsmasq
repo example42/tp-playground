@@ -1,0 +1,20 @@
+# Package status
+dnsmasq-2.66-12.el7.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  dnsmasq.service
+dnsmasq.service - DNS caching server.
+   Loaded: loaded (/usr/lib/systemd/system/dnsmasq.service; enabled)
+   Active: [1;32mactive (running)[0m since Wed 2015-02-04 06:00:21 EST; 2s ago
+ Main PID: 6012 (dnsmasq)
+   CGroup: /system.slice/dnsmasq.service
+           └─6012 /usr/sbin/dnsmasq -k
+
+Feb 04 06:00:21 centos7.example42.com systemd[1]: Starting DNS caching server....
+Feb 04 06:00:21 centos7.example42.com systemd[1]: Started DNS caching server..
+Feb 04 06:00:21 centos7.example42.com dnsmasq[6012]: started, version 2.66 cachesize 150
+Feb 04 06:00:21 centos7.example42.com dnsmasq[6012]: compile time options: IPv6 GNU-getopt DBus no-i18n IDN DHCP DHC...auth
+Feb 04 06:00:21 centos7.example42.com dnsmasq[6012]: reading /etc/resolv.conf
+Feb 04 06:00:21 centos7.example42.com dnsmasq[6012]: using nameserver 10.0.2.3#53
+Feb 04 06:00:21 centos7.example42.com dnsmasq[6012]: read /etc/hosts - 2 addresses
+Hint: Some lines were ellipsized, use -l to show in full.

@@ -1,0 +1,17 @@
+# Package status
+package { 'collectd':
+  ensure => '5.0.4-7.1.1',
+}
+
+# Service status
+collectd.service - System statistics collection daemon
+	  Loaded: loaded (/usr/lib/systemd/system/collectd.service; enabled)
+	  Active: [1;32mactive (running)[0m since Tue, 2015-01-27 20:20:25 GMT; 3s ago
+	Main PID: 26138 (collectd)
+	  CGroup: name=systemd:/system/collectd.service
+		  └ 26138 /usr/sbin/collectd -C /etc/collectd.conf -f
+
+Jan 27 20:20:25 opensuse12-3.example42.com systemd[1]: Starting System statistics collection daemon...
+Jan 27 20:20:25 opensuse12-3.example42.com systemd[1]: Started System statistics collection daemon.
+Jan 27 20:20:25 opensuse12-3.example42.com collectd[26138]: Initialization complete, entering read-loop.
+Jan 27 20:20:25 opensuse12-3.example42.com collectd[26138]: rrdtool plugin: Adjusting "RandomTimeout" to 0.000 seconds.

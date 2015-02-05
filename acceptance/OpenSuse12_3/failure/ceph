@@ -1,0 +1,7 @@
+# Package status
+package { 'ceph':
+  ensure => 'absent',
+}
+
+# Service status
+service: no such service ceph

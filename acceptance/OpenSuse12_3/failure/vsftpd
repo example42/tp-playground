@@ -1,0 +1,16 @@
+# Package status
+package { 'vsftpd':
+  ensure => '3.0.2-4.5.1',
+}
+
+# Service status
+vsftpd.service - Vsftpd ftp daemon
+	  Loaded: loaded (/usr/lib/systemd/system/vsftpd.service; enabled)
+	  Active: [1;31mfailed[0m (Result: exit-code) since Mon, 2015-02-02 11:17:10 GMT; 3s ago
+	Main PID: 7670 (code=exited, status=2)
+	  CGroup: name=systemd:/system/vsftpd.service
+
+Feb 02 11:17:10 opensuse12-3.example42.com systemd[1]: Starting Vsftpd ftp daemon...
+Feb 02 11:17:10 opensuse12-3.example42.com systemd[1]: Started Vsftpd ftp daemon.
+Feb 02 11:17:10 opensuse12-3.example42.com systemd[1]: [1;39mvsftpd.service: main process exited, code=exited, status=2/INVALIDARGUMENT[0m
+Feb 02 11:17:10 opensuse12-3.example42.com systemd[1]: [1;39mUnit vsftpd.service entered failed state[0m

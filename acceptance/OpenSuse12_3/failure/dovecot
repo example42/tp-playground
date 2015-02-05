@@ -1,0 +1,11 @@
+# Package status
+package { 'dovecot':
+  ensure => 'absent',
+}
+
+# Service status
+dovecot.service - Dovecot IMAP/POP3 email server
+	  Loaded: loaded (/usr/lib/systemd/system/dovecot.service; disabled)
+	  Active: inactive (dead)
+	  CGroup: name=systemd:/system/dovecot.service
+

@@ -1,0 +1,4 @@
+# Package status
+package { 'mailx':
+  ensure => '12.5-9.4.1',
+}

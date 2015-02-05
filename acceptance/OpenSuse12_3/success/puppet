@@ -1,0 +1,15 @@
+# Package status
+package { 'puppet':
+  ensure => '3.0.2-2.5.1',
+}
+
+# Service status
+puppet.service - LSB: puppet
+	  Loaded: loaded (/etc/init.d/puppet)
+	  Active: [1;32mactive (exited)[0m since Mon, 2015-02-02 11:12:02 GMT; 3s ago
+	 Process: 18227 ExecStart=/etc/init.d/puppet start (code=exited, status=0/SUCCESS)
+	  CGroup: name=systemd:/system/puppet.service
+
+Feb 02 11:12:02 opensuse12-3.example42.com systemd[1]: Starting LSB: puppet...
+Feb 02 11:12:02 opensuse12-3.example42.com puppet[18227]: Starting puppet services...done
+Feb 02 11:12:02 opensuse12-3.example42.com systemd[1]: Started LSB: puppet.

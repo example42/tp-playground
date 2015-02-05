@@ -1,0 +1,19 @@
+# Package status
+httpd-2.4.6-19.el7.centos.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  httpd.service
+httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled)
+   Active: [1;32mactive (running)[0m since Wed 2015-02-04 05:54:50 EST; 2s ago
+ Main PID: 30723 (httpd)
+   Status: "Processing requests..."
+   CGroup: /system.slice/httpd.service
+           ├─30723 /usr/sbin/httpd -DFOREGROUND
+           ├─30724 /usr/sbin/httpd -DFOREGROUND
+           ├─30725 /usr/sbin/httpd -DFOREGROUND
+           ├─30726 /usr/sbin/httpd -DFOREGROUND
+           ├─30727 /usr/sbin/httpd -DFOREGROUND
+           └─30728 /usr/sbin/httpd -DFOREGROUND
+
+Feb 04 05:54:50 centos7.example42.com systemd[1]: Started The Apache HTTP Server.

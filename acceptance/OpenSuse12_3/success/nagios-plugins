@@ -1,0 +1,4 @@
+# Package status
+package { 'nagios-plugins':
+  ensure => '1.4.16-6.2.1',
+}

@@ -1,0 +1,15 @@
+# Package status
+package { 'memcached':
+  ensure => '1.4.20-3.4.1',
+}
+
+# Service status
+memcached.service - memcached daemon
+	  Loaded: loaded (/usr/lib/systemd/system/memcached.service; enabled)
+	  Active: [1;32mactive (running)[0m since Tue, 2015-01-27 20:27:59 GMT; 3s ago
+	Main PID: 18567 (memcached)
+	  CGroup: name=systemd:/system/memcached.service
+		  └ 18567 /usr/sbin/memcached -l 127.0.0.1
+
+Jan 27 20:27:59 opensuse12-3.example42.com systemd[1]: Starting memcached daemon...
+Jan 27 20:27:59 opensuse12-3.example42.com systemd[1]: Started memcached daemon.

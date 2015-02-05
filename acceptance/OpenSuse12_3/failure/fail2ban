@@ -1,0 +1,7 @@
+# Package status
+package { 'fail2ban':
+  ensure => 'absent',
+}
+
+# Service status
+service: no such service fail2ban

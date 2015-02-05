@@ -1,0 +1,20 @@
+# Package status
+package { 'apache2':
+  ensure => '2.2.29-10.24.1',
+}
+
+# Service status
+apache2.service - apache
+	  Loaded: loaded (/lib/systemd/system/apache2.service; enabled)
+	  Active: [1;32mactive (running)[0m since Tue, 2015-01-27 20:16:30 GMT; 1min 30s ago
+	Main PID: 16076 (httpd2-prefork)
+	  CGroup: name=systemd:/system/apache2.service
+		  ├ 16076 /usr/sbin/httpd2-prefork -f /etc/apache2/httpd.conf -D SYSTEMD -k start
+		  ├ 16079 /usr/sbin/httpd2-prefork -f /etc/apache2/httpd.conf -D SYSTEMD -k start
+		  ├ 16080 /usr/sbin/httpd2-prefork -f /etc/apache2/httpd.conf -D SYSTEMD -k start
+		  ├ 16081 /usr/sbin/httpd2-prefork -f /etc/apache2/httpd.conf -D SYSTEMD -k start
+		  ├ 16082 /usr/sbin/httpd2-prefork -f /etc/apache2/httpd.conf -D SYSTEMD -k start
+		  └ 16083 /usr/sbin/httpd2-prefork -f /etc/apache2/httpd.conf -D SYSTEMD -k start
+
+Jan 27 20:16:30 opensuse12-3.example42.com systemd[1]: Starting apache...
+Jan 27 20:16:30 opensuse12-3.example42.com systemd[1]: Started apache.

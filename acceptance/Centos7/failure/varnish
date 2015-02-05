@@ -1,0 +1,21 @@
+# Package status
+varnish-4.0.2-1.el7.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  varnish.service
+varnish.service - Varnish a high-perfomance HTTP accelerator
+   Loaded: loaded (/usr/lib/systemd/system/varnish.service; disabled)
+   Active: [1;31mfailed[0m (Result: exit-code) since Wed 2015-02-04 06:32:48 EST; 2s ago
+  Process: 16320 ExecStartPre=/usr/sbin/varnishd -C -f $VARNISH_VCL_CONF [1;31m(code=exited, status=2)[0m
+
+Feb 04 06:32:48 centos7.example42.com varnishd[16320]: .deliver_func = VGC_function_vcl_deliver,
+Feb 04 06:32:48 centos7.example42.com varnishd[16320]: .synth_func = VGC_function_vcl_synth,
+Feb 04 06:32:48 centos7.example42.com varnishd[16320]: .backend_fetch_func = VGC_function_vcl_backend_fetch,
+Feb 04 06:32:48 centos7.example42.com varnishd[16320]: .backend_response_func = VGC_function_vcl_backend_response,
+Feb 04 06:32:48 centos7.example42.com varnishd[16320]: .backend_error_func = VGC_function_vcl_backend_error,
+Feb 04 06:32:48 centos7.example42.com varnishd[16320]: .init_func = VGC_function_vcl_init,
+Feb 04 06:32:48 centos7.example42.com varnishd[16320]: .fini_func = VGC_function_vcl_fini,
+Feb 04 06:32:48 centos7.example42.com varnishd[16320]: };
+Feb 04 06:32:48 centos7.example42.com varnishd[16320]: Failed to set permissions on ./vcl.tLh3ccPo.so: Operation not...tted
+Feb 04 06:32:48 centos7.example42.com varnishd[16320]: VCL compilation failed
+Hint: Some lines were ellipsized, use -l to show in full.

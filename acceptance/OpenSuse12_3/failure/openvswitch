@@ -1,0 +1,7 @@
+# Package status
+package { 'openvswitch-switch':
+  ensure => 'absent',
+}
+
+# Service status
+service: no such service openvswitch-switch

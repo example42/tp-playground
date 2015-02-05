@@ -1,0 +1,7 @@
+# Package status
+package { 'sysklogd':
+  ensure => 'absent',
+}
+
+# Service status
+service: no such service syslog

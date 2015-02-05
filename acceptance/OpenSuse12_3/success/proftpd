@@ -1,0 +1,16 @@
+# Package status
+package { 'proftpd':
+  ensure => '1.3.4d-4.8.1',
+}
+
+# Service status
+proftpd.service - ProFTPd FTP server
+	  Loaded: loaded (/usr/lib/systemd/system/proftpd.service; enabled)
+	  Active: [1;32mactive (running)[0m since Mon, 2015-02-02 11:11:48 GMT; 3s ago
+	Main PID: 17076 (proftpd)
+	  CGroup: name=systemd:/system/proftpd.service
+		  └ 17076 proftpd: (accepting connections)
+
+Feb 02 11:11:48 opensuse12-3.example42.com systemd[1]: Starting ProFTPd FTP server...
+Feb 02 11:11:48 opensuse12-3.example42.com systemd[1]: Started ProFTPd FTP server.
+Feb 02 11:11:48 opensuse12-3.example42.com proftpd[17076]: opensuse12-3.example42.com proftpd[17076] opensuse12-3.example42.com: ProFTPD 1.3.4d (maint) standalone mode STARTUP

@@ -1,0 +1,19 @@
+# Package status
+package { 'nrpe':
+  ensure => '2.14-3.4.1',
+}
+
+# Service status
+nrpe.service - LSB: NRPE Nagios Remote Plugin Executor
+	  Loaded: loaded (/etc/init.d/nrpe)
+	  Active: [1;32mactive (running)[0m since Tue, 2015-01-27 20:31:40 GMT; 3s ago
+	 Process: 2493 ExecStart=/etc/init.d/nrpe start (code=exited, status=0/SUCCESS)
+	  CGroup: name=systemd:/system/nrpe.service
+		  └ 2520 /usr/sbin/nrpe -c /etc/nrpe.cfg -d
+
+Jan 27 20:31:40 opensuse12-3.example42.com systemd[1]: Starting LSB: NRPE Nagios Remote Plugin Executor...
+Jan 27 20:31:40 opensuse12-3.example42.com nrpe[2520]: [1;39mStarting up daemon[0m
+Jan 27 20:31:40 opensuse12-3.example42.com nrpe[2520]: Listening for connections on port 5666
+Jan 27 20:31:40 opensuse12-3.example42.com nrpe[2520]: Allowing connections from: 127.0.0.1
+Jan 27 20:31:40 opensuse12-3.example42.com nrpe[2493]: Starting Nagios NRPE ..done
+Jan 27 20:31:40 opensuse12-3.example42.com systemd[1]: Started LSB: NRPE Nagios Remote Plugin Executor.

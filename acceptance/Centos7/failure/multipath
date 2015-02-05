@@ -1,0 +1,12 @@
+# Package status
+device-mapper-multipath-0.4.9-66.el7.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  multipathd.service
+multipathd.service - Device-Mapper Multipath Device Controller
+   Loaded: loaded (/usr/lib/systemd/system/multipathd.service; enabled)
+   Active: inactive (dead)
+           start condition failed at Wed 2015-02-04 06:11:43 EST; 2s ago
+           ConditionPathExists=/etc/multipath.conf was not met
+
+Feb 04 06:11:43 centos7.example42.com systemd[1]: Started Device-Mapper Multipath Device Controller.

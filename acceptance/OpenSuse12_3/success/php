@@ -1,0 +1,4 @@
+# Package status
+package { 'php5':
+  ensure => 'absent',
+}

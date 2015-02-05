@@ -1,0 +1,7 @@
+# Package status
+package { 'quagga':
+  ensure => '0.99.21-3.1.1',
+}
+
+# Service status
+service: no such service quagga

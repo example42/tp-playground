@@ -1,0 +1,7 @@
+# Package status
+package { 'postgresql':
+  ensure => '9.2-2.1.1',
+}
+
+# Service status
+service: no such service postgresql
