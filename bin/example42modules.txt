@@ -2,11 +2,11 @@
 # + Module data migrated to tp
 # - Module won't be migrated and will be removed for Ex42 modules 3.x
 # = Module will remain on Ex42
-+activemq
-+=apache
-+=apt
--auth
-+autofs
++activemq (gwarf)
++=apache (gwarf)
++=apt (sathieu, gwarf)
+-auth (gwarf)
++autofs (shellfu)
 +bacula
 +bind
 +bluepill
@@ -26,7 +26,7 @@
 +exim
 +fail2ban
 -firewall
--foreman
+-foreman (ricciocri)
 +freeradius
 =git
 +glance
@@ -37,29 +37,29 @@
 +icinga
 +icinga2
 =iptables
-=java
-+jboss
+=java (gwarf)
++jboss (gwarf)
 +jenkins
 +keystone
 -kibana
 +libvirt
 +lighttpd
 =limits
-+logrotate
++logrotate (gwarf)
 +logstash
 +lsb
 +mailx
 +mariadb
 -maven
-+mcollective
++mcollective (gwarf)
 +memcached
 +mongodb
-+monit
++monit (ricciocri)
 -monitor
 +msmtp
 +multipath
-+munin
-+mysql
++munin (gwarf)
++mysql (lermit, gwarf)
 +nagios
 =network
 +newrelic
@@ -67,7 +67,7 @@
 +nginx
 +nova
 +nrpe
-+ntp
++ntp (gwarf)
 -nut
 +openntpd
 +openssh
@@ -78,14 +78,14 @@
 +pam
 -pentaho
 =perl
-+=php
-+postfix
-+postgresql
++=php (gwarf)
++postfix (amateo, shellfu)
++postgresql (gwarf)
 +profile
 +proftpd
-+puppet
--puppetdashboard
-+puppetdb
++puppet (gwarf)
+-puppetdashboard (gwarf)
++puppetdb (gwarf)
 +quagga
 +quantum
 +=rabbitmq
@@ -105,27 +105,27 @@
 -=solr
 -=splunk
 +ssmtp
-=sudo
+=sudo (gwarf)
 =svn (renamed to subversion)
-=sysctl
+=sysctl (gwarf)
 +sysklogd
 +syslogng (renamed to syslog-ng)
 +sysstat
 -tartarus
 -=tcpwrappers
 +tftp
-=timezone
+=timezone (gwarf)
 +tinc
-=tomcat
--unicorn
+=tomcat (ricciocri)
+-unicorn (shellfu)
 =user
 -vagrant
 +varnish
 +vim
-+vsftpd
++vsftpd (gwarf)
 =wget
 -wordpress
 +xinetd
-=yum
-+zabbix_agent (renamed to zabbix-agent)
+=yum (shellfu, gwarf)
++zabbix_agent (renamed to zabbix-agent) (shellfu)
 -zip
