@@ -23,9 +23,9 @@ class site::backup::duply (
   } 
 
   # All the data used in templates can be stored on Hiera ( 'duply_options' key)
-  # Here are defined the defaults for the used templates
+  # Here are defined the defaults (useful just for a POC) for the used templates
   $options_default = {
-    'target'          => 'file:///backup', # Just as POC
+    'target'          => 'file:///backup',
     'source'          => '/etc',
     'max_age'         => '3M',
     'max_fullbkp_age' => '1M',
