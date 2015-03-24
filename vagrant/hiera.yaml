@@ -6,5 +6,5 @@
   - global
 
 :yaml:
-  :datadir: /vagrant/hiera/
+  :datadir: /vagrant/hieradata/
 

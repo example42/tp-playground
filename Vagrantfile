@@ -57,9 +57,9 @@ Vagrant.configure("2") do |config|
       local.vm.provision "shell", path: 'vagrant/bin/setup-' + cfg[:breed] + '.sh', args: cfg[:puppetversion]
       local.vm.provision :puppet do |puppet|
         puppet.hiera_config_path = 'vagrant/hiera.yaml'
-        puppet.working_directory = '/vagrant/vagrant/hieradata'
+        puppet.working_directory = '/vagrant/hieradata'
         puppet.manifests_path = "vagrant/manifests"
-        puppet.module_path = [ 'vagrant/modules/local' , 'vagrant/modules/public' ]
+        puppet.module_path = [ 'modules/local' , 'modules/public' ]
         puppet.manifest_file = "site.pp"
         puppet.options = [
          '--verbose',
@@ -71,7 +71,7 @@ Vagrant.configure("2") do |config|
 #        '--evaltrace',
 #        '--trace',
 #        '--debug',
-#         '--parser future',
+         '--parser future',
         ]
       end
     end
