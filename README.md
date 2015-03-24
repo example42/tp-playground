@@ -14,13 +14,13 @@ You absolutely need to have the VirtualBox guest additions working on the Vagran
 
     vagrant plugin install vagrant-vbguest
 
-Besides the ```Vagrantfile``` all the Vagrant stuff is under the ```vagrant``` directory.
+Besides the ```Vagrantfile``` all the Vagrant specific stuff is under the ```vagrant``` directory.
 
 The default manifest is ```vagrant/manifests/site.pp```, you can play with Tiny Puppet there and verify there what you can do with it.
 
-Public modules, which are required or optional dependencies for Tiny Puppet are under ```vagrant/modules/public```, populate them with Librarian Puppet:
+Public modules, which are required or optional dependencies for Tiny Puppet are under ```modules/public```, populate them with Librarian Puppet:
 
-    librarian-puppet install --puppetfile Puppetfile --path vagrant/modules/public
+    librarian-puppet install --puppetfile Puppetfile --path modules/public
 
 On the shell of your VM you can run Puppet (same effect of ```vagrant provision```) with:
 
