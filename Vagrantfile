@@ -7,40 +7,25 @@ Vagrant.configure("2") do |config|
 
   {
     :Centos7 => {
-      :box     => 'centos7.box',
-      :box_url => 'https://f0fff3908f081cb6461b407be80daf97f07ac418.googledrive.com/host/0BwtuV7VyVTSkUG1PM3pCeDJ4dVE/centos7.box',
-      :breed   => 'redhat',
-      :puppetversion => 'latest',
+      :box     => 'puppetlabs/centos-7.0-64-puppet',
     },
-    :Centos65 => {
-      :box     => 'centos65_64',
-      :box_url => 'http://puppet-vagrant-boxes.puppetlabs.com/centos-65-x64-virtualbox-puppet.box',
-      :breed   => 'redhat6',
-      :puppetversion => 'latest',
+    :Centos6 => {
+      :box     => 'puppetlabs/centos-6.6-64-puppet',
+    },
+    :Centos7_pe => {
+      :box     => 'puppetlabs/centos-7.0-64-puppet-enterprise',
     },
     :Ubuntu1404 => {
-      :box     => 'trusty-server-cloudimg-amd64-vagrant-disk1.box',
-      :box_url => 'https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box',
-      :breed   => 'debian',
-      :puppetversion => '3.6.2-1',
+      :box     => 'puppetlabs/ubuntu-14.04-64-puppet',
     },
     :Ubuntu1204 => {
-      :box     => 'ubuntu-server-12042-x64-vbox4210',
-      :box_url => 'http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-12042-x64-vbox4210.box',
-      :breed   => 'ubuntu1204',
-      :puppetversion => '3.6.2-1',
+      :box     => 'puppetlabs/ubuntu-12.04-64-puppet',
     },
     :Debian7 => {
-      :box     => 'debian-70rc1-x64-vbox4210',
-      :box_url => 'http://puppet-vagrant-boxes.puppetlabs.com/debian-70rc1-x64-vbox4210.box',
-      :breed   => 'debian',
-      :puppetversion => '3.6.2-1',
+      :box     => 'puppetlabs/debian-7.8-64-puppet',
     },
     :Debian6 => {
-      :box     => 'debian-607-x64-vbox4210',
-      :box_url => 'http://puppet-vagrant-boxes.puppetlabs.com/debian-607-x64-vbox4210.box',
-      :breed   => 'debian6',
-      :puppetversion => '3.6.2-1',
+      :box     => 'puppetlabs/debian-6.0.10-64-puppet',
     },
     :OpenSuse12_3 => {
       :box     => 'opensuse-12.3-64',
@@ -51,10 +36,10 @@ Vagrant.configure("2") do |config|
   }.each do |name,cfg|
     config.vm.define name do |local|
       local.vm.box = cfg[:box]
-      local.vm.box_url = cfg[:box_url]
+      local.vm.box_url = cfg[:box_url] if cfg[:box_url]
 #      local.vm.boot_mode = :gui
-      local.vm.host_name = ENV['VAGRANT_HOSTNAME'] || name.to_s.downcase.gsub(/_/, '-').concat(".example42.com")
-      local.vm.provision "shell", path: 'vagrant/bin/setup-' + cfg[:breed] + '.sh', args: cfg[:puppetversion]
+      local.vm.host_name = ENV['VAGRANT_HOSTNAME'] || name.to_s.downcase.gsub(/_/, '-').concat(".example42.dev")
+      local.vm.provision "shell", path: 'vagrant/bin/setup-' + cfg[:breed] + '.sh', args: cfg[:puppetversion] if cfg[:breed] and cfg[:puppetversion]
       local.vm.provision :puppet do |puppet|
         puppet.hiera_config_path = 'vagrant/hiera.yaml'
         puppet.working_directory = '/vagrant/hieradata'
