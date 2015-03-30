@@ -1,4 +1,4 @@
-# File Managed by Puppet
+# File Managed by Puppet
 
 [main]
 logdir=/var/log/puppet
@@ -6,4 +6,8 @@ vardir=/var/lib/puppet
 ssldir=/var/lib/puppet/ssl
 rundir=/var/run/puppet
 factpath=$vardir/lib/facter
-
+<% if @virtual == 'virtualbox' %>
+environmentpath=/vagrant
+<% else -%>
+environmentpath=$confdir/environments
+<% end -%>

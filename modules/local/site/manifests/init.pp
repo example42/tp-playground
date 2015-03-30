@@ -1,5 +1,6 @@
 class site (
   $repo_class        = '::site::repo',
+  $puppet_class      = '::site::puppet',
   $tools_class       = '::site::tools',
   $network_class     = '::site::network',
   $users_class       = '::site::users',
@@ -7,7 +8,7 @@ class site (
   $time_class        = '::site::time',
   $mail_class        = '::site::mail::postfix',
   $access_class      = '::site::access',
-  $monitor_class     = '::site::monitor::nrpe',
+  $monitor_class     = '::site::monitor',
   $firewall_class    = '::site::firewall',
   $backup_class      = '::site::backup::duply',
   $logs_class        = '::site::logs',
@@ -16,6 +17,10 @@ class site (
 
   if $repo_class and $repo_class != '' {
     include $repo_class
+  }
+
+  if $puppet_class and $puppet_class != '' {
+    include $puppet_class
   }
 
   if $network_class and $network_class != '' {
@@ -68,6 +73,6 @@ class site (
 
   # Role specific class is loaded, if $role is set
   if $role and $role != '' {
-     include "::site::role::${role}"
+    include "::site::role::${role}"
   }
 }

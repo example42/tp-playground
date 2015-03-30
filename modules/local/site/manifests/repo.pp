@@ -1,5 +1,5 @@
 class site::repo {
 
-  # TODO
+  tp::repo { 'epel': }
 
 }
