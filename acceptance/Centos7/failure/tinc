@@ -1,5 +1,5 @@
 # Package status
-tinc-1.0.24-1.el7.x86_64
+tinc-1.0.24-6.el7.x86_64
 
 # Service status
 Redirecting to /bin/systemctl status  tinc.service

@@ -5,13 +5,12 @@ monit-5.6-1.el7.x86_64
 Redirecting to /bin/systemctl status  monit.service
 monit.service - Pro-active monitoring utility for unix systems
    Loaded: loaded (/usr/lib/systemd/system/monit.service; enabled)
-   Active: [1;32mactive (running)[0m since Wed 2015-02-04 06:10:57 EST; 2s ago
- Main PID: 21637 (monit)
+   Active: [1;32mactive (running)[0m since Sun 2015-04-12 11:27:55 UTC; 3s ago
+ Main PID: 22744 (monit)
    CGroup: /system.slice/monit.service
-           └─21637 /usr/bin/monit -I
+           └─22744 /usr/bin/monit -I
 
-Feb 04 06:10:57 centos7.example42.com systemd[1]: Starting Pro-active monitoring utility for unix systems...
-Feb 04 06:10:57 centos7.example42.com systemd[1]: Started Pro-active monitoring utility for unix systems.
-Feb 04 06:10:57 centos7.example42.com monit[21637]: monit: generated unique Monit id 51e37fbe5d7be0184acffe8d3433a0...t.id'
-Feb 04 06:10:57 centos7.example42.com monit[21637]: Starting monit daemon with http interface at [localhost:2812]
-Hint: Some lines were ellipsized, use -l to show in full.
+Apr 12 11:27:55 centos7.example42.dev systemd[1]: Starting Pro-active monitoring utility for unix systems...
+Apr 12 11:27:55 centos7.example42.dev systemd[1]: Started Pro-active monitoring utility for unix systems.
+Apr 12 11:27:55 centos7.example42.dev monit[22744]: monit: generated unique Monit id b535f487611031cefecb211d79a76cd0 and stored to '/root/.monit.id'
+Apr 12 11:27:55 centos7.example42.dev monit[22744]: Starting monit daemon with http interface at [localhost:2812]

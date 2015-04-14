@@ -1,17 +1,20 @@
 # Package status
-collectd-5.4.1-1.el7.x86_64
+collectd-5.4.2-1.el7.x86_64
 
 # Service status
 Redirecting to /bin/systemctl status  collectd.service
-collectd.service - Collectd
+collectd.service - Collectd statistics daemon
    Loaded: loaded (/usr/lib/systemd/system/collectd.service; enabled)
-   Active: [1;32mactive (running)[0m since Wed 2015-02-04 05:59:05 EST; 2s ago
- Main PID: 3837 (collectd)
+   Active: [1;32mactive (running)[0m since Sun 2015-04-12 11:08:15 UTC; 3s ago
+     Docs: man:collectd(1)
+           man:collectd.conf(5)
+ Main PID: 3966 (collectd)
    CGroup: /system.slice/collectd.service
-           └─3837 /usr/sbin/collectd -C /etc/collectd.conf -f
+           └─3966 /usr/sbin/collectd -C /etc/collectd.conf -f
 
-Feb 04 05:59:05 centos7.example42.com systemd[1]: Started Collectd.
-Feb 04 05:59:05 centos7.example42.com collectd[3837]: Initialization complete, entering read-loop.
-Feb 04 05:59:05 centos7.example42.com collectd[3837]: [1;39mplugin_dispatch_values: No write callback has been registered....red.[0m
-Feb 04 05:59:05 centos7.example42.com collectd[3837]: Filter subsystem: Built-in target `write': Dispatching value t...ins.
+Apr 12 11:08:15 centos7.example42.dev systemd[1]: Starting Collectd statistics daemon...
+Apr 12 11:08:15 centos7.example42.dev systemd[1]: Started Collectd statistics daemon.
+Apr 12 11:08:15 centos7.example42.dev collectd[3966]: Initialization complete, entering read-loop.
+Apr 12 11:08:15 centos7.example42.dev collectd[3966]: [1;39mplugin_dispatch_values: No write callback has been registered. Please load at least one ou...stored.[0m
+Apr 12 11:08:15 centos7.example42.dev collectd[3966]: Filter subsystem: Built-in target `write': Dispatching value to all write plugins failed w...lugins.
 Hint: Some lines were ellipsized, use -l to show in full.

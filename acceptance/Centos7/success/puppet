@@ -5,10 +5,17 @@ puppet-3.7.4-1.el7.noarch
 Redirecting to /bin/systemctl status  puppet.service
 puppet.service - Puppet agent
    Loaded: loaded (/usr/lib/systemd/system/puppet.service; enabled)
-   Active: [1;32mactive (running)[0m since Wed 2015-02-04 06:25:00 EST; 2s ago
- Main PID: 5102 (puppet)
+   Active: [1;32mactive (running)[0m since Sun 2015-04-12 11:19:29 UTC; 19min ago
+ Main PID: 16578 (puppet)
    CGroup: /system.slice/puppet.service
-           └─5102 /usr/bin/ruby /usr/bin/puppet agent --no-daemonize
+           └─16578 /usr/bin/ruby /usr/bin/puppet agent --no-daemonize
 
-Feb 04 06:25:00 centos7.example42.com systemd[1]: Starting Puppet agent...
-Feb 04 06:25:00 centos7.example42.com systemd[1]: Started Puppet agent.
+Apr 12 11:19:29 centos7.example42.dev systemd[1]: [1;39mpuppet.service: main process exited, code=exited, status=1/FAILURE[0m
+Apr 12 11:19:29 centos7.example42.dev systemd[1]: [1;39mUnit puppet.service entered failed state.[0m
+Apr 12 11:19:29 centos7.example42.dev systemd[1]: Starting Puppet agent...
+Apr 12 11:19:29 centos7.example42.dev systemd[1]: Started Puppet agent.
+Apr 12 11:21:31 centos7.example42.dev puppet-agent[16578]: [1;31mCould not request certificate: execution expired[0m
+Apr 12 11:25:31 centos7.example42.dev puppet-agent[16578]: [1;31mCould not request certificate: execution expired[0m
+Apr 12 11:29:31 centos7.example42.dev puppet-agent[16578]: [1;31mCould not request certificate: execution expired[0m
+Apr 12 11:33:31 centos7.example42.dev puppet-agent[16578]: [1;31mCould not request certificate: execution expired[0m
+Apr 12 11:37:31 centos7.example42.dev puppet-agent[16578]: [1;31mCould not request certificate: execution expired[0m

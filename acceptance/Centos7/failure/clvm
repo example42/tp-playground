@@ -1,5 +1,5 @@
 # Package status
-lvm2-cluster-2.02.105-14.el7.x86_64
+lvm2-cluster-2.02.115-3.el7.x86_64
 
 # Service status
 Redirecting to /bin/systemctl status  clvmd.service

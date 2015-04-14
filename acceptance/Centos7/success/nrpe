@@ -5,15 +5,15 @@ nrpe-2.15-2.el7.x86_64
 Redirecting to /bin/systemctl status  nrpe.service
 nrpe.service - NRPE
    Loaded: loaded (/usr/lib/systemd/system/nrpe.service; enabled)
-   Active: [1;32mactive (running)[0m since Wed 2015-02-04 06:15:36 EST; 2s ago
- Main PID: 29826 (nrpe)
+   Active: [1;32mactive (running)[0m since Sun 2015-04-12 11:33:55 UTC; 3s ago
+ Main PID: 31282 (nrpe)
    CGroup: /system.slice/nrpe.service
-           └─29826 /usr/sbin/nrpe -c /etc/nagios/nrpe.cfg -d
+           └─31282 /usr/sbin/nrpe -c /etc/nagios/nrpe.cfg -d
 
-Feb 04 06:15:36 centos7.example42.com systemd[1]: Starting NRPE...
-Feb 04 06:15:36 centos7.example42.com nrpe[29826]: [1;39mStarting up daemon[0m
-Feb 04 06:15:36 centos7.example42.com nrpe[29826]: Server listening on 0.0.0.0 port 5666.
-Feb 04 06:15:36 centos7.example42.com nrpe[29826]: Server listening on :: port 5666.
-Feb 04 06:15:36 centos7.example42.com nrpe[29826]: Listening for connections on port 0
-Feb 04 06:15:36 centos7.example42.com nrpe[29826]: Allowing connections from: 127.0.0.1
-Feb 04 06:15:36 centos7.example42.com systemd[1]: Started NRPE.
+Apr 12 11:33:55 centos7.example42.dev systemd[1]: Starting NRPE...
+Apr 12 11:33:55 centos7.example42.dev systemd[1]: Started NRPE.
+Apr 12 11:33:55 centos7.example42.dev nrpe[31282]: [1;39mStarting up daemon[0m
+Apr 12 11:33:55 centos7.example42.dev nrpe[31282]: Server listening on 0.0.0.0 port 5666.
+Apr 12 11:33:55 centos7.example42.dev nrpe[31282]: Server listening on :: port 5666.
+Apr 12 11:33:55 centos7.example42.dev nrpe[31282]: Listening for connections on port 0
+Apr 12 11:33:55 centos7.example42.dev nrpe[31282]: Allowing connections from: 127.0.0.1

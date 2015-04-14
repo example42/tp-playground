@@ -5,13 +5,13 @@ lighttpd-1.4.35-1.el7.x86_64
 Redirecting to /bin/systemctl status  lighttpd.service
 lighttpd.service - Lightning Fast Webserver With Light System Requirements
    Loaded: loaded (/usr/lib/systemd/system/lighttpd.service; enabled)
-   Active: [1;32mactive (running)[0m since Wed 2015-02-04 06:07:10 EST; 2s ago
- Main PID: 16289 (lighttpd)
+   Active: [1;32mactive (running)[0m since Sun 2015-04-12 11:19:55 UTC; 3s ago
+ Main PID: 17316 (lighttpd)
    CGroup: /system.slice/lighttpd.service
-           └─16289 /usr/sbin/lighttpd -D -f /etc/lighttpd/lighttpd.conf
+           └─17316 /usr/sbin/lighttpd -D -f /etc/lighttpd/lighttpd.conf
 
-Feb 04 06:07:10 centos7.example42.com systemd[1]: Starting Lightning Fast Webserver With Light System Requirements...
-Feb 04 06:07:10 centos7.example42.com systemd[1]: Started Lightning Fast Webserver With Light System Requirements.
-Feb 04 06:07:10 centos7.example42.com lighttpd[16289]: 2015-02-04 06:07:10: (network.c.283) warning: please use serv...nges
-Feb 04 06:07:10 centos7.example42.com lighttpd[16289]: 2015-02-04 06:07:10: (server.c.927) can't have more connectio...1024
+Apr 12 11:19:55 centos7.example42.dev systemd[1]: Starting Lightning Fast Webserver With Light System Requirements...
+Apr 12 11:19:55 centos7.example42.dev systemd[1]: Started Lightning Fast Webserver With Light System Requirements.
+Apr 12 11:19:55 centos7.example42.dev lighttpd[17316]: 2015-04-12 11:19:55: (network.c.283) warning: please use server.use-ipv6 only for hostnam...changes
+Apr 12 11:19:55 centos7.example42.dev lighttpd[17316]: 2015-04-12 11:19:55: (server.c.927) can't have more connections than fds/2:  1024 1024
 Hint: Some lines were ellipsized, use -l to show in full.

@@ -1,18 +1,17 @@
 # Package status
-fail2ban-0.9.1-2.el7.noarch
+fail2ban-0.9.1-4.el7.noarch
 
 # Service status
 Redirecting to /bin/systemctl status  fail2ban.service
 fail2ban.service - Fail2Ban Service
    Loaded: loaded (/usr/lib/systemd/system/fail2ban.service; enabled)
-   Active: [1;32mactive (running)[0m since Wed 2015-02-04 06:02:55 EST; 2s ago
+   Active: [1;32mactive (running)[0m since Sun 2015-04-12 11:14:27 UTC; 3s ago
      Docs: man:fail2ban(1)
- Main PID: 8864 (fail2ban-server)
+ Main PID: 9971 (fail2ban-server)
    CGroup: /system.slice/fail2ban.service
-           └─8864 /usr/bin/python /usr/bin/fail2ban-server -s /var/run/fail2ban/fail2ban.sock -p /var/run/fail2ban/fail2...
+           └─9971 /usr/bin/python -Es /usr/bin/fail2ban-server -s /var/run/fail2ban/fail2ban.sock -p /var/run/fail2ban/fail2ban.pid -x -b
 
-Feb 04 06:02:54 centos7.example42.com systemd[1]: Starting Fail2Ban Service...
-Feb 04 06:02:54 centos7.example42.com fail2ban-client[8861]: 2015-02-04 06:02:54,918 fail2ban.server         [8862]:....9.1
-Feb 04 06:02:54 centos7.example42.com fail2ban-client[8861]: 2015-02-04 06:02:54,918 fail2ban.server         [8862]:...mode
-Feb 04 06:02:55 centos7.example42.com systemd[1]: Started Fail2Ban Service.
-Hint: Some lines were ellipsized, use -l to show in full.
+Apr 12 11:14:27 centos7.example42.dev systemd[1]: Starting Fail2Ban Service...
+Apr 12 11:14:27 centos7.example42.dev fail2ban-client[9968]: 2015-04-12 11:14:27,396 fail2ban.server         [9969]: INFO    Starting Fail2ban v0.9.1
+Apr 12 11:14:27 centos7.example42.dev fail2ban-client[9968]: 2015-04-12 11:14:27,396 fail2ban.server         [9969]: INFO    Starting in daemon mode
+Apr 12 11:14:27 centos7.example42.dev systemd[1]: Started Fail2Ban Service.

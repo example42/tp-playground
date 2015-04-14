@@ -1,5 +1,5 @@
 # Package status
-pacemaker-1.1.10-32.el7_0.1.x86_64
+pacemaker-1.1.12-22.el7_1.1.x86_64
 
 # Service status
 Redirecting to /bin/systemctl status  pacemaker.service
@@ -7,4 +7,4 @@ pacemaker.service - Pacemaker High Availability Cluster Manager
    Loaded: loaded (/usr/lib/systemd/system/pacemaker.service; disabled)
    Active: inactive (dead)
 
-Feb 04 06:23:07 centos7.example42.com systemd[1]: [1;31mDependency failed for Pacemaker High Availability Cluster Manager.[0m
+Apr 12 11:36:13 centos7.example42.dev systemd[1]: [1;31mDependency failed for Pacemaker High Availability Cluster Manager.[0m
