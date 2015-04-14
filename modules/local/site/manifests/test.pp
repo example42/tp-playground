@@ -2,12 +2,17 @@
 
 class site::test {
 
-  #  tp::conf { 'openssh::ssh_config':
-  #  content => "# test test.conf\n",
-  # }
+  package { 'git': }
+  ::tp::install4 { 'apache': }
+  ::tp::conf4 { 'apache::testlog':
+    base_dir => 'log',
+    content  => '# test ',
+  }
+  ::tp::conf4 { 'apache::testconf':
+    content  => '# test ',
+  }
 
-
-  tp::dir { 'test':
+  tp::dir4 { 'test':
     path        => '/opt/tp_self',
     source      => 'https://github.com/example42/puppet-tp/',
     vcsrepo     => 'git',

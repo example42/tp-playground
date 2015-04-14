@@ -1,3 +1,3 @@
 ---
   site::backup::duply::enable: true
-
+  site::monitor::nagiosplugins_class : '::site::monitor::nagiosplugins'
