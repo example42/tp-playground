@@ -1,5 +1,7 @@
 class site::repo {
 
-  tp::repo { 'epel': }
+  if $::osfamily == 'RedHat' {
+    tp::repo { 'epel': }
+  }
 
 }

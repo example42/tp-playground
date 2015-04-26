@@ -9,6 +9,10 @@ Vagrant.configure("2") do |config|
     :Centos7 => {
       :box     => 'puppetlabs/centos-7.0-64-puppet',
     },
+    :Centos7_P4 => {
+      :box     => 'geerlingguy/centos7',
+      :breed   => 'redhatP4',
+    },
     :Centos6 => {
       :box     => 'puppetlabs/centos-6.6-64-puppet',
     },
@@ -20,6 +24,9 @@ Vagrant.configure("2") do |config|
     },
     :Ubuntu1204 => {
       :box     => 'puppetlabs/ubuntu-12.04-64-puppet',
+    },
+    :Debian8 => {
+      :box     => 'oar-team/debian8',
     },
     :Debian7 => {
       :box     => 'puppetlabs/debian-7.8-64-puppet',
@@ -39,7 +46,7 @@ Vagrant.configure("2") do |config|
       local.vm.box_url = cfg[:box_url] if cfg[:box_url]
 #      local.vm.boot_mode = :gui
       local.vm.host_name = ENV['VAGRANT_HOSTNAME'] || name.to_s.downcase.gsub(/_/, '-').concat(".example42.dev")
-      local.vm.provision "shell", path: 'vagrant/bin/setup-' + cfg[:breed] + '.sh', args: cfg[:puppetversion] if cfg[:breed] and cfg[:puppetversion]
+      local.vm.provision "shell", path: 'vagrant/bin/setup-' + cfg[:breed] + '.sh', args: cfg[:puppetversion] if cfg[:breed] 
       local.vm.provision :puppet do |puppet|
         puppet.hiera_config_path = 'vagrant/hiera.yaml'
         puppet.working_directory = '/vagrant/hieradata'
@@ -56,7 +63,7 @@ Vagrant.configure("2") do |config|
 #        '--evaltrace',
 #        '--trace',
 #        '--debug',
-         '--parser future',
+#         '--parser future',
         ]
       end
     end
