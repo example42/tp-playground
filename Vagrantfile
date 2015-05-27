@@ -10,14 +10,15 @@ Vagrant.configure("2") do |config|
       :box     => 'puppetlabs/centos-7.0-64-puppet',
     },
     :Centos7_P4 => {
-      :box     => 'geerlingguy/centos7',
+#      :box     => 'geerlingguy/centos7',
+      :box     => 'webhippie/centos-7',
       :breed   => 'redhatP4',
+    },
+    :Centos7_PE => {
+      :box     => 'puppetlabs/centos-7.0-64-puppet-enterprise',
     },
     :Centos6 => {
       :box     => 'puppetlabs/centos-6.6-64-puppet',
-    },
-    :Centos7_pe => {
-      :box     => 'puppetlabs/centos-7.0-64-puppet-enterprise',
     },
     :Ubuntu1404 => {
       :box     => 'puppetlabs/ubuntu-14.04-64-puppet',
@@ -30,6 +31,10 @@ Vagrant.configure("2") do |config|
     },
     :Debian7 => {
       :box     => 'puppetlabs/debian-7.8-64-puppet',
+    },
+    :Debian7_P4 => {
+      :box     => 'puppetlabs/debian-7.8-64-puppet',
+      :breed   => 'debianP4',
     },
     :Debian6 => {
       :box     => 'puppetlabs/debian-6.0.10-64-puppet',
@@ -51,6 +56,7 @@ Vagrant.configure("2") do |config|
         puppet.hiera_config_path = 'vagrant/hiera.yaml'
         puppet.working_directory = '/vagrant/hieradata'
         puppet.manifests_path = "vagrant/manifests"
+        # puppet.manifests_path = ''
         puppet.module_path = [ 'modules/local' , 'modules/public' ]
         puppet.manifest_file = "site.pp"
         puppet.options = [
@@ -64,6 +70,7 @@ Vagrant.configure("2") do |config|
 #        '--trace',
 #        '--debug',
 #         '--parser future',
+         '--environmentpath /vagrant',
         ]
       end
     end

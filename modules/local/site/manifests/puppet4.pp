@@ -6,7 +6,7 @@ class site::puppet4 (
   $config_dir_source          = undef,
   $config_file_template       = 'site/puppet4/puppet.conf.erb',
 
-  $create_symlinks            = false,
+  $create_symlinks            = true,
 ) {
 
   $options_default = {
@@ -30,7 +30,7 @@ class site::puppet4 (
   }
 
   if $create_symlinks {
-    file { '/usr/bin/puppet':
+    file { '/usr/local/bin/puppet':
       ensure => link,
       target => '/opt/puppetlabs/bin/puppet',
     }
