@@ -20,3 +20,8 @@ fi
 
 [ -x /usr/bin/puppet ] || ln -s /opt/puppetlabs/bin/puppet /usr/bin/puppet
 
+
+echo "## Running /vagrant/bin/papply4_vagrant.sh"
+
+/vagrant/bin/papply4_vagrant.sh
+

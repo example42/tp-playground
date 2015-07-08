@@ -10,22 +10,22 @@ Vagrant.configure("2") do |config|
       :box     => 'puppetlabs/centos-7.0-64-puppet',
     },
     :Centos7_P4 => {
-#      :box     => 'geerlingguy/centos7',
       :box     => 'webhippie/centos-7',
       :breed   => 'redhatP4',
+      :runpuppet => false,
     },
     :Centos7_PE => {
       :box     => 'puppetlabs/centos-7.0-64-puppet-enterprise',
     },
-    :Centos6 => {
-      :box     => 'puppetlabs/centos-6.6-64-puppet',
-    },
+#    :Centos6 => {
+#      :box     => 'puppetlabs/centos-6.6-64-puppet',
+#    },
     :Ubuntu1404 => {
       :box     => 'puppetlabs/ubuntu-14.04-64-puppet',
     },
-    :Ubuntu1204 => {
-      :box     => 'puppetlabs/ubuntu-12.04-64-puppet',
-    },
+#    :Ubuntu1204 => {
+#      :box     => 'puppetlabs/ubuntu-12.04-64-puppet',
+#    },
     :Debian8 => {
       :box     => 'oar-team/debian8',
     },
@@ -36,9 +36,9 @@ Vagrant.configure("2") do |config|
       :box     => 'puppetlabs/debian-7.8-64-puppet',
       :breed   => 'debianP4',
     },
-    :Debian6 => {
-      :box     => 'puppetlabs/debian-6.0.10-64-puppet',
-    },
+#    :Debian6 => {
+#      :box     => 'puppetlabs/debian-6.0.10-64-puppet',
+#    },
     :OpenSuse12_3 => {
       :box     => 'opensuse-12.3-64',
       :box_url => 'http://sourceforge.net/projects/opensusevagrant/files/12.3/opensuse-12.3-64.box/download',
@@ -52,6 +52,8 @@ Vagrant.configure("2") do |config|
 #      local.vm.boot_mode = :gui
       local.vm.host_name = ENV['VAGRANT_HOSTNAME'] || name.to_s.downcase.gsub(/_/, '-').concat(".example42.dev")
       local.vm.provision "shell", path: 'vagrant/bin/setup-' + cfg[:breed] + '.sh', args: cfg[:puppetversion] if cfg[:breed] 
+
+      if cfg[:runpuppet]
       local.vm.provision :puppet do |puppet|
         puppet.hiera_config_path = 'vagrant/hiera.yaml'
         puppet.working_directory = '/vagrant/hieradata'
@@ -72,6 +74,8 @@ Vagrant.configure("2") do |config|
 #         '--parser future',
          '--environmentpath /vagrant',
         ]
+      end
+      
       end
     end
   end

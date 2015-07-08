@@ -2,7 +2,7 @@
 #
 class site::general {
 
-  #  include site::test
+  # include site::test
 
   ::tp::install { 'openssh': }
 
