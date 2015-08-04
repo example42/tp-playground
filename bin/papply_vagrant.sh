@@ -6,5 +6,5 @@ else
   manifest="/vagrant/vagrant/manifests/site.pp"
 fi
 
-puppet apply --verbose --report --show_diff --pluginsync --summarize --modulepath "/vagrant/modules/local:/vagrant/modules/public:/etc/puppet/modules" --hiera_config=/vagrant/vagrant/hiera.yaml --manifestdir /vagrant/vagrant/manifests --detailed-exitcodes $manifest
+puppet apply --verbose --report --show_diff --pluginsync --summarize --modulepath "/vagrant/modules_local:/vagrant/modules:/etc/puppet/modules" --hiera_config=/vagrant/vagrant/hiera.yaml --manifestdir /vagrant/vagrant/manifests --detailed-exitcodes $manifest
 

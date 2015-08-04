@@ -5,7 +5,7 @@ echo "## Installing Puppet "
 
 rpm -qi epel-release >/dev/null 
 if [ "x$?" == "x1" ] ; then
-  rpm -ivh http://mirror.oss.maxcdn.com/epel/6/i386/epel-release-6-8.noarch.rpm >/dev/null # 2>&1
+  rpm -ivh http://ftp-stud.hs-esslingen.de/pub/epel/6/i386/epel-release-6-8.noarch.rpm >/dev/null # 2>&1
 fi
 
 rpm -qi puppetlabs-release-pc1 >/dev/null 2>&1

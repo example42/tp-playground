@@ -2,6 +2,11 @@
 
 ## A place where to test and play with [Tiny Puppet](https://github.com/example42/puppet-tp)
 
+To install and setup the playground:
+
+    git clone git@github.com:example42/tp-playground.git
+    cd tp-playground
+    
 You can test Tiny Puppet on different Operating Systems with Tiny Puppet Playground with Vagrant:
 
     vagrant status
@@ -18,9 +23,13 @@ Besides the ```Vagrantfile``` all the Vagrant specific stuff is under the ```vag
 
 The default manifest is ```vagrant/manifests/site.pp```, you can play with Tiny Puppet there and verify there what you can do with it.
 
-Public modules, which are required or optional dependencies for Tiny Puppet are under ```modules/public```, populate them with Librarian Puppet:
+Public modules, which are required or optional dependencies for Tiny Puppet are expected under ```modules```, you can populate them with Librarian Puppet Simple (install it with ```gem install librarian-puppet-simple```):
 
-    librarian-puppet install --puppetfile Puppetfile --path modules/public
+    librarian-puppet install --puppetfile Puppetfile --path modules
+
+or r10k (```gem install r10k```):
+
+    r10k puppetfile install
 
 On the shell of your VM you can run Puppet (same effect of ```vagrant provision```) with:
 

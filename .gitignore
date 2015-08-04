@@ -10,7 +10,7 @@ spec/fixtures
 Gemfile.lock
 *.un~
 /.vagrant
-/modules/public
+/modules
 /vagrant/modules/public
 .coveralls.yml
 .bundle/
