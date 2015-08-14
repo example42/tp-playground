@@ -44,7 +44,7 @@ else
   envs=''
 fi
 
-options="$PUPPET_OPTIONS --verbose --report --show_diff --pluginsync --summarize --modulepath '/vagrant/modules/local:/vagrant/modules/public:/etc/puppet/modules' "
+options="$PUPPET_OPTIONS --verbose --report --show_diff --pluginsync --summarize --modulepath '/vagrant/modules_local:/vagrant/modules:/etc/puppet/modules' "
 command="sudo $envs puppet apply"
 
 acceptance_test () {
@@ -84,7 +84,7 @@ puppi_check () {
 
 
 if [ "x${app}" == "xall" ]; then
-  for a in $(ls -1 modules/public/tp/data | grep -v default.yaml | grep -v test) ; do
+  for a in $(ls -1 modules/tinydata/data | grep -v default.yaml | grep -v test) ; do
     echo_title "Installing $a on $vm"
     vagrant ssh $vm -c "$command $options -e 'tp::install { $a: $mode_param }'"
     if [ "x${mode}" == "xacceptance" ]; then

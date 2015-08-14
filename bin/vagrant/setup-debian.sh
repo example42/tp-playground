@@ -19,4 +19,6 @@ fi
 
 echo "## Installing Puppet and its dependencies"
 dpkg -s puppet >/dev/null 2>&1 || apt-get update >/dev/null 2>&1 ; apt-get install puppet$puppetsuffix puppet-common$puppetsuffix -y >/dev/null 
+dpkg -s apt-transport-https >/dev/null 2>&1 ; apt-get install apt-transport-https -y >/dev/null 
+
 
