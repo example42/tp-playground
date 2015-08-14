@@ -4,7 +4,6 @@
   site::backup::duply::enable: true
   site::monitor::nagiosplugins_class : '::site::monitor::nagiosplugins'
 
-
   # Data used by /vagrant/vagrant/manifests/hiera.pp
   # TP Default settings
   tp_defaults: &tp_defaults
@@ -35,4 +34,13 @@
   tp::conf:
     munin:
       <<: *tp_conf_defaults
+
+# Tests for puppi 4 support
+#  exim_package: 'exim2'
+#  exim_config_file: '/etc/exim2/hiera'
+#  exim_version: '1.1.1.1.1'
+  debug: true
+  monitor: false
+  monitor_tool: false
+  firewall_tool: false
 

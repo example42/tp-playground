@@ -7,11 +7,19 @@ To install and setup the playground:
     git clone git@github.com:example42/tp-playground.git
     cd tp-playground
     
+Public modules, which are required or optional dependencies for Tiny Puppet are expected under ```modules```, you can populate them with Librarian Puppet Simple (install it with ```gem install librarian-puppet-simple```):
+
+    librarian-puppet install --puppetfile Puppetfile --path modules
+
+or r10k (```gem install r10k```):
+
+    r10k puppetfile install
+
 You can test Tiny Puppet on different Operating Systems with Tiny Puppet Playground with Vagrant:
 
     vagrant status
 
-The default Vagrantfile uses the cachier plugin, you can install it with:
+The default [Vagrantfile](https://github.com/example42/tp-playground/blob/master/Vagrantfile#L3) uses the cachier plugin, you can install it with (comment thesecond line of Vagrant file (```config.cache.auto_detect = true```) if you don't want to use/install it:
 
     vagrant plugin install vagrant-cachier
 
@@ -23,23 +31,18 @@ Besides the ```Vagrantfile``` all the Vagrant specific stuff is under the ```vag
 
 The default manifest is ```vagrant/manifests/site.pp```, you can play with Tiny Puppet there and verify there what you can do with it.
 
-Public modules, which are required or optional dependencies for Tiny Puppet are expected under ```modules```, you can populate them with Librarian Puppet Simple (install it with ```gem install librarian-puppet-simple```):
-
-    librarian-puppet install --puppetfile Puppetfile --path modules
-
-or r10k (```gem install r10k```):
-
-    r10k puppetfile install
-
 On the shell of your VM you can run Puppet (same effect of ```vagrant provision```) with:
 
     root@ubuntu1404:/#  /vagrant/bin/papply_vagrant.sh 
 
-this does a puppet apply on /vagrant/vagrant/manifests/site.pp with the correct parameters.
+this does a ```puppet apply``` on ```/vagrant/vagrant/manifests/site.pp``` with the correct parameters.
 
 If you specify a different manifest, puppet apply is done on it:
 
     root@ubuntu1404:/#  /vagrant/bin/papply_vagrant.sh test.pp 
+
+Runs ```puppet apply``` on ```/vagrant/vagrant/manifests/test.pp```
+
 
 ### Acceptance tests
 

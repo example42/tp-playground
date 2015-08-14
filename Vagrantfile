@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
 
   {
     :Centos7 => {
-      :box     => 'puppetlabs/centos-7.0-64-puppet',
+      :box       => 'puppetlabs/centos-7.0-64-puppet',
     },
     :Centos7_P4 => {
       :box     => 'webhippie/centos-7',
@@ -16,25 +16,30 @@ Vagrant.configure("2") do |config|
     },
     :Centos7_PE => {
       :box     => 'puppetlabs/centos-7.0-64-puppet-enterprise',
+      :runpuppet => true,
     },
 #    :Centos6 => {
 #      :box     => 'puppetlabs/centos-6.6-64-puppet',
 #    },
     :Ubuntu1404 => {
       :box     => 'puppetlabs/ubuntu-14.04-64-puppet',
+      :runpuppet => true,
     },
 #    :Ubuntu1204 => {
 #      :box     => 'puppetlabs/ubuntu-12.04-64-puppet',
 #    },
     :Debian8 => {
       :box     => 'oar-team/debian8',
+      :runpuppet => true,
     },
     :Debian7 => {
       :box     => 'puppetlabs/debian-7.8-64-puppet',
+      :runpuppet => true,
     },
     :Debian7_P4 => {
       :box     => 'puppetlabs/debian-7.8-64-puppet',
       :breed   => 'debianP4',
+      :runpuppet => false,
     },
 #    :Debian6 => {
 #      :box     => 'puppetlabs/debian-6.0.10-64-puppet',
@@ -44,6 +49,7 @@ Vagrant.configure("2") do |config|
       :box_url => 'http://sourceforge.net/projects/opensusevagrant/files/12.3/opensuse-12.3-64.box/download',
       :breed   => 'suse',
       :puppetversion => 'latest',
+      :runpuppet => true,
     },
   }.each do |name,cfg|
     config.vm.define name do |local|

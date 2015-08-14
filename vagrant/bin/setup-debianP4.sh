@@ -21,3 +21,9 @@ dpkg -s puppet >/dev/null 2>&1 || apt-get update >/dev/null 2>&1 ; apt-get insta
 #[ -f /opt/puppetlabs/bin/puppet ] || ln -s /opt/puppetlabs/bin/puppet /usr/bin/puppet
 #ln -s /opt/puppetlabs/bin/facter /usr/bin/facter
 #ln -s /opt/puppetlabs/bin/hiera /usr/bin/hiera
+
+echo "## Running /vagrant/bin/papply4_vagrant.sh"
+
+/vagrant/bin/papply4_vagrant.sh
+exit $?
+

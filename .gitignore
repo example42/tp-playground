@@ -11,7 +11,7 @@ Gemfile.lock
 *.un~
 /.vagrant
 /modules
-/vagrant/modules/public
+/vagrant/modules
 .coveralls.yml
 .bundle/
 vendor/

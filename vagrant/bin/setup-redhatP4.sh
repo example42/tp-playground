@@ -1,7 +1,7 @@
 #!/bin/bash
 cd /root
 
-echo "## Installing Puppet "
+echo "## Ensuring Puppet 4 existence"
 
 rpm -qi epel-release >/dev/null 
 if [ "x$?" == "x1" ] ; then
@@ -24,4 +24,5 @@ fi
 echo "## Running /vagrant/bin/papply4_vagrant.sh"
 
 /vagrant/bin/papply4_vagrant.sh
+exit $?
 
