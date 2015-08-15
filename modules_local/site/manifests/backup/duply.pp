@@ -13,8 +13,10 @@ class site::backup::duply (
 
   validate_bool($enable)
 
-  ::tp::install { 'duply':
-    ensure => $ensure,
+  if $ensure == 'absent' {
+    ::tp::uninstall { 'duply': }
+  } else {
+    ::tp::install { 'duply': }
   }
 
   ::tp::dir { 'duply':

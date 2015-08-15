@@ -68,7 +68,8 @@ acceptance_test () {
     echo_title "Skipping Uninstallation of $1 on $2"
   else
     echo_title "Uninstalling $1 on $2"
-    vagrant ssh $2 -c "$command $options -e 'tp::install { $1: ensure => absent }'"
+    vagrant ssh $2 -c "which apt >/dev/null 2>&1 || apt-get -f install"
+    vagrant ssh $2 -c "$command $options -e 'tp::uninstall { $1: }'"
   fi
 }
 

@@ -40,9 +40,12 @@ class site::monitor::nrpe (
   $options_user=hiera_hash('nrpe_options', {} )
   $options=merge($options_default,$options_user)
 
-  ::tp::install { 'nrpe':
-    ensure => $ensure,
+  if $ensure == 'absent' {
+    ::tp::uninstall { 'nrpe': }
+  } else { 
+    ::tp::install { 'nrpe': }
   }
+
   ::tp::dir { 'nrpe':
     ensure => $ensure,
     source => $config_dir_source,

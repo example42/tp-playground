@@ -12,13 +12,15 @@ class site::puppet4 (
   $options_default = {
     server => 'puppet',
   }
-  #
   $options_user=hiera_hash('puppet_options', {} )
   $options=merge($options_default,$options_user)
 
-  ::tp::install { 'puppet-agent':
-    ensure         => $ensure,
+  if $ensure == 'absent' {
+    ::tp::uninstall { 'puppet-agent': }
+  } else {
+    ::tp::install { 'puppet-agent': }
   }
+
   ::tp::dir { 'puppet-agent':
     ensure => $ensure,
     source => $config_dir_source,
