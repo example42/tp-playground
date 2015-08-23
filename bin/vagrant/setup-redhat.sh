@@ -26,7 +26,6 @@ if [ "x$?" == "x1" ] ; then
   yum install -y puppet$puppetsuffix >/dev/null # 2>&1
 fi
 
-my_exit = $?
-puppet --version
+exit $?
 
-exit $my_exit
+

@@ -18,7 +18,6 @@ class profile::puppetdb (
     ::tp::uninstall { 'puppetdb': }
   } else {
     include ::java
-    Exec['tp_apt_update'] -> Class['java']
     ::tp::install { 'puppetdb': }
   }
 

@@ -15,17 +15,18 @@ Vagrant.configure("2") do |config|
       :box       => 'puppetlabs/centos-7.0-64-puppet',
       :provision_puppet => false,
       :provision_shell  => true,
-      :ram       => '2048',
+      :ram       => '4096',
+      :cpu       => '2',
       :facts     => {
         :role      => 'puppet',
-
       }
     },
-    :puppetmaster_ubuntu => {
+    :puppetserver_ubuntu => {
       :box       => 'puppetlabs/ubuntu-14.04-64-puppet',
       :provision_puppet => false,
       :provision_shell  => true,
       :ram       => '4096',
+      :cpu       => '2',
       :facts     => {
         :role      => 'puppet',
       }
@@ -87,15 +88,15 @@ Vagrant.configure("2") do |config|
       :provision_shell  => true,
     },
   }.each do |name,cfg|
-    memory = cfg[:ram] ? cfg[:ram] : default_ram ;
-    cpu = cfg[:cpu] ? cfg[:cpu] : default_cpu ;
-    config.vm.provider "virtualbox" do |v|
-      v.customize [ 'modifyvm', :id, '--memory', memory.to_s ]
-      v.customize [ 'modifyvm', :id, '--cpus', cpu.to_s ]
-      # v.customize [ 'setextradata', :id, 'VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root', '1']
-    end
 
     config.vm.define name do |local|
+      memory = cfg[:ram] ? cfg[:ram] : default_ram ;
+      cpu = cfg[:cpu] ? cfg[:cpu] : default_cpu ;
+      local.vm.provider "virtualbox" do |v|
+        v.customize [ 'modifyvm', :id, '--memory', memory.to_s ]
+        v.customize [ 'modifyvm', :id, '--cpus', cpu.to_s ]
+        # v.customize [ 'setextradata', :id, 'VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root', '1']
+      end
       local.vm.box = cfg[:box]
       local.vm.box_url = cfg[:box_url] if cfg[:box_url]
 #      local.vm.boot_mode = :gui
@@ -105,12 +106,11 @@ Vagrant.configure("2") do |config|
 # TODO Fix
       $facter_script = <<EOF
 facts_dir=$(puppet config print pluginfactdest)
+mkdir -p $facts_dir
 echo "role=puppet" > $facts_dir/facts.txt
 EOF
 
       if cfg[:facts]
-
-
         local.vm.provision "shell", inline: $facter_script
       end
 
