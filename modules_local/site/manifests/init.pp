@@ -3,7 +3,7 @@ class site (
 
   $general_class     = '::site::general',
 
-  $puppet_class      = '::site::puppet',
+  $puppet_class      = '',
 
   $network_class     = '::site::network',
   $users_class       = '::site::users',

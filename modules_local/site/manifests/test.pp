@@ -2,6 +2,7 @@
 
 class site::test {
 
+  # include site::web::nginx
   package { 'git': }
   ::tp::install4 { 'apache': }
   ::tp::conf4 { 'apache::testlog':

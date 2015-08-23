@@ -9,7 +9,7 @@ esac
 
 echo "## Installing latest Puppet version and dependencies"
 
-rpm -qi epel-release >/dev/null 
+rpm -qi epel-release >/dev/null
 if [ "x$?" == "x1" ] ; then
   rpm -ivh http://ftp.colocall.net/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm >/dev/null # 2>&1
 fi
@@ -26,3 +26,7 @@ if [ "x$?" == "x1" ] ; then
   yum install -y puppet$puppetsuffix >/dev/null # 2>&1
 fi
 
+my_exit = $?
+puppet --version
+
+exit $my_exit

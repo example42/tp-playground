@@ -1,11 +1,14 @@
 ---
-# Uncomment to try ::site::puppet4 instead of default ::site::puppet
-#  site::puppet_class: '::site::puppet4'
+# Uncomment to install Puppet4 and puppet server
+#  site::puppet_class: 'profile::puppet4'
+#  profile::puppet4::install_server: true
+ 
   site::backup::duply::enable: false
 #  site::monitor::nagiosplugins_class : '::site::monitor::nagiosplugins'
 
-  # Data used by /vagrant/vagrant/manifests/hiera.pp
-  # TP Default settings
+# Alternative data set used by /vagrant/manifests/hiera.pp
+
+  # TP Default settings (Note the usage of Yaml aliases to define common parameters)
   tp_defaults: &tp_defaults
     data_module: 'tinydata'
     debug: false
@@ -35,12 +38,4 @@
     munin:
       <<: *tp_conf_defaults
 
-# Tests for puppi 4 support
-#  exim_package: 'exim2'
-#  exim_config_file: '/etc/exim2/hiera'
-#  exim_version: '1.1.1.1.1'
-  debug: true
-  monitor: false
-  monitor_tool: false
-  firewall_tool: false
-
+# 

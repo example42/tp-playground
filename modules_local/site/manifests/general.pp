@@ -2,7 +2,7 @@
 #
 class site::general {
 
-  # include site::test
+  # include ::site::test
 
   ::tp::install { 'openssh': }
 
@@ -17,5 +17,6 @@ class site::general {
     template     => hiera('tp::postfix::template', undef),
     options_hash => hiera('tp::postfix::options', { } ),
   }
+
 
 }
