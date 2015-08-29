@@ -18,7 +18,7 @@ class profile::puppetserver (
     ::tp::uninstall { 'puppetserver': }
   } else {
     include ::java
-    Exec['tp_apt_update'] -> Class['java']
+    ## Exec['tp_apt_update'] -> Class['java']
     ::tp::install { 'puppetserver': }
   }
 

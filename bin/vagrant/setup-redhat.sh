@@ -18,3 +18,4 @@ if [ "x$?" == "x1" ] ; then
   yum install -y puppet >/dev/null # 2>&1
 fi
 
+exit $?
