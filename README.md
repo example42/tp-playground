@@ -33,15 +33,13 @@ The default manifest is ```vagrant/manifests/site.pp```, you can play with Tiny 
 
 On the shell of your VM you can run Puppet (same effect of ```vagrant provision```) with:
 
-    root@ubuntu1404:/#  /vagrant/bin/papply_vagrant.sh 
+    root@ubuntu1404:/#  /vagrant/bin/runpuppet.sh 
 
-this does a ```puppet apply``` on ```/vagrant/vagrant/manifests/site.pp``` with the correct parameters.
+this does a ```puppet apply``` on ```/vagrant/manifests/site.pp``` with the correct parameters.
 
 If you specify a different manifest, puppet apply is done on it:
 
-    root@ubuntu1404:/#  /vagrant/bin/papply_vagrant.sh test.pp 
-
-Runs ```puppet apply``` on ```/vagrant/vagrant/manifests/test.pp```
+    root@ubuntu1404:/#  /vagrant/bin/runpuppet.sh /vagrant/manifests/test.pp 
 
 
 ### Acceptance tests
@@ -65,6 +63,10 @@ and then execute commands like these:
   - To test ALL the applications on Centos7 and save the results in the ```acceptance``` dir:
 
     ```bin/test.sh all Centos7 acceptance```
+
+  - To test an application on all the running VMs and save the results in the ```acceptance``` dir:
+
+    ```bin/test.sh munin all acceptance```
 
   - To run puppi check for proftpd applications on Centos7:
 

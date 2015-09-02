@@ -39,9 +39,9 @@ esac
 
 # Workaround to use Ruby 193 on Centos6
 if [ "x$vm" == "xCentos65" ]; then
-  envs="env PATH=/opt/rh/ruby193/root/usr/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/vagrant/bin LD_LIBRARY_PATH=/opt/rh/ruby193/root/usr/lib64"
+  envs="env PATH=/opt/puppetlabs/bin:/opt/rh/ruby193/root/usr/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/vagrant/bin LD_LIBRARY_PATH=/opt/rh/ruby193/root/usr/lib64"
 else
-  envs=''
+  envs='env PATH=/opt/puppetlabs/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/vagrant/bin'
 fi
 
 options="$PUPPET_OPTIONS --verbose --report --show_diff --pluginsync --summarize --modulepath '/vagrant/modules_local:/vagrant/modules:/etc/puppet/modules' "
@@ -93,6 +93,17 @@ if [ "x${app}" == "xall" ]; then
     fi
     if [ "x${mode}" == "xpuppi" ]; then
       puppi_check $a $vm
+    fi
+  done
+elif [ "x${vm}" == "xall" ]; then
+  for a in $(vagrant status | grep running | cut -d ' ' -f1) ; do
+    echo_title "Installing $app on $a"
+    vagrant ssh $a -c "$command $options -e 'tp::install { $app: $mode_param }'"
+    if [ "x${mode}" == "xacceptance" ]; then
+      acceptance_test $app $a
+    fi
+    if [ "x${mode}" == "xpuppi" ]; then
+      puppi_check $app $a
     fi
   done
 else
