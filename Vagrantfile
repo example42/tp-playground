@@ -116,7 +116,7 @@ EOF
 
 
       if cfg[:provision_shell]
-        local.vm.provision "shell", path: 'bin/runpuppet.sh'
+        local.vm.provision "shell", path: 'bin/papply_vagrant.sh'
       end
 
       if cfg[:provision_puppet]

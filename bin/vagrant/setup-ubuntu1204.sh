@@ -33,7 +33,3 @@ update-alternatives --install /usr/bin/ruby ruby /usr/bin/ruby1.9.1 400 \
 update-alternatives --config ruby
 update-alternatives --config gem
 
-my_exit = $?
-puppet --version
-
-exit $my_exit

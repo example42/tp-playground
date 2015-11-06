@@ -12,7 +12,3 @@ echo "## Installing Puppet version and dependencies"
 zypper addrepo -f http://download.opensuse.org/repositories/systemsmanagement:/puppet/SLE_11_SP2/ puppet
 zypper install puppet
 
-my_exit = $?
-puppet --version
-
-exit $my_exit

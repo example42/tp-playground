@@ -36,7 +36,3 @@ if [ "x$?" == "x1" ] ; then
   yum install -y /tmp/$package
 fi
 
-my_exit = $?
-puppet --version
-
-exit $my_exit

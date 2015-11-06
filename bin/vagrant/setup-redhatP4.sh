@@ -17,10 +17,8 @@ rpm -qi puppet >/dev/null 2>&1
 if [ "x$?" == "x1" ] ; then
   yum install -y puppet >/dev/null # 2>&1
 fi
+my_exit = $?
 
 [ -x /usr/bin/puppet ] || ln -s /opt/puppetlabs/bin/puppet /usr/bin/puppet
-
-my_exit = $?
-puppet --version
 
 exit $my_exit
