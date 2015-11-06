@@ -15,20 +15,20 @@ class site::monitor::newrelic (
   $options_user=hiera_hash('newrelic_options', {} )
   $options=merge($options_default,$options_user)
 
-  ::tp::install { 'newrelic':
+  ::tp::install3 { 'newrelic':
     ensure => $ensure,
   }
-  ::tp::dir { 'newrelic':
+  ::tp::dir3 { 'newrelic':
     ensure => $ensure,
     source => $config_dir_source,
   }
-  ::tp::conf { 'newrelic':
+  ::tp::conf3 { 'newrelic':
     ensure       => $ensure,
     template     => $config_file_template,
     options_hash => $options,
   }
 
-  ::tp::conf { 'newrelic::extra.conf':
+  ::tp::conf3 { 'newrelic::extra.conf':
     ensure       => $ensure,
     template     => $extra_config_file_template,
     options_hash => $options,

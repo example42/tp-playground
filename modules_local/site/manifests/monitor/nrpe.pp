@@ -41,22 +41,22 @@ class site::monitor::nrpe (
   $options=merge($options_default,$options_user)
 
   if $ensure == 'absent' {
-    ::tp::uninstall { 'nrpe': }
+    ::tp::uninstall3 { 'nrpe': }
   } else { 
-    ::tp::install { 'nrpe': }
+    ::tp::install3 { 'nrpe': }
   }
 
-  ::tp::dir { 'nrpe':
+  ::tp::dir3 { 'nrpe':
     ensure => $ensure,
     source => $config_dir_source,
   }
-  ::tp::conf { 'nrpe':
+  ::tp::conf3 { 'nrpe':
     ensure       => $ensure,
     template     => $config_file_template,
     options_hash => $options,
   }
 
-  ::tp::conf { 'nrpe::extra.conf':
+  ::tp::conf3 { 'nrpe::extra.conf':
     ensure       => $ensure,
     template     => $extra_config_file_template,
     options_hash => $options,

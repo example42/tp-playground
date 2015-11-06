@@ -1,6 +1,6 @@
 class site::pre {
 
   # Repo Management
-  tp::repo { 'epel': }
+  tp::repo3 { 'epel': }
 
 }

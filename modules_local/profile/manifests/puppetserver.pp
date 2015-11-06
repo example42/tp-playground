@@ -15,18 +15,18 @@ class profile::puppetserver (
   $options=merge($options_default,$options_user)
 
   if $ensure == 'absent' {
-    ::tp::uninstall { 'puppetserver': }
+    ::tp::uninstall3 { 'puppetserver': }
   } else {
     include ::java
     ## Exec['tp_apt_update'] -> Class['java']
-    ::tp::install { 'puppetserver': }
+    ::tp::install3 { 'puppetserver': }
   }
 
-  ::tp::dir { 'puppetserver':
+  ::tp::dir3 { 'puppetserver':
     ensure => $ensure,
     source => $config_dir_source,
   }
-  ::tp::conf { 'puppetserver':
+  ::tp::conf3 { 'puppetserver':
     ensure       => $ensure,
     template     => $config_file_template,
     options_hash => $options,

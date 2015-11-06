@@ -15,16 +15,16 @@ class site::puppet (
   $options=merge($options_default,$options_user)
 
   if $ensure == 'absent' {
-    ::tp::uninstall { 'puppet': }
+    ::tp::uninstall3 { 'puppet': }
   } else { 
-    ::tp::install { 'puppet': }
+    ::tp::install3 { 'puppet': }
   }
 
-  ::tp::dir { 'puppet':
+  ::tp::dir3 { 'puppet':
     ensure => $ensure,
     source => $config_dir_source,
   }
-  ::tp::conf { 'puppet':
+  ::tp::conf3 { 'puppet':
     ensure       => $ensure,
     template     => $config_file_template,
     options_hash => $options,

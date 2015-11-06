@@ -1,7 +1,7 @@
 class site::role::log {
 
-  tp::install { 'redis': }
-  tp::install { 'logstash': }
-  tp::install { 'elasticsearch': }
+  tp::install3 { 'redis': }
+  tp::install3 { 'logstash': }
+  tp::install3 { 'elasticsearch': }
 
 }

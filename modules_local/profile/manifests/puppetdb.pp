@@ -15,17 +15,17 @@ class profile::puppetdb (
   $options=merge($options_default,$options_user)
 
   if $ensure == 'absent' {
-    ::tp::uninstall { 'puppetdb': }
+    ::tp::uninstall3 { 'puppetdb': }
   } else {
     include ::java
-    ::tp::install { 'puppetdb': }
+    ::tp::install3 { 'puppetdb': }
   }
 
-  ::tp::dir { 'puppetdb':
+  ::tp::dir3 { 'puppetdb':
     ensure => $ensure,
     source => $config_dir_source,
   }
-  ::tp::conf { 'puppetdb':
+  ::tp::conf3 { 'puppetdb':
     ensure       => $ensure,
     #    template     => $config_file_template,
     options_hash => $options,

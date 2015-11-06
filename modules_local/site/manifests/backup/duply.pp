@@ -14,12 +14,12 @@ class site::backup::duply (
   validate_bool($enable)
 
   if $ensure == 'absent' {
-    ::tp::uninstall { 'duply': }
+    ::tp::uninstall3 { 'duply': }
   } else {
-    ::tp::install { 'duply': }
+    ::tp::install3 { 'duply': }
   }
 
-  ::tp::dir { 'duply':
+  ::tp::dir3 { 'duply':
     ensure => $ensure,
     source => $duply_dir_source,
   } 
@@ -35,7 +35,7 @@ class site::backup::duply (
   $options_user=hiera_hash('duply_options', {} )
   $options=merge($options_default,$options_user)
 
-  ::tp::conf { 'duply::logs':
+  ::tp::conf3 { 'duply::logs':
     ensure       => $ensure,
     template     => $config_file_template,
     options_hash => $options,
@@ -43,11 +43,11 @@ class site::backup::duply (
 
   if $enable {
   # When enabled cronjob for automatic backups and log rotation are managed
-    ::tp::conf { 'cron::duply':
+    ::tp::conf3 { 'cron::duply':
       ensure   => $ensure,
       content  => "${cron_schedule} duply  backup_verify_purge --force ${log_file} 2>&1"
     }
-    ::tp::conf { 'logrotate::duply.conf':
+    ::tp::conf3 { 'logrotate::duply.conf':
       ensure   => $ensure,
       template => $logrotate_file_template,
     }

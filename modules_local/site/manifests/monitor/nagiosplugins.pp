@@ -1,7 +1,7 @@
 class site::monitor::nagiosplugins (
 ) {
 
-  ::tp::install { 'nagios-plugins': } 
+  ::tp::install3 { 'nagios-plugins': } 
 
 }
 

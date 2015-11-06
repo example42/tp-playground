@@ -26,18 +26,18 @@ class profile::puppet (
   $options=merge($options_default,$options_user)
 
   if $ensure == 'absent' {
-    ::tp::uninstall { 'puppet-agent': }
+    ::tp::uninstall3 { 'puppet-agent': }
   } else {
-    ::tp::install { 'puppet-agent': }
+    ::tp::install3 { 'puppet-agent': }
   }
 
-  ::tp::conf { 'puppet-agent':
+  ::tp::conf3 { 'puppet-agent':
     ensure       => $ensure,
     template     => $real_config_file_template,
     options_hash => $options,
   }
 
-  ::tp::dir { 'puppet-agent':
+  ::tp::dir3 { 'puppet-agent':
     ensure => $ensure,
     source => $config_dir_source,
   }

@@ -4,16 +4,16 @@ class site::test {
 
   # include site::web::nginx
   package { 'git': }
-  ::tp::install4 { 'apache': }
-  ::tp::conf4 { 'apache::testlog':
+  ::tp::install { 'apache': }
+  ::tp::conf { 'apache::testlog':
     base_dir => 'log',
     content  => '# test ',
   }
-  ::tp::conf4 { 'apache::testconf':
+  ::tp::conf { 'apache::testconf':
     content  => '# test ',
   }
 
-  tp::dir4 { 'test':
+  tp::dir { 'test':
     path        => '/opt/tp_self',
     source      => 'https://github.com/example42/puppet-tp/',
     vcsrepo     => 'git',
