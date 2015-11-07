@@ -68,8 +68,8 @@ class site (
 
 
   # Role specific class is loaded, if $role is set
-  if $role and $role != '' {
-    class { "::site::role::${role}":
+  if $::role and $::role != '' {
+    class { "::site::role::${::role}":
       require => Class[$pre_class],
     }
   }
