@@ -12,78 +12,82 @@ Vagrant.configure("2") do |config|
 
   {
     :puppetserver_centos => {
-      :box       => 'puppetlabs/centos-7.0-64-puppet',
+      :box              => 'puppetlabs/centos-7.0-64-puppet',
       :provision_puppet => false,
       :provision_shell  => true,
-      :ram       => '4096',
-      :cpu       => '2',
-      :facts     => {
-        :role      => 'puppet',
+      :breed            => 'puppetlabs',
+      :ram              => '4096',
+      :cpu              => '2',
+      :facts            => {
+        :role => 'puppet',
       }
     },
     :puppetserver_ubuntu => {
-      :box       => 'puppetlabs/ubuntu-14.04-64-puppet',
+      :box              => 'puppetlabs/ubuntu-14.04-64-puppet',
       :provision_puppet => false,
       :provision_shell  => true,
-      :ram       => '4096',
-      :cpu       => '2',
-      :facts     => {
-        :role      => 'puppet',
+      :breed            => 'puppetlabs-apt',
+      :ram              => '4096',
+      :cpu              => '2',
+      :facts            => {
+        :role => 'puppet',
       }
     },
     :Centos7_P4 => {
-      :box       => 'puppetlabs/centos-7.0-64-puppet',
-      :breed     => 'puppetlabs',
+      :box              => 'puppetlabs/centos-7.0-64-puppet',
+      :breed            => 'puppetlabs',
       :provision_puppet => false,
       :provision_shell  => true,
     },
     :Centos7 => {
-      :box       => 'webhippie/centos-7',
-      :breed     => 'redhat',
+      :box              => 'webhippie/centos-7',
+      :breed            => 'redhat7',
       :provision_puppet => false,
       :provision_shell  => true,
     },
     :Centos7_PE => {
-      :box       => 'puppetlabs/centos-7.0-64-puppet-enterprise',
-      :breed     => 'puppetlabs',
+      :box              => 'puppetlabs/centos-7.0-64-puppet-enterprise',
+      :breed            => 'puppetlabs',
       :provision_puppet => true,
       :provision_shell  => true,
     },
-#    :Centos6 => {
-#      :box      => 'puppetlabs/centos-6.6-64-puppet',
-#      :provision_shell  => true,
-#    },
+    :Centos6_P4 => {
+      :box              => 'puppetlabs/centos-6.6-64-puppet',
+      :breed            => 'puppetlabs-centos6',
+      :provision_puppet => false,
+      :provision_shell  => true,
+    },
     :Ubuntu1404_P4 => {
-      :box       => 'puppetlabs/ubuntu-14.04-64-puppet',
-      :breed     => 'puppetlabs',
+      :box              => 'puppetlabs/ubuntu-14.04-64-puppet',
+      :breed            => 'puppetlabs-apt',
       :provision_puppet => false,
       :provision_shell  => true,
     },
     :Ubuntu1204_P4 => {
-      :box       => 'puppetlabs/ubuntu-12.04-64-puppet',
-      :breed     => 'puppetlabs',
+      :box              => 'puppetlabs/ubuntu-12.04-64-puppet',
+      :breed            => 'puppetlabs-ubuntu1204',
       :provision_puppet => false,
       :provision_shell  => true,
     },
     :Debian8 => {
-      :box       => 'oar-team/debian8',
-      :breed     => 'debian',
+      :box              => 'oar-team/debian8',
+      :breed            => 'debian8',
       :provision_puppet => false,
       :provision_shell  => true,
     },
     :Debian7_P4 => {
-      :box       => 'puppetlabs/debian-7.8-64-puppet',
-      :breed     => 'puppetlabs',
+      :box              => 'puppetlabs/debian-7.8-64-puppet',
+      :breed            => 'puppetlabs-apt',
       :provision_puppet => false,
       :provision_shell  => true,
     },
 #    :Debian6 => {
-#      :box     => 'puppetlabs/debian-6.0.10-64-puppet',
+#      :box              => 'puppetlabs/debian-6.0.10-64-puppet',
 #    },
     :OpenSuse12_3 => {
-      :box     => 'opensuse-12.3-64',
-      :box_url => 'http://sourceforge.net/projects/opensusevagrant/files/12.3/opensuse-12.3-64.box/download',
-      :breed   => 'suse',
+      :box              => 'opensuse-12.3-64',
+      :box_url          => 'http://sourceforge.net/projects/opensusevagrant/files/12.3/opensuse-12.3-64.box/download',
+      :breed            => 'opensuse12',
       :provision_puppet => false,
       :provision_shell  => true,
     },
@@ -101,7 +105,7 @@ Vagrant.configure("2") do |config|
       local.vm.box_url = cfg[:box_url] if cfg[:box_url]
 #      local.vm.boot_mode = :gui
       local.vm.host_name = ENV['VAGRANT_HOSTNAME'] || name.to_s.downcase.gsub(/_/, '-').concat(".example42.dev")
-      local.vm.provision "shell", path: 'bin/vagrant/setup-' + cfg[:breed] + '.sh', args: cfg[:puppetversion] if cfg[:breed]
+      local.vm.provision "shell", path: 'bin/vagrant-setup.sh', args: cfg[:breed]
 
 # TODO Fix
       $facter_script = <<EOF

@@ -45,7 +45,7 @@ else
 fi
 
 options="$PUPPET_OPTIONS --verbose --report --show_diff --pluginsync --summarize --modulepath '/vagrant/modules_local:/vagrant/modules:/etc/puppet/modules' "
-command="sudo $envs puppet apply"
+command="sudo -i $envs puppet apply"
 
 acceptance_test () {
   echo_title "Running acceptance test for $1 on $2"
