@@ -1,0 +1,20 @@
+# Package status
+activemq-5.9.1-2.el7.noarch
+
+# Service status
+Redirecting to /bin/systemctl status  activemq.service
+activemq.service - ActiveMQ
+   Loaded: loaded (/usr/lib/systemd/system/activemq.service; enabled)
+   Active: [1;32mactive (running)[0m since Sat 2015-11-07 15:20:05 UTC; 4s ago
+ Main PID: 16686 (java)
+   CGroup: /system.slice/activemq.service
+           ‣ 16686 java -Xms512m -Xmx512m -Djava.util.logging.config.file=logging.properties -Dhawtio.realm=activemq -Dhawtio.role=admins -Dhawtio.rolePrincipalClasses=org.apache.activemq.jaas.GroupPr...
+
+Nov 07 15:20:05 centos7-p4.example42.dev systemd[1]: Starting ActiveMQ...
+Nov 07 15:20:05 centos7-p4.example42.dev activemq[16671]: INFO: Loading '/etc/sysconfig/activemq'
+Nov 07 15:20:05 centos7-p4.example42.dev activemq[16671]: INFO: Using java 'java'
+Nov 07 15:20:05 centos7-p4.example42.dev activemq[16671]: INFO: Starting - inspect logfiles specified in logging.properties and log4j.properties to get details
+Nov 07 15:20:05 centos7-p4.example42.dev activemq[16671]: INFO: changing to user 'activemq' to invoke java
+Nov 07 15:20:05 centos7-p4.example42.dev su[16678]: [1;39m(to activemq) root on none[0m
+Nov 07 15:20:05 centos7-p4.example42.dev activemq[16671]: INFO: pidfile created : '/var/run/activemq/activemq.pid' (pid '16686')
+Nov 07 15:20:05 centos7-p4.example42.dev systemd[1]: Started ActiveMQ.
