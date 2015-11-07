@@ -9,7 +9,7 @@ class site (
   $users_class       = '::site::users',
   $monitor_class     = '::site::monitor',
   $firewall_class    = '::site::firewall',
-  $backup_class      = '::site::backup::duply',
+  $backup_class      = '',
   $logs_class        = '::site::logs',
 
 ) {
