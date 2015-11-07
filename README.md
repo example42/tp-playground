@@ -4,7 +4,7 @@
 
 To install and setup the playground:
 
-    git clone git@github.com:example42/tp-playground.git
+    git clone https://github.com/example42/tp-playground
     cd tp-playground
     
 Public modules, which are required or optional dependencies for Tiny Puppet are expected under ```modules```, you can populate them with Librarian Puppet Simple (install it with ```gem install librarian-puppet-simple```):
