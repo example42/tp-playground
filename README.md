@@ -1,6 +1,6 @@
 # Tiny Puppet Playground
 
-## A place where to test and play with [Tiny Puppet](https://github.com/example42/puppet-tp)
+## A place where to test and play with [Tiny Puppet](https://www.tiny-puppet.com)
 
 To install and setup the playground:
 
@@ -33,13 +33,13 @@ The default manifest is ```vagrant/manifests/site.pp```, you can play with Tiny 
 
 On the shell of your VM you can run Puppet (same effect of ```vagrant provision```) with:
 
-    root@ubuntu1404:/#  /vagrant/bin/runpuppet.sh 
+    root@ubuntu1404:/#  /vagrant/bin/papply_vagrant.sh 
 
 this does a ```puppet apply``` on ```/vagrant/manifests/site.pp``` with the correct parameters.
 
 If you specify a different manifest, puppet apply is done on it:
 
-    root@ubuntu1404:/#  /vagrant/bin/runpuppet.sh /vagrant/manifests/test.pp 
+    root@ubuntu1404:/#  /vagrant/bin/papply_vagrant.sh /vagrant/manifests/test.pp 
 
 
 ### Acceptance tests
