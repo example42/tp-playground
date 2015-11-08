@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
   # config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
 
   {
-    :puppetserver_centos => {
+    :Centos7_PuppetServer => {
       :box              => 'puppetlabs/centos-7.0-64-puppet',
       :provision_puppet => false,
       :provision_shell  => true,
@@ -22,7 +22,7 @@ Vagrant.configure("2") do |config|
         :role => 'puppet',
       }
     },
-    :puppetserver_ubuntu => {
+    :Ubuntu1404_PuppetServer => {
       :box              => 'puppetlabs/ubuntu-14.04-64-puppet',
       :provision_puppet => false,
       :provision_shell  => true,
@@ -33,13 +33,13 @@ Vagrant.configure("2") do |config|
         :role => 'puppet',
       }
     },
-    :Centos7_P4 => {
+    :Centos7 => {
       :box              => 'puppetlabs/centos-7.0-64-puppet',
       :breed            => 'puppetlabs',
       :provision_puppet => false,
       :provision_shell  => true,
     },
-    :Centos7 => {
+    :Centos7_P3 => {
       :box              => 'webhippie/centos-7',
       :breed            => 'redhat7',
       :provision_puppet => false,
@@ -51,39 +51,42 @@ Vagrant.configure("2") do |config|
       :provision_puppet => true,
       :provision_shell  => true,
     },
-    :Centos6_P4 => {
+    :Centos6 => {
       :box              => 'puppetlabs/centos-6.6-64-puppet',
       :breed            => 'puppetlabs-centos6',
       :provision_puppet => false,
       :provision_shell  => true,
     },
-    :Ubuntu1404_P4 => {
+    :Ubuntu1404 => {
       :box              => 'puppetlabs/ubuntu-14.04-64-puppet',
       :breed            => 'puppetlabs-apt',
       :provision_puppet => false,
       :provision_shell  => true,
     },
-    :Ubuntu1204_P4 => {
+    :Ubuntu1204 => {
       :box              => 'puppetlabs/ubuntu-12.04-64-puppet',
       :breed            => 'puppetlabs-ubuntu1204',
       :provision_puppet => false,
       :provision_shell  => true,
     },
-    :Debian8 => {
+    :Debian8_P3 => {
       :box              => 'oar-team/debian8',
       :breed            => 'debian8',
       :provision_puppet => false,
       :provision_shell  => true,
     },
-    :Debian7_P4 => {
+    :Debian7 => {
       :box              => 'puppetlabs/debian-7.8-64-puppet',
       :breed            => 'puppetlabs-apt',
       :provision_puppet => false,
       :provision_shell  => true,
     },
-#    :Debian6 => {
-#      :box              => 'puppetlabs/debian-6.0.10-64-puppet',
-#    },
+    :Debian6 => {
+      :box              => 'puppetlabs/debian-6.0.10-64-puppet',
+      :breed            => 'puppetlabs-apt',
+      :provision_puppet => false,
+      :provision_shell  => true,
+    },
     :OpenSuse12_3 => {
       :box              => 'opensuse-12.3-64',
       :box_url          => 'http://sourceforge.net/projects/opensusevagrant/files/12.3/opensuse-12.3-64.box/download',

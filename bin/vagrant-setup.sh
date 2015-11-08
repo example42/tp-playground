@@ -29,6 +29,10 @@ setup_puppetlabs-centos6() {
   yum install -y puppet-agent
 }
 
+setup_centos5() {
+
+}
+
 setup_redhat7() {
   echo "## Installing Puppetlabs repo"
   rpm -ivh https://yum.puppetlabs.com/el/7/products/x86_64/puppetlabs-release-7-11.noarch.rpm >/dev/null # 2>&1
