@@ -30,7 +30,7 @@ setup_puppetlabs-centos6() {
 }
 
 setup_centos5() {
-
+  echo
 }
 
 setup_redhat7() {
