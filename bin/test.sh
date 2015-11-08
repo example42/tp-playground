@@ -4,7 +4,7 @@
 . $(dirname $0)/functions || exit 10
 
 # RegExp for whitelist of programs to not uninstall after test
-uninstall_whitelist='ssh|vim|lsb|puppet|apt'
+uninstall_whitelist='ssh|vim|lsb|puppet|apt|puppet-agent'
 
 show_help () {
   echo
