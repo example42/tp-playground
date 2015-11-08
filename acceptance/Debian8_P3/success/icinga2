@@ -1,0 +1,25 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                     Architecture                Description
++++-============================================-===========================-===========================-==============================================================================================
+ii  icinga2                                      2.1.1-1                     amd64                       host and network monitoring system
+
+# Service status
+[1;32m●[0m icinga2.service - LSB: icinga2 host/service/network monitoring and management system
+   Loaded: loaded (/etc/init.d/icinga2)
+   Active: [1;32mactive (running)[0m since Sun 2015-11-08 18:39:39 UTC; 3s ago
+   CGroup: /system.slice/icinga2.service
+           └─16429 /usr/sbin/icinga2 --no-stack-rlimit -c /etc/icinga2/icinga2.conf -u nagios -g nagios -d -e /var/log/icinga2/icinga2.err
+
+Nov 08 18:39:39 debian8-p3 icinga2[16399]: [2015-11-08 18:39:39 +0000] information/ConfigItem: Checked 3 ServiceGroup(s).
+Nov 08 18:39:39 debian8-p3 icinga2[16399]: [2015-11-08 18:39:39 +0000] information/ConfigItem: Checked 1 Host(s).
+Nov 08 18:39:39 debian8-p3 icinga2[16399]: [2015-11-08 18:39:39 +0000] information/ConfigItem: Checked 11 Service(s).
+Nov 08 18:39:39 debian8-p3 icinga2[16399]: [2015-11-08 18:39:39 +0000] information/ConfigItem: Checked 1 User(s).
+Nov 08 18:39:39 debian8-p3 icinga2[16399]: [2015-11-08 18:39:39 +0000] information/ConfigItem: Checked 11 Notification(s).
+Nov 08 18:39:39 debian8-p3 icinga2[16399]: [2015-11-08 18:39:39 +0000] information/ConfigItem: Checked 1 ScheduledDowntime(s).
+Nov 08 18:39:39 debian8-p3 icinga2[16399]: [2015-11-08 18:39:39 +0000] information/ConfigItem: Checked 1 UserGroup(s).
+Nov 08 18:39:39 debian8-p3 icinga2[16399]: [2015-11-08 18:39:39 +0000] information/ConfigItem: Checked 1 IcingaApplication(s).
+Nov 08 18:39:39 debian8-p3 systemd[1]: Started LSB: icinga2 host/service/network monitoring and management system.
+Nov 08 18:39:39 debian8-p3 icinga2[16399]: .

@@ -1,0 +1,18 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                     Architecture                Description
++++-============================================-===========================-===========================-==============================================================================================
+ii  memcached                                    1.4.21-1.1                  amd64                       high-performance memory object caching system
+
+# Service status
+[1;32m●[0m memcached.service - memcached daemon
+   Loaded: loaded (/lib/systemd/system/memcached.service; enabled)
+   Active: [1;32mactive (running)[0m since Sun 2015-11-08 19:36:07 UTC; 3s ago
+ Main PID: 32131 (memcached)
+   CGroup: /system.slice/memcached.service
+           └─32131 /usr/bin/memcached -m 64 -p 11211 -u memcache -l 127.0.0.1
+
+Nov 08 19:36:07 debian8-p3 systemd[1]: Starting memcached daemon...
+Nov 08 19:36:07 debian8-p3 systemd[1]: Started memcached daemon.

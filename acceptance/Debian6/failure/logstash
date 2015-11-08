@@ -1,0 +1,10 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                                      Description
++++-============================================-============================================-========================================================================================================
+ii  logstash                                     1:1.5.5-1                                    An extensible logging pipeline
+
+# Service status
+logstash is not running

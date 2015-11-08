@@ -1,0 +1,18 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                     Architecture                Description
++++-============================================-===========================-===========================-==============================================================================================
+un  proftpd                                      <none>                      <none>                      (no description available)
+
+# Service status
+[1;32m●[0m proftpd.service - LSB: Starts ProFTPD daemon
+   Loaded: loaded (/etc/init.d/proftpd)
+   Active: [1;32mactive (running)[0m since Sun 2015-11-08 21:55:56 UTC; 3s ago
+   CGroup: /system.slice/proftpd.service
+           └─4310 proftpd: (accepting connections)
+
+Nov 08 21:55:56 debian8-p3 systemd[1]: Starting LSB: Starts ProFTPD daemon...
+Nov 08 21:55:56 debian8-p3 proftpd[4302]: Starting ftp server: proftpd.
+Nov 08 21:55:56 debian8-p3 systemd[1]: Started LSB: Starts ProFTPD daemon.

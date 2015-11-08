@@ -1,0 +1,19 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                     Architecture                Description
++++-============================================-===========================-===========================-==============================================================================================
+un  sysklogd                                     <none>                      <none>                      (no description available)
+
+# Service status
+[1;32m●[0m rsyslog.service - System Logging Service
+   Loaded: loaded (/lib/systemd/system/rsyslog.service; enabled)
+   Active: [1;32mactive (running)[0m since Sun 2015-11-08 20:48:27 UTC; 11min ago
+     Docs: man:rsyslogd(8)
+           http://www.rsyslog.com/doc/
+ Main PID: 23805 (rsyslogd)
+   CGroup: /system.slice/rsyslog.service
+           └─23805 /usr/sbin/rsyslogd -n
+
+Nov 08 20:48:27 debian8-p3 systemd[1]: Started System Logging Service.

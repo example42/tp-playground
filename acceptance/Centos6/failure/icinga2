@@ -1,0 +1,5 @@
+# Package status
+package icinga2 is not installed
+
+# Service status
+icinga2: unrecognized service

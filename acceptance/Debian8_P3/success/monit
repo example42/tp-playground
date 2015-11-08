@@ -1,0 +1,18 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                     Architecture                Description
++++-============================================-===========================-===========================-==============================================================================================
+ii  monit                                        1:5.9-1                     amd64                       utility for monitoring and managing daemons or similar programs
+
+# Service status
+[1;32m●[0m monit.service - LSB: service and resource monitoring daemon
+   Loaded: loaded (/etc/init.d/monit)
+   Active: [1;32mactive (running)[0m since Sun 2015-11-08 19:40:07 UTC; 3s ago
+   CGroup: /system.slice/monit.service
+           └─1970 /usr/bin/monit -c /etc/monit/monitrc
+
+Nov 08 19:40:07 debian8-p3 systemd[1]: Starting LSB: service and resource monitoring daemon...
+Nov 08 19:40:07 debian8-p3 monit[1966]: Starting daemon monitor: monit.
+Nov 08 19:40:07 debian8-p3 systemd[1]: Started LSB: service and resource monitoring daemon.

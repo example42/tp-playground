@@ -1,0 +1,19 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                     Architecture                Description
++++-============================================-===========================-===========================-==============================================================================================
+ii  rsyslog                                      8.4.2-1                     amd64                       reliable system and kernel logging daemon
+
+# Service status
+[1;32m●[0m rsyslog.service - System Logging Service
+   Loaded: loaded (/lib/systemd/system/rsyslog.service; enabled)
+   Active: [1;32mactive (running)[0m since Sun 2015-11-08 14:03:53 UTC; 6h ago
+     Docs: man:rsyslogd(8)
+           http://www.rsyslog.com/doc/
+ Main PID: 448 (rsyslogd)
+   CGroup: /system.slice/rsyslog.service
+           └─448 /usr/sbin/rsyslogd -n
+
+Nov 08 14:03:53 kameleon-debian systemd[1]: Started System Logging Service.

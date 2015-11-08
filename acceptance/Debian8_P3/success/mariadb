@@ -1,0 +1,28 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                     Architecture                Description
++++-============================================-===========================-===========================-==============================================================================================
+ii  mariadb-server                               10.0.22-0+deb8u1            all                         MariaDB database server (metapackage depending on the latest version)
+
+# Service status
+[1;32m●[0m mysql.service - LSB: Start and stop the mysql database server daemon
+   Loaded: loaded (/etc/init.d/mysql)
+   Active: [1;32mactive (running)[0m since Sun 2015-11-08 19:31:25 UTC; 4s ago
+   CGroup: /system.slice/mysql.service
+           ├─30161 /bin/bash /usr/bin/mysqld_safe
+           ├─30162 logger -p daemon.err -t /etc/init.d/mysql -i
+           ├─30300 /usr/sbin/mysqld --basedir=/usr --datadir=/var/lib/mysql --plugin-dir=/usr/lib/mysql/plugin --user=mysql --skip-log-error --pid-file=/var/run/mysqld/mysqld.pid --socket=/var/run/mys...
+           └─30301 logger -t mysqld -p daemon.error
+
+Nov 08 19:31:26 debian8-p3 /etc/mysql/debian-start[30352]: [1;39mmysql.time_zone_transition_type                    OK[0m
+Nov 08 19:31:26 debian8-p3 /etc/mysql/debian-start[30352]: [1;39mmysql.user                                         OK[0m
+Nov 08 19:31:26 debian8-p3 /etc/mysql/debian-start[30352]: [1;39mPhase 2/6: Fixing views[0m
+Nov 08 19:31:26 debian8-p3 /etc/mysql/debian-start[30352]: [1;39mProcessing databases[0m
+Nov 08 19:31:26 debian8-p3 /etc/mysql/debian-start[30352]: [1;39minformation_schema[0m
+Nov 08 19:31:26 debian8-p3 /etc/mysql/debian-start[30352]: [1;39mmysql[0m
+Nov 08 19:31:26 debian8-p3 /etc/mysql/debian-start[30352]: [1;39mperformance_schema[0m
+Nov 08 19:31:26 debian8-p3 /etc/mysql/debian-start[30411]: Checking for insecure root accounts.
+Nov 08 19:31:26 debian8-p3 /etc/mysql/debian-start[30420]: [1;39mWARNING: mysql.user contains 4 root accounts without password![0m
+Nov 08 19:31:26 debian8-p3 /etc/mysql/debian-start[30422]: Triggering myisam-recover for all MyISAM tables

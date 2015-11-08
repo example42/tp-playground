@@ -1,0 +1,5 @@
+# Package status
+package ddclient is not installed
+
+# Service status
+ddclient: unrecognized service

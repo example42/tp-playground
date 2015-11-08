@@ -1,0 +1,15 @@
+# Package status
+redis-2.8.19-2.el7.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  redis.service
+redis.service - Redis persistent key-value database
+   Loaded: loaded (/usr/lib/systemd/system/redis.service; enabled)
+  Drop-In: /etc/systemd/system/redis.service.d
+           └─limit.conf
+   Active: [1;32mactive (running)[0m since Sun 2015-11-08 21:45:49 UTC; 3s ago
+ Main PID: 6644 (redis-server)
+   CGroup: /system.slice/redis.service
+           └─6644 /usr/bin/redis-server 127.0.0.1:6379
+
+Nov 08 21:45:49 centos7.example42.dev systemd[1]: Started Redis persistent key-value database.

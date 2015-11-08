@@ -1,0 +1,24 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                     Architecture                Description
++++-============================================-===========================-===========================-==============================================================================================
+iU  mysql-server                                 5.5.46-0+deb8u1             all                         MySQL database server (metapackage depending on the latest version)
+
+# Service status
+● mysql.service - LSB: Start and stop the mysql database server daemon
+   Loaded: loaded (/etc/init.d/mysql)
+   Active: inactive (dead) since Sun 2015-11-08 19:31:40 UTC; 20min ago
+
+Nov 08 19:31:38 debian8-p3 mysqld[30301]: 
+Nov 08 19:31:38 debian8-p3 mysqld[30301]: [1;31m151108 19:31:38 [Note] Event Scheduler: Purging the queue. 0 events[0m
+Nov 08 19:31:38 debian8-p3 mysqld[30301]: [1;31m151108 19:31:38 [Note] InnoDB: FTS optimize thread exiting.[0m
+Nov 08 19:31:38 debian8-p3 mysqld[30301]: [1;31m151108 19:31:38 [Note] InnoDB: Starting shutdown...[0m
+Nov 08 19:31:40 debian8-p3 mysqld[30301]: [1;31m151108 19:31:40 [Note] InnoDB: Shutdown completed; log sequence number 1616747[0m
+Nov 08 19:31:40 debian8-p3 mysqld[30301]: [1;31m151108 19:31:40 [Note] /usr/sbin/mysqld: Shutdown complete[0m
+Nov 08 19:31:40 debian8-p3 mysqld[30301]: 
+Nov 08 19:31:40 debian8-p3 mysqld_safe[30691]: [1;39mmysqld from pid file /var/run/mysqld/mysqld.pid ended[0m
+Nov 08 19:31:40 debian8-p3 mysql[30669]: Stopping MariaDB database server: mysqld.
+Nov 08 19:31:40 debian8-p3 systemd[1]: Stopped LSB: Start and stop the mysql database server daemon.
+Nov 08 19:52:09 debian8-p3 systemd[1]: Stopped LSB: Start and stop the mysql database server daemon.

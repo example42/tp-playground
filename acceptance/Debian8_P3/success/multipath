@@ -1,0 +1,19 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                     Architecture                Description
++++-============================================-===========================-===========================-==============================================================================================
+ii  multipath-tools                              0.5.0-6+deb8u1              amd64                       maintain multipath block device access
+
+# Service status
+[1;32m●[0m multipath-tools.service - LSB: multipath daemon
+   Loaded: loaded (/etc/init.d/multipath-tools)
+   Active: [1;32mactive (running)[0m since Sun 2015-11-08 19:45:29 UTC; 3s ago
+   CGroup: /system.slice/multipath-tools.service
+           └─6138 /sbin/multipathd
+
+Nov 08 19:45:29 debian8-p3 multipath-tools[6133]: Starting multipath daemon: multipathd.
+Nov 08 19:45:29 debian8-p3 systemd[1]: Started LSB: multipath daemon.
+Nov 08 19:45:29 debian8-p3 multipathd[6138]: [1;31mDM multipath kernel driver not loaded[0m
+Nov 08 19:45:29 debian8-p3 multipathd[6138]: [1;39mpath checkers start up[0m

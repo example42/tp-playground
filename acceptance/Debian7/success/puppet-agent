@@ -1,0 +1,10 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                     Architecture                Description
++++-============================================-===========================-===========================-==============================================================================================
+ii  puppet-agent                                 1.2.2-1wheezy               amd64                       The Puppet Agent package contains all of the elements needed to run puppet, including ruby, fa
+
+# Service status
+[....] agent is running[?25l7[1G[[32m ok [39;49m8[?12l[?25h.

@@ -1,0 +1,18 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                     Architecture                Description
++++-============================================-===========================-===========================-==============================================================================================
+ii  heartbeat                                    1:3.0.5+hg12629-1.2         amd64                       Subsystem for High-Availability Linux
+
+# Service status
+[1;31m●[0m heartbeat.service - LSB: High-availability services.
+   Loaded: loaded (/etc/init.d/heartbeat)
+   Active: [1;31mfailed[0m (Result: resources) since Sun 2015-11-08 18:27:15 UTC; 2s ago
+  Process: 8309 ExecStart=/etc/init.d/heartbeat start (code=exited, status=0/SUCCESS)
+
+Nov 08 18:27:15 debian8-p3 heartbeat[8309]: Heartbeat not configured: /etc/ha.d/ha.cf not found. Heartbeat failure [rc=1]. Failed.
+Nov 08 18:27:15 debian8-p3 systemd[1]: PID file /var/run/heartbeat.pid not readable (yet?) after start.
+Nov 08 18:27:15 debian8-p3 systemd[1]: [1;31mFailed to start LSB: High-availability services..[0m
+Nov 08 18:27:15 debian8-p3 systemd[1]: [1;39mUnit heartbeat.service entered failed state.[0m

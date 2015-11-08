@@ -1,0 +1,17 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                     Architecture                Description
++++-============================================-===========================-===========================-==============================================================================================
+ii  mcollective                                  2.8.1-1puppetlabs1          all                         build server orchestration or parallel job execution systems
+
+# Service status
+[1;32m●[0m mcollective.service - LSB: Start daemon at boot time
+   Loaded: loaded (/etc/init.d/mcollective)
+   Active: [1;32mactive (running)[0m since Sun 2015-11-08 19:33:57 UTC; 3s ago
+   CGroup: /system.slice/mcollective.service
+           └─31265 /usr/bin/ruby /usr/sbin/mcollectived --pid=/var/run/mcollectived.pid --config=/etc/mcollective/server.cfg --daemonize
+
+Nov 08 19:33:57 debian8-p3 mcollective[31254]: Starting daemon:  mcollective
+Nov 08 19:33:57 debian8-p3 systemd[1]: Started LSB: Start daemon at boot time.

@@ -1,0 +1,26 @@
+# Package status
+libvirt-1.2.8-16.el7_1.5.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  libvirtd.service
+libvirtd.service - Virtualization daemon
+   Loaded: loaded (/usr/lib/systemd/system/libvirtd.service; enabled)
+   Active: [1;32mactive (running)[0m since Sun 2015-11-08 18:54:05 UTC; 3s ago
+     Docs: man:libvirtd(8)
+           http://libvirt.org
+ Main PID: 30441 (libvirtd)
+   CGroup: /system.slice/libvirtd.service
+           ├─30441 /usr/sbin/libvirtd
+           ├─30548 /sbin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/default.conf --dhcp-script=/usr/libexec/libvirt_leaseshelper
+           └─30549 /sbin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/default.conf --dhcp-script=/usr/libexec/libvirt_leaseshelper
+
+Nov 08 18:54:05 centos7.example42.dev systemd[1]: Starting Virtualization daemon...
+Nov 08 18:54:05 centos7.example42.dev systemd[1]: Started Virtualization daemon.
+Nov 08 18:54:06 centos7.example42.dev dnsmasq[30548]: started, version 2.66 cachesize 150
+Nov 08 18:54:06 centos7.example42.dev dnsmasq[30548]: compile time options: IPv6 GNU-getopt DBus no-i18n IDN DHCP DHCPv6 no-Lua TFTP no-conntrack ipset auth
+Nov 08 18:54:06 centos7.example42.dev dnsmasq-dhcp[30548]: DHCP, IP range 192.168.122.2 -- 192.168.122.254, lease time 1h
+Nov 08 18:54:06 centos7.example42.dev dnsmasq[30548]: reading /etc/resolv.conf
+Nov 08 18:54:06 centos7.example42.dev dnsmasq[30548]: using nameserver 10.0.2.3#53
+Nov 08 18:54:06 centos7.example42.dev dnsmasq[30548]: read /etc/hosts - 2 addresses
+Nov 08 18:54:06 centos7.example42.dev dnsmasq[30548]: read /var/lib/libvirt/dnsmasq/default.addnhosts - 0 addresses
+Nov 08 18:54:06 centos7.example42.dev dnsmasq-dhcp[30548]: read /var/lib/libvirt/dnsmasq/default.hostsfile

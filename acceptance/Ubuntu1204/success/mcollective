@@ -1,0 +1,10 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                                      Description
++++-============================================-============================================-========================================================================================================
+ii  mcollective                                  1.2.1+dfsg-2ubuntu1.1                        Build server orchestration or parallel job execution systems
+
+# Service status
+mcollective start/running, process 28959

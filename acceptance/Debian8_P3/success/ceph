@@ -1,0 +1,17 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                     Architecture                Description
++++-============================================-===========================-===========================-==============================================================================================
+ii  ceph                                         0.80.7-2                    amd64                       distributed storage and file system
+
+# Service status
+[1;32m●[0m ceph.service - LSB: Start Ceph distributed file system daemons at boot time
+   Loaded: loaded (/etc/init.d/ceph)
+   Active: [1;32mactive (exited)[0m since Sun 2015-11-08 15:54:43 UTC; 3s ago
+  Process: 8655 ExecStart=/etc/init.d/ceph start (code=exited, status=0/SUCCESS)
+
+Nov 08 15:54:43 debian8-p3 systemd[1]: Starting LSB: Start Ceph distributed file system daemons at boot time...
+Nov 08 15:54:43 debian8-p3 ceph[8655]: /etc/init.d/ceph: ceph conf /etc/ceph/ceph.conf not found; system is not configured.
+Nov 08 15:54:43 debian8-p3 systemd[1]: Started LSB: Start Ceph distributed file system daemons at boot time.

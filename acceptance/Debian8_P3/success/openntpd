@@ -1,0 +1,27 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                     Architecture                Description
++++-============================================-===========================-===========================-==============================================================================================
+ii  openntpd                                     20080406p-10                amd64                       OpenBSD NTP daemon
+
+# Service status
+[1;32m●[0m openntpd.service - OpenNTPd Network Time Protocol
+   Loaded: loaded (/lib/systemd/system/openntpd.service; enabled)
+   Active: [1;32mactive (running)[0m since Sun 2015-11-08 15:54:43 UTC; 4h 20min ago
+ Main PID: 8599 (ntpd)
+   CGroup: /system.slice/openntpd.service
+           ├─8599 /usr/sbin/ntpd -f /etc/openntpd/ntpd.conf
+           └─8600 /usr/sbin/ntpd -f /etc/openntpd/ntpd.conf
+
+Nov 08 19:51:56 debian8-p3 ntpd[8599]: adjusting local clock by 104.030073s
+Nov 08 19:56:02 debian8-p3 ntpd[8600]: peer 193.204.114.233 now valid
+Nov 08 19:56:11 debian8-p3 ntpd[8599]: adjusting local clock by 103.895156s
+Nov 08 19:59:34 debian8-p3 ntpd[8600]: peer 212.45.144.3 now valid
+Nov 08 20:00:26 debian8-p3 ntpd[8599]: adjusting local clock by 103.764272s
+Nov 08 20:00:59 debian8-p3 ntpd[8599]: adjusting local clock by 103.752555s
+Nov 08 20:03:38 debian8-p3 ntpd[8599]: adjusting local clock by 103.664176s
+Nov 08 20:07:53 debian8-p3 ntpd[8599]: adjusting local clock by 103.530815s
+Nov 08 20:09:25 debian8-p3 ntpd[8599]: adjusting local clock by 103.482317s
+Nov 08 20:13:42 debian8-p3 ntpd[8599]: adjusting local clock by 103.348812s

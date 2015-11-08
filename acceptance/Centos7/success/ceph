@@ -1,0 +1,5 @@
+# Package status
+ceph-0.80.7-0.6.el7.x86_64
+
+# Service status
+/etc/init.d/ceph: ceph conf /etc/ceph/ceph.conf not found; system is not configured.

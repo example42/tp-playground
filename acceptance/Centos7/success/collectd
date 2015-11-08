@@ -1,0 +1,24 @@
+# Package status
+collectd-5.5.0-2.el7.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  collectd.service
+collectd.service - Collectd statistics daemon
+   Loaded: loaded (/usr/lib/systemd/system/collectd.service; enabled)
+   Active: [1;32mactive (running)[0m since Sun 2015-11-08 16:06:36 UTC; 3s ago
+     Docs: man:collectd(1)
+           man:collectd.conf(5)
+ Main PID: 20334 (collectd)
+   CGroup: /system.slice/collectd.service
+           └─20334 /usr/sbin/collectd -C /etc/collectd.conf -f
+
+Nov 08 16:06:36 centos7.example42.dev collectd[20334]: Available write targets: [none]
+Nov 08 16:06:36 centos7.example42.dev collectd[20334]: Available write targets: [none]
+Nov 08 16:06:36 centos7.example42.dev collectd[20334]: Available write targets: [none]
+Nov 08 16:06:36 centos7.example42.dev collectd[20334]: Available write targets: [none]
+Nov 08 16:06:36 centos7.example42.dev collectd[20334]: Available write targets: [none]
+Nov 08 16:06:36 centos7.example42.dev collectd[20334]: Available write targets: [none]
+Nov 08 16:06:36 centos7.example42.dev collectd[20334]: Available write targets: [none]
+Nov 08 16:06:36 centos7.example42.dev collectd[20334]: Available write targets: [none]
+Nov 08 16:06:36 centos7.example42.dev collectd[20334]: Available write targets: [none]
+Nov 08 16:06:36 centos7.example42.dev collectd[20334]: Available write targets: [none]

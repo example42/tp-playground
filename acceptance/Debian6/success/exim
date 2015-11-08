@@ -1,0 +1,9 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                                      Description
++++-============================================-============================================-========================================================================================================
+rc  exim4                                        4.72-6+squeeze4                              metapackage to ease Exim MTA (v4) installation
+
+# Service status

@@ -1,0 +1,19 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                     Architecture                Description
++++-============================================-===========================-===========================-==============================================================================================
+ii  apache2                                      2.4.10-10+deb8u3            amd64                       Apache HTTP Server
+
+# Service status
+[1;32m●[0m apache2.service - LSB: Apache2 web server
+   Loaded: loaded (/etc/init.d/apache2)
+   Active: [1;32mactive (running)[0m since Sun 2015-11-08 15:20:24 UTC; 3s ago
+   CGroup: /system.slice/apache2.service
+           ├─22531 /usr/sbin/apache2 -k start
+           ├─22534 /usr/sbin/apache2 -k start
+           └─22535 /usr/sbin/apache2 -k start
+
+Nov 08 15:20:24 debian8-p3 apache2[22510]: Starting web server: apache2.
+Nov 08 15:20:24 debian8-p3 systemd[1]: Started LSB: Apache2 web server.

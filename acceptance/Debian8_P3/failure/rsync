@@ -1,0 +1,14 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                     Architecture                Description
++++-============================================-===========================-===========================-==============================================================================================
+ii  rsync                                        3.1.1-3                     amd64                       fast, versatile, remote (and local) file-copying tool
+
+# Service status
+● rsync.service - fast remote file copy program daemon
+   Loaded: loaded (/lib/systemd/system/rsync.service; disabled)
+   Active: inactive (dead)
+
+Nov 08 20:46:32 debian8-p3 systemd[1]: Started fast remote file copy program daemon.

@@ -1,0 +1,17 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                     Architecture                Description
++++-============================================-===========================-===========================-==============================================================================================
+ii  fail2ban                                     0.8.13-1                    all                         ban hosts that cause multiple authentication errors
+
+# Service status
+[1;32m●[0m fail2ban.service - LSB: Start/stop fail2ban
+   Loaded: loaded (/etc/init.d/fail2ban)
+   Active: [1;32mactive (running)[0m since Sun 2015-11-08 17:57:52 UTC; 3s ago
+   CGroup: /system.slice/fail2ban.service
+           └─10048 /usr/bin/python /usr/bin/fail2ban-server -b -s /var/run/fail2ban/fail2ban.sock -p /var/run/fail2ban/fail2ban.pid
+
+Nov 08 17:57:52 debian8-p3 fail2ban[10037]: Starting authentication failure monitor: fail2ban.
+Nov 08 17:57:52 debian8-p3 systemd[1]: Started LSB: Start/stop fail2ban.

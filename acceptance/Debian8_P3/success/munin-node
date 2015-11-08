@@ -1,0 +1,21 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                     Architecture                Description
++++-============================================-===========================-===========================-==============================================================================================
+ii  munin-node                                   2.0.25-1                    all                         network-wide graphing framework (node)
+
+# Service status
+[1;32m●[0m munin-node.service - Munin Node
+   Loaded: loaded (/lib/systemd/system/munin-node.service; enabled)
+   Active: [1;32mactive (running)[0m since Sun 2015-11-08 19:47:40 UTC; 2min 21s ago
+     Docs: man:munin-node(1)
+           http://munin.readthedocs.org/en/stable-2.0/reference/munin-node.html
+ Main PID: 11534 (munin-node)
+   CGroup: /system.slice/munin-node.service
+           └─11534 /usr/bin/perl -wT /usr/sbin/munin-node
+
+Nov 08 19:47:40 debian8-p3 systemd[1]: PID file /run/munin/munin-node.pid not readable (yet?) after start.
+Nov 08 19:47:40 debian8-p3 systemd[1]: Started Munin Node.
+Nov 08 19:47:40 debian8-p3 systemd[1]: Started Munin Node.

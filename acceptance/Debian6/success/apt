@@ -1,0 +1,7 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                                      Description
++++-============================================-============================================-========================================================================================================
+ii  apt                                          0.8.10.3+squeeze1                            Advanced front-end for dpkg

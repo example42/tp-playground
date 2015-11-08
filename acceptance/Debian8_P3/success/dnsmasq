@@ -1,0 +1,25 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                     Architecture                Description
++++-============================================-===========================-===========================-==============================================================================================
+ii  dnsmasq                                      2.72-3+deb8u1               all                         Small caching DNS proxy and DHCP/TFTP server
+
+# Service status
+[1;32m●[0m dnsmasq.service - dnsmasq - A lightweight DHCP and caching DNS server
+   Loaded: loaded (/lib/systemd/system/dnsmasq.service; enabled)
+  Drop-In: /run/systemd/generator/dnsmasq.service.d
+           └─50-dnsmasq-$named.conf, 50-insserv.conf-$named.conf
+   Active: [1;32mactive (running)[0m since Sun 2015-11-08 16:25:36 UTC; 3s ago
+ Main PID: 1827 (dnsmasq)
+   CGroup: /system.slice/dnsmasq.service
+           └─1827 /usr/sbin/dnsmasq -x /var/run/dnsmasq/dnsmasq.pid -u dnsmasq -r /var/run/dnsmasq/resolv.conf -7 /etc/dnsmasq.d,.dpkg-dist,.dpkg-old,.dpkg-new --local-service --trust-anchor=.,19036,8...
+
+Nov 08 16:25:36 debian8-p3 dnsmasq[1817]: dnsmasq: syntax check OK.
+Nov 08 16:25:36 debian8-p3 dnsmasq[1827]: started, version 2.72 cachesize 150
+Nov 08 16:25:36 debian8-p3 dnsmasq[1827]: compile time options: IPv6 GNU-getopt DBus i18n IDN DHCP DHCPv6 no-Lua TFTP conntrack ipset auth DNSSEC loop-detect
+Nov 08 16:25:36 debian8-p3 dnsmasq[1827]: DNS service limited to local subnets
+Nov 08 16:25:36 debian8-p3 dnsmasq[1827]: [1;39mfailed to access /var/run/dnsmasq/resolv.conf: No such file or directory[0m
+Nov 08 16:25:36 debian8-p3 dnsmasq[1827]: read /etc/hosts - 2 addresses
+Nov 08 16:25:36 debian8-p3 systemd[1]: Started dnsmasq - A lightweight DHCP and caching DNS server.

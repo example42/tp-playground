@@ -1,0 +1,6 @@
+# Package status
+package [python-keystone, is not installed
+package openstack-keystone] is not installed
+
+# Service status
+openstack-keystone: unrecognized service

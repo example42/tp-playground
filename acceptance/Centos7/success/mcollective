@@ -1,0 +1,15 @@
+# Package status
+package mcollective is not installed
+
+# Service status
+Redirecting to /bin/systemctl status  mcollective.service
+mcollective.service - The Marionette Collective
+   Loaded: loaded (/usr/lib/systemd/system/mcollective.service; enabled)
+   Active: [1;32mactive (running)[0m since Sun 2015-11-08 19:32:31 UTC; 3s ago
+ Main PID: 541 (mcollectived)
+   CGroup: /system.slice/mcollective.service
+           └─541 /opt/puppetlabs/puppet/bin/ruby /opt/puppetlabs/puppet/bin/mcollectived --config=/etc/puppetlabs/mcollective/server.cfg --pidfile=/var/run/puppetlabs/mcollective.pid --daemonize
+
+Nov 08 19:32:31 centos7.example42.dev systemd[1]: Starting The Marionette Collective...
+Nov 08 19:32:31 centos7.example42.dev systemd[1]: PID file /var/run/puppetlabs/mcollective.pid not readable (yet?) after start.
+Nov 08 19:32:31 centos7.example42.dev systemd[1]: Started The Marionette Collective.

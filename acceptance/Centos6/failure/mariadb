@@ -1,0 +1,5 @@
+# Package status
+package MariaDB-server is not installed
+
+# Service status
+mysql: unrecognized service

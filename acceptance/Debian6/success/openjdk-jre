@@ -1,0 +1,7 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                                      Description
++++-============================================-============================================-========================================================================================================
+ii  openjdk-6-jre-headless                       6b31-1.13.3-1~deb6u1                         OpenJDK Java runtime, using Hotspot JIT (headless)

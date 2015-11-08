@@ -1,0 +1,17 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                     Architecture                Description
++++-============================================-===========================-===========================-==============================================================================================
+ii  puppet                                       3.8.1-1puppetlabs1          all                         Centralized configuration management - agent startup and compatibility scripts
+
+# Service status
+[1;32m●[0m puppet.service - (null)
+   Loaded: loaded (/etc/init.d/puppet)
+   Active: [1;32mactive (exited)[0m since Sun 2015-11-08 14:03:53 UTC; 6h ago
+
+Nov 08 14:03:53 kameleon-debian puppet[444]: Starting puppet agent
+Nov 08 14:03:53 kameleon-debian puppet[444]: puppet not configured to start, please edit /etc/default/puppet to enable
+Nov 08 14:03:53 kameleon-debian puppet[444]: .
+Nov 08 14:03:53 kameleon-debian systemd[1]: Started (null).

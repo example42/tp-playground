@@ -1,0 +1,13 @@
+# Package status
+
+# Service status
+[1;32m●[0m keystone.service - OpenStack Identity service
+   Loaded: loaded (/lib/systemd/system/keystone.service; enabled)
+   Active: [1;32mactive (running)[0m since Sun 2015-11-08 18:51:30 UTC; 10s ago
+ Main PID: 18214 (keystone-all)
+   CGroup: /system.slice/keystone.service
+           └─18214 /usr/bin/python /usr/bin/keystone-all --config-file=/etc/keystone/keystone.conf --log-file=/var/log/keystone/keystone.log
+
+Nov 08 18:51:30 debian8-p3 systemd[1]: Started OpenStack Identity service.
+Nov 08 18:51:31 debian8-p3 keystone[18214]: 2015-11-08 18:51:31.298 18214 WARNING keystone.openstack.common.versionutils [-] Deprecated: keystone.middleware.core.XmlBodyMiddleware is depr...removed in K.
+Hint: Some lines were ellipsized, use -l to show in full.

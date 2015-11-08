@@ -1,0 +1,5 @@
+# Package status
+package graylog2-server is not installed
+
+# Service status
+graylog2-server: unrecognized service

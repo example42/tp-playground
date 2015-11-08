@@ -1,0 +1,15 @@
+# Package status
+exim-4.84-4.el7.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  exim.service
+exim.service - Exim Mail Transport Agent
+   Loaded: loaded (/usr/lib/systemd/system/exim.service; enabled)
+   Active: [1;32mactive (running)[0m since Sun 2015-11-08 17:52:09 UTC; 3s ago
+ Main PID: 24262 (exim)
+   CGroup: /system.slice/exim.service
+           └─24262 /usr/sbin/exim -bd -q1h
+
+Nov 08 17:52:09 centos7.example42.dev systemd[1]: Starting Exim Mail Transport Agent...
+Nov 08 17:52:09 centos7.example42.dev exim-gen-cert[24246]: Generating exim certificate: /usr/libexec/exim-gen-cert: line 25: success: command not found
+Nov 08 17:52:09 centos7.example42.dev systemd[1]: Started Exim Mail Transport Agent.

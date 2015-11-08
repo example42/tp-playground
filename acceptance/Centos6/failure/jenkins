@@ -1,0 +1,5 @@
+# Package status
+package jenkins is not installed
+
+# Service status
+jenkins: unrecognized service

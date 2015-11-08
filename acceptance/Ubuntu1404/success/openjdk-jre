@@ -1,0 +1,7 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                         Version                     Architecture                Description
++++-============================================-===========================-===========================-==============================================================================================
+ii  openjdk-7-jre-headless:amd64                 7u85-2.6.1-5ubuntu0.14.04.1 amd64                       OpenJDK Java runtime, using Hotspot JIT (headless)

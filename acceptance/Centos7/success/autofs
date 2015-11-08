@@ -1,0 +1,13 @@
+# Package status
+autofs-5.0.7-48.el7.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  autofs.service
+autofs.service - Automounts filesystems on demand
+   Loaded: loaded (/usr/lib/systemd/system/autofs.service; enabled)
+   Active: [1;32mactive (running)[0m since Sun 2015-11-08 15:24:24 UTC; 3s ago
+ Main PID: 17247 (automount)
+   CGroup: /system.slice/autofs.service
+           └─17247 /usr/sbin/automount --pid-file /run/autofs.pid
+
+Nov 08 15:24:24 centos7.example42.dev systemd[1]: Started Automounts filesystems on demand.
