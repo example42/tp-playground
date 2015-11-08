@@ -1,6 +1,6 @@
 # Tiny Puppet Playground
 
-## A place where to test and play with [Tiny Puppet](https://www.tiny-puppet.com)
+## A place where to test and play with [Tiny Puppet](http://www.tiny-puppet.com)
 
 To install and setup the playground:
 
@@ -31,15 +31,22 @@ Besides the ```Vagrantfile``` all the Vagrant specific stuff is under the ```vag
 
 The default manifest is ```vagrant/manifests/site.pp```, you can play with Tiny Puppet there and verify there what you can do with it.
 
+To start and manage a VM (based on VIrtualBox) use the common vagrant commands:
+
+    vagrant up Ubuntu1404_P4
+    vagrant provision Ubuntu1404_P4
+    vagrant ssh Ubuntu1404_P4
+
 On the shell of your VM you can run Puppet (same effect of ```vagrant provision```) with:
 
-    root@ubuntu1404:/#  /vagrant/bin/papply_vagrant.sh 
+    vagrant@ubuntu1404-p4:~$ sudo su -
+    root@ubuntu1404-p4:~# /vagrant/bin/papply_vagrant.sh
 
 this does a ```puppet apply``` on ```/vagrant/manifests/site.pp``` with the correct parameters.
 
 If you specify a different manifest, puppet apply is done on it:
 
-    root@ubuntu1404:/#  /vagrant/bin/papply_vagrant.sh /vagrant/manifests/test.pp 
+    root@ubuntu1404-p4:/#  /vagrant/bin/papply_vagrant.sh /vagrant/manifests/test.pp 
 
 
 ### Acceptance tests
@@ -71,6 +78,10 @@ and then execute commands like these:
   - To run puppi check for proftpd applications on Centos7:
 
     ```bin/test.sh all Centos7 puppi```
+
+  - To run acceptance tests for all the supported applications on all the running VMs:
+
+    ```bin/test.sh all all acceptance```
 
 
 Do not expect everything to work seamlessly, this is a test environment to verify functionality and coverage on different Operating Systems. 
