@@ -1,7 +1,0 @@
-# Package status
-package { 'postfix':
-  ensure => 'absent',
-}
-
-# Service status
-service: no such service postfix

@@ -1,7 +1,0 @@
-# Package status
-package { 'heartbeat':
-  ensure => 'absent',
-}
-
-# Service status
-service: no such service heartbeat

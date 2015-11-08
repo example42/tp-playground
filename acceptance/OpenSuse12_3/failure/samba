@@ -1,7 +1,0 @@
-# Package status
-package { 'samba':
-  ensure => 'absent',
-}
-
-# Service status
-service: no such service smb

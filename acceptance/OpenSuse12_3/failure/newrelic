@@ -1,7 +1,0 @@
-# Package status
-package { 'newrelic-sysmond':
-  ensure => 'absent',
-}
-
-# Service status
-service: no such service newrelic-sysmond

@@ -1,4 +1,0 @@
-# Package status
-package { 'ssmtp':
-  ensure => 'absent',
-}

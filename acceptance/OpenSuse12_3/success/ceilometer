@@ -1,4 +1,0 @@
-# Package status
-package { 'ceilometer':
-  ensure => 'absent',
-}

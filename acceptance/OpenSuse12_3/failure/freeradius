@@ -1,7 +1,0 @@
-# Package status
-package { 'freeradius':
-  ensure => 'absent',
-}
-
-# Service status
-service: no such service radiusd

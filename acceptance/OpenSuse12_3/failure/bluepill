@@ -1,7 +1,0 @@
-# Package status
-package { 'bluepill':
-  ensure => 'absent',
-}
-
-# Service status
-service: no such service bluepill

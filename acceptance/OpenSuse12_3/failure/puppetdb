@@ -1,7 +1,0 @@
-# Package status
-package { 'puppetdb':
-  ensure => 'absent',
-}
-
-# Service status
-service: no such service puppetdb

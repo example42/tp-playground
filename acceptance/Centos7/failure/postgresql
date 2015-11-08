@@ -1,9 +1,0 @@
-# Package status
-postgresql-9.2.10-2.el7_1.x86_64
-
-# Service status
-Redirecting to /bin/systemctl status  postgresql.service
-postgresql.service
-   Loaded: not-found (Reason: No such file or directory)
-   Active: inactive (dead)
-

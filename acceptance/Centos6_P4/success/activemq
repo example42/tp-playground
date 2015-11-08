@@ -1,7 +1,0 @@
-# Package status
-activemq-5.9.1-2.el6.noarch
-
-# Service status
-INFO: Loading '/etc/sysconfig/activemq'
-INFO: Using java 'java'
-activemq is running (pid '29200')

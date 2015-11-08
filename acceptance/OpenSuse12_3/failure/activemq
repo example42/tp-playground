@@ -1,7 +1,0 @@
-# Package status
-package { 'activemq':
-  ensure => 'absent',
-}
-
-# Service status
-service: no such service activemq
