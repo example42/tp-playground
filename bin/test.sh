@@ -58,13 +58,13 @@ install() {
 }
 
 uninstall() {
-  u_app=1
+  u_app=$1
   u_vm=$2  
   if [[ "$u_app" =~ $uninstall_whitelist ]]; then
     echo_title "Skipping Uninstallation of $u_app on $u_vm"
   else
     echo_title "Uninstalling $u_app on $u_vm"
-    vagrant ssh $u_vm -c "which apt >/dev/null 2>&1 || apt-get -f install"
+    vagrant ssh $u_vm -c "which apt >/dev/null 2>&1 || sudo -i apt-get -f install"
     vagrant ssh $u_vm -c "$command $options -e 'tp::uninstall { $u_app: }'"
   fi
 }
@@ -85,7 +85,7 @@ acceptance_check () {
   mkdir -p acceptance/$2/$result
   mv /tmp/tp_test_$1_$2 acceptance/$2/$result/$1
   cat acceptance/$2/$result/$1
-  echo_$result "## ${result}! ## Output written to acceptance/$2/${result}/$1"
+  echo_$result "## ${result}! ## Output written to acceptance/$2/${result}/$1"
 
   uninstall $1 $2
 }
