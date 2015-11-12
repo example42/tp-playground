@@ -1,38 +1,13 @@
 #!/bin/bash
+# Requires: pip3 install csvtomd
+
 output=acceptance.md
 vms=$(ls -1 acceptance/)
+bin/acceptance_to_csv.sh
 
-header=$(cat <<EOF
-# Tiny Puppet acceptance test results
-
-### Generated: `date`
-EOF
-)
-
-table_head=$(
-  echo " | APP " ;
-  for a in $vms; do
-    echo "| " ; echo $a ; echo " "
-  done
-  echo "|"
-  echo)
-
-echo $header > $output
-echo $table_head >> $output
-
-  for app in $(ls -1 modules/tinydata/data | grep -v default.yaml | grep -v test) ; do
-    table_line=$(echo "| $app "
-    for vm in $vms ; do
-      echo "| "
-      echo $(find acceptance/$vm | grep "/$app$"  | cut -d '/' -f 3)
-      echo " " 
-      echo
-    done
-    echo "|\n"
-    echo)
-    echo $table_line >> $output
-  done
-
+echo "# Tiny Puppet acceptance test results" > $output
+echo "### Generated: $(date)" >> $output
+csvtomd acceptance.csv >> $output
 
 
 
