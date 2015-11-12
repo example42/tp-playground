@@ -17,9 +17,11 @@ table_head=$(
   echo "|"
   echo)
 
-table_body=$(
+echo $header > $output
+echo $table_head >> $output
+
   for app in $(ls -1 modules/tinydata/data | grep -v default.yaml | grep -v test) ; do
-    echo "| $app "
+    table_line=$(echo "| $app "
     for vm in $vms ; do
       echo "| "
       echo $(find acceptance/$vm | grep "/$app$"  | cut -d '/' -f 3)
@@ -27,13 +29,10 @@ table_body=$(
       echo
     done
     echo "|\n"
-    echo
+    echo)
+    echo $table_line >> $output
   done
-  echo)
 
 
-echo $header > $output
-echo $table_head >> $output
-echo $table_body >> $output
 
 
