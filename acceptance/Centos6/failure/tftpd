@@ -1,1 +1,5 @@
-sudo: /etc/tp/test/tftpd: command not found
+# Package status
+package tftpd is not installed
+
+# Service status
+tftpd: unrecognized service

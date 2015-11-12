@@ -1,0 +1,17 @@
+# Package status
+samba-4.1.12-24.el7_1.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  smb.service
+smb.service - Samba SMB Daemon
+   Loaded: loaded (/usr/lib/systemd/system/smb.service; enabled)
+   Active: [1;32mactive (running)[0m since Thu 2015-11-12 20:42:43 UTC; 2s ago
+ Main PID: 16302 (smbd)
+   Status: "smbd: ready to serve connections..."
+   CGroup: /system.slice/smb.service
+           ├─16302 /usr/sbin/smbd
+           └─16303 /usr/sbin/smbd
+
+Nov 12 20:42:43 centos7.example42.dev smbd[16302]: [1;31m[2015/11/12 20:42:43.550722,  0] ../lib/util/become_daemon.c:136(daemon_ready)[0m
+Nov 12 20:42:43 centos7.example42.dev systemd[1]: Started Samba SMB Daemon.
+Nov 12 20:42:43 centos7.example42.dev smbd[16303]: [1;31mSTATUS=daemon 'smbd' finished starting up and ready to serve connectionsfailed to retrieve printer list: NT_STATUS_UNSUCCESSFUL[0m

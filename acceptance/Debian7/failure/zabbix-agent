@@ -1,1 +1,4 @@
-sudo: /etc/tp/test/zabbix-agent: command not found
+# Package status
+
+# Service status
+zabbix-agent: unrecognized service

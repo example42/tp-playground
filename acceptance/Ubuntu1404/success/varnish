@@ -1,0 +1,9 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                    Version                  Architecture             Description
++++-=======================================-========================-========================-===================================================================================
+ii  varnish                                 3.0.5-2                  amd64                    state of the art, high-performance web accelerator
+
+# Service status

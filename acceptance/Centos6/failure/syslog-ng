@@ -1,1 +1,5 @@
-sudo: /etc/tp/test/syslog-ng: command not found
+# Package status
+package syslog-ng is not installed
+
+# Service status
+syslog-ng: unrecognized service

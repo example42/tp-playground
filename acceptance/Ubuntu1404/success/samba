@@ -1,0 +1,11 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                    Version                  Architecture             Description
++++-=======================================-========================-========================-===================================================================================
+ii  samba                                   2:4.1.6+dfsg-1ubuntu2.14 amd64                    SMB/CIFS file, print, and login server for Unix
+
+# Service status
+ * nmbd is running
+ * smbd is running

@@ -1,6 +1,1 @@
-# Package status
-
-# Service status
-● zabbix-agent.service
-   Loaded: not-found (Reason: No such file or directory)
-   Active: inactive (dead)
+sudo: /etc/tp/test/zabbix-agent: command not found

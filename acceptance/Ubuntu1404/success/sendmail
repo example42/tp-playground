@@ -1,0 +1,21 @@
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                    Version                  Architecture             Description
++++-=======================================-========================-========================-===================================================================================
+ii  sendmail-bin                            8.14.4-4.1ubuntu1        amd64                    powerful, efficient, and scalable Mail Transport Agent
+
+# Service status
+MSP: is run via cron (20m)
+MTA: 17962 /usr/sbin/sendmail-mta -Am -L sm-mta -bd -q10m
+UID        PID  PPID  C STIME TTY          TIME CMD
+root     17962     1  0 12:04 ?        00:00:00 sendmail: MTA: accepting connections          
+Daemon Status: (process 18079) Console socket child
+
+Current number of children: 0
+QueueDir free disk space (in blocks): 17382076
+Load average: 0
+Child Process 17962 Status: accepting connections
+
+QUE: Same as MTA

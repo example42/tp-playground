@@ -1,1 +1,5 @@
-sudo: /etc/tp/test/sendmail: command not found
+# Package status
+package sendmail-cf is not installed
+
+# Service status
+sendmail: unrecognized service

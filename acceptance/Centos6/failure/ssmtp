@@ -1,1 +1,2 @@
-sudo: /etc/tp/test/ssmtp: command not found
+# Package status
+package ssmtp is not installed

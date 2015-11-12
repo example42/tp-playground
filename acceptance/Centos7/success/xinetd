@@ -1,0 +1,23 @@
+# Package status
+xinetd-2.3.15-12.el7.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  xinetd.service
+xinetd.service - Xinetd A Powerful Replacement For Inetd
+   Loaded: loaded (/usr/lib/systemd/system/xinetd.service; enabled)
+   Active: [1;32mactive (running)[0m since Thu 2015-11-12 11:09:05 UTC; 2s ago
+  Process: 12599 ExecStart=/usr/sbin/xinetd -stayalive -pidfile /var/run/xinetd.pid $EXTRAOPTIONS (code=exited, status=0/SUCCESS)
+ Main PID: 12600 (xinetd)
+   CGroup: /system.slice/xinetd.service
+           └─12600 /usr/sbin/xinetd -stayalive -pidfile /var/run/xinetd.pid
+
+Nov 12 11:09:05 centos7.example42.dev xinetd[12600]: removing daytime
+Nov 12 11:09:05 centos7.example42.dev xinetd[12600]: removing discard
+Nov 12 11:09:05 centos7.example42.dev xinetd[12600]: removing discard
+Nov 12 11:09:05 centos7.example42.dev xinetd[12600]: removing echo
+Nov 12 11:09:05 centos7.example42.dev xinetd[12600]: removing echo
+Nov 12 11:09:05 centos7.example42.dev xinetd[12600]: removing tcpmux
+Nov 12 11:09:05 centos7.example42.dev xinetd[12600]: removing time
+Nov 12 11:09:05 centos7.example42.dev xinetd[12600]: removing time
+Nov 12 11:09:05 centos7.example42.dev xinetd[12600]: [1;39mxinetd Version 2.3.15 started with libwrap loadavg labeled-networking options compiled in.[0m
+Nov 12 11:09:05 centos7.example42.dev xinetd[12600]: [1;39mStarted working: 0 available services[0m

@@ -1,4 +1,10 @@
 # Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                    Version                                 Description
++++-=======================================-=======================================-==============================================================================================
+ii  sysstat                                 9.0.6.1-2                               system performance tools for Linux
 
 # Service status
-sysstat: unrecognized service
+sadc cron jobs are disabled ... [31mfailed![39;49m

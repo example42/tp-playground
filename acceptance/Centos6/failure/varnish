@@ -1,1 +1,5 @@
-sudo: /etc/tp/test/varnish: command not found
+# Package status
+package varnish is not installed
+
+# Service status
+varnish: unrecognized service

@@ -1,1 +1,10 @@
-sudo: /etc/tp/test/sysstat: command not found
+# Package status
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                    Version                  Architecture             Description
++++-=======================================-========================-========================-===================================================================================
+ii  sysstat                                 10.2.0-1                 amd64                    system performance tools for Linux
+
+# Service status
+ [31m*[39;49m sadc cron jobs are disabled

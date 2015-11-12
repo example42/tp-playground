@@ -2,6 +2,6 @@
 Desired=Unknown/Install/Remove/Purge/Hold
 | Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
 |/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
-||/ Name                                         Version                                      Description
-+++-============================================-============================================-========================================================================================================
-un  ssmtp                                        <none>                                       (no description available)
+||/ Name                                    Version                                 Description
++++-=======================================-=======================================-==============================================================================================
+ii  ssmtp                                   2.64-4                                  extremely simple MTA to get mail off the system to a mail hub

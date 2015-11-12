@@ -1,1 +1,9 @@
-sudo: /etc/tp/test/sysklogd: command not found
+# Package status
+package sysklogd is not installed
+
+# Service status
+Redirecting to /bin/systemctl status  syslog.service
+syslog.service
+   Loaded: not-found (Reason: No such file or directory)
+   Active: inactive (dead)
+

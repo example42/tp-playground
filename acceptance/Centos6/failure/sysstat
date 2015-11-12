@@ -1,1 +1,4 @@
-sudo: /etc/tp/test/sysstat: command not found
+# Package status
+sysstat-9.0.4-27.el6.x86_64
+
+# Service status

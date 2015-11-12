@@ -1,6 +1,1 @@
-# Package status
-
-# Service status
-● sysstat.service
-   Loaded: not-found (Reason: No such file or directory)
-   Active: inactive (dead)
+sudo: /etc/tp/test/sysstat: command not found

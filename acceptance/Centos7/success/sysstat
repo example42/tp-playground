@@ -1,0 +1,12 @@
+# Package status
+sysstat-10.1.5-7.el7.x86_64
+
+# Service status
+Redirecting to /bin/systemctl status  sysstat.service
+sysstat.service - Resets System Activity Logs
+   Loaded: loaded (/usr/lib/systemd/system/sysstat.service; enabled)
+   Active: [1;32mactive (exited)[0m since Thu 2015-11-12 12:41:38 UTC; 2s ago
+  Process: 14493 ExecStart=/usr/lib64/sa/sa1 --boot (code=exited, status=0/SUCCESS)
+ Main PID: 14493 (code=exited, status=0/SUCCESS)
+
+Nov 12 12:41:38 centos7.example42.dev systemd[1]: Started Resets System Activity Logs.

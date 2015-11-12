@@ -1,1 +1,5 @@
-sudo: /etc/tp/test/sysklogd: command not found
+# Package status
+package sysklogd is not installed
+
+# Service status
+syslog: unrecognized service
