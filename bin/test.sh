@@ -4,7 +4,7 @@
 . $(dirname $0)/functions || exit 10
 
 # RegExp for whitelist of programs to not uninstall after test
-uninstall_whitelist='ssh|vim|lsb|puppet|apt|puppet-agent'
+uninstall_whitelist='ssh|vim|lsb|puppet|apt|puppet-agent|epel'
 
 show_help () {
   echo
@@ -54,7 +54,7 @@ install() {
   i_app=$1
   i_vm=$2  
   echo_title "Installing $i_app on $i_vm"
-  vagrant ssh $i_vm -c "$command $options -e 'tp::install { $i_app: $mode_param }'"
+  vagrant ssh $i_vm -c "$command $options -e 'tp::install3 { $i_app: $mode_param }'"
 }
 
 uninstall() {
@@ -64,8 +64,8 @@ uninstall() {
     echo_title "Skipping Uninstallation of $u_app on $u_vm"
   else
     echo_title "Uninstalling $u_app on $u_vm"
-    vagrant ssh $u_vm -c "which apt >/dev/null 2>&1 || sudo -i apt-get -f install"
-    vagrant ssh $u_vm -c "$command $options -e 'tp::uninstall { $u_app: }'"
+    vagrant ssh $u_vm -c "which apt >/dev/null 2>&1 || sudo -i apt-get -f install >/dev/null 2>&1"
+    vagrant ssh $u_vm -c "$command $options -e 'tp::uninstall3 { $u_app: }'"
   fi
 }
 
@@ -76,9 +76,13 @@ acceptance_check () {
   echo_title "Running acceptance test for $1 on $2"
   rm -f acceptance/$2/success/$1
   rm -f acceptance/$2/failure/$1
+  rm -f acceptance/$2/na/$1
   vagrant ssh $2 -c "sudo /etc/tp/test/$1" > /tmp/tp_test_$1_$2
-  if [ "x$?" == "x0" ]; then
+  res=$?
+  if [ "x$res" == "x0" ]; then
     result='success'
+  elif [ "x$res" == "x99" ]; then
+    result='na'
   else
     result='failure'
   fi

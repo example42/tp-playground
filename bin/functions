@@ -6,6 +6,7 @@ RES_COL=75
 MOVE_TO_COL="echo -en \\033[${RES_COL}G"
 SETCOLOR_SUCCESS="echo -en \\033[0;32m"
 SETCOLOR_FAILURE="echo -en \\033[0;31m"
+SETCOLOR_NA="echo -en \\033[0;34m"
 SETCOLOR_WARNING="echo -en \\033[0;33m"
 SETCOLOR_NORMAL="echo -en \\033[0;39m"
 SETCOLOR_TITLE="echo -en \\033[0;35m"
@@ -33,6 +34,18 @@ echo_failure() {
   echo -n "]"
   echo -ne "\r"
   return 1
+}
+
+echo_na() {
+  echo "$1"
+  [ "$BOOTUP" = "color" ] && $MOVE_TO_COL
+  echo -n "["
+  [ "$BOOTUP" = "color" ] && $SETCOLOR_NA
+  echo -n $"NOT APPLICABLE"
+  [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+  echo -n "]"
+  echo -ne "\r"
+  return 0
 }
 
 echo_passed() {
