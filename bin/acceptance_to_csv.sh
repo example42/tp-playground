@@ -7,7 +7,7 @@ for app in $(ls -1 modules/tinydata/data | grep -v default.yaml | grep -v test) 
   table_line=$(echo "$app"
   echo "$(find acceptance/ | grep "/$app$"  | grep "success/" | wc -l)"
   for vm in $vms ; do
-    echo "$(find acceptance/$vm | grep "/$app$"  | cut -d '/' -f 3)" | sed 's/success/OK/g'
+	  echo "$(find acceptance/$vm | grep "/$app$"  | cut -d '/' -f 3)" | sed "s/success/[OK](acceptance\/$vm\/success\/$app)/g" | sed "s/failure/[failure](acceptance\/$vm\/failure\/$app)/g"
   done
   )
   echo $table_line | sed 's/ /,/g' >> $output
