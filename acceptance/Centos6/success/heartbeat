@@ -1,5 +1,0 @@
-# Package status
-heartbeat-3.0.4-2.el6.x86_64
-
-# Service status
-Heartbeat not configured: /etc/ha.d/ha.cf not found. Heartbeat failure [rc=1]. Failed.

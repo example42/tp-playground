@@ -1,5 +1,0 @@
-# Package status
-package mcollective is not installed
-
-# Service status
-mcollectived (pid  16767) is running...
