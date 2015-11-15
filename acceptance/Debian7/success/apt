@@ -1,7 +1,0 @@
-# Package status
-Desired=Unknown/Install/Remove/Purge/Hold
-| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
-|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
-||/ Name                                         Version                     Architecture                Description
-+++-============================================-===========================-===========================-==============================================================================================
-ii  apt                                          0.9.7.9+deb7u7              amd64                       commandline package manager

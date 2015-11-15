@@ -1,5 +1,0 @@
-# Package status
-package sysklogd is not installed
-
-# Service status
-syslog: unrecognized service

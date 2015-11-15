@@ -1,5 +1,0 @@
-# Package status
-package zabbix-agent is not installed
-
-# Service status
-zabbix-agent: unrecognized service

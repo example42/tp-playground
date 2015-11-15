@@ -1,5 +1,0 @@
-# Package status
-package tftpd is not installed
-
-# Service status
-tftpd: unrecognized service

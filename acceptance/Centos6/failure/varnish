@@ -1,5 +1,0 @@
-# Package status
-package varnish is not installed
-
-# Service status
-varnish: unrecognized service

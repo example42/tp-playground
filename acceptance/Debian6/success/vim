@@ -1,7 +1,0 @@
-# Package status
-Desired=Unknown/Install/Remove/Purge/Hold
-| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
-|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
-||/ Name                                    Version                                 Description
-+++-=======================================-=======================================-==============================================================================================
-ii  vim-common                              2:7.2.445+hg~cb94c42c0e1a-1             Vi IMproved - Common files
