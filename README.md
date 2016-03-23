@@ -9,7 +9,7 @@ To install and setup the playground:
     
 Public modules, which are required or optional dependencies for Tiny Puppet are expected under ```modules```, you can populate them with Librarian Puppet Simple (install it with ```gem install librarian-puppet-simple```):
 
-    librarian-puppet install --puppetfile Puppetfile --path modules
+    librarian-puppet install --path modules
 
 or r10k (```gem install r10k```):
 
