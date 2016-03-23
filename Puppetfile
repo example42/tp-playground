@@ -1,7 +1,7 @@
 # Extra modules needed for Vagrant test environment. Install them with:
-# librarian-puppet install --puppetfile Puppetfile --path modules/public
+# librarian-puppet install --path modules/public
 
-forge "http://forge.puppetlabs.com"
+forge "http://forgeapi.puppetlabs.com"
 
 ## This is Tiny Puppet and tinydata. Both required.
 mod 'example42/tp',
