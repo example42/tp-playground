@@ -1,0 +1,52 @@
+---
+vm:
+  memory: 512
+  cpu: 1
+  box: centos7
+network:
+  range: 10.42.42.0/24
+  ip_start_offset: 101
+  domain: example42.dev
+
+nodes:
+  - role: puppet
+    count: 1
+    memory: 2048
+    ip_address: 10.42.42.10
+  - role: www
+    count: 2
+    memory: 256
+
+boxes:
+  - name: centos7
+    box: puppetlabs/centos-7.0-64-puppet
+    breed: puppetlabs
+  - name: centos7_puppet3
+    box: webhippie/centos-7
+    breed: redhat7
+  - name: centos7_pe
+    box: puppetlabs/centos-7.0-64-puppet-enterprise
+    breed: puppetlabs
+  - name: centos6
+    box: puppetlabs/centos-6.6-64-puppet
+    breed: puppetlabs-centos6
+  - name: ubuntu1404
+    box: puppetlabs/ubuntu-14.04-64-puppet
+    breed: puppetlabs-apt
+  - name: ubuntu1204
+    box: puppetlabs/ubuntu-12.04-64-puppet
+    breed: puppetlabs-ubuntu1204
+  - name: debian8_puppet3
+    box: oar-team/debian8
+    breed: debian8
+  - name: debian7
+    box: puppetlabs/debian-7.8-64-puppet
+    breed: puppetlabs-apt
+  - name: debian6
+    box: puppetlabs/debian-6.0.10-64-puppet
+    breed: puppetlabs-apt
+  - name: opensuse12_3
+    box: opensuse-12.3-64
+    box_url: http://sourceforge.net/projects/opensusevagrant/files/12.3/opensuse-12.3-64.box/download
+    breed: opensuse12
+

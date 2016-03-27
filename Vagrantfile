@@ -30,6 +30,7 @@ Vagrant.configure("2") do |config|
       :role             => 'puppet',
     },
     :puppetserver_ubuntu1404 => {
+      :ip               => network_prefix + '20',
       :box              => 'puppetlabs/ubuntu-14.04-64-puppet',
       :provision        => 'papply',
       :breed            => 'puppetlabs-apt',
@@ -38,9 +39,11 @@ Vagrant.configure("2") do |config|
       :role             => 'puppet',
     },
     :centos7 => {
+      :ip               => network_prefix + '50',
       :box              => 'puppetlabs/centos-7.0-64-puppet',
       :breed            => 'puppetlabs',
-      :provision        => 'puppet_agent',
+      :provision        => 'papply',
+      # :provision        => 'puppet_agent',
     },
     :centos7_puppet3 => {
       :box              => 'webhippie/centos-7',
@@ -53,16 +56,20 @@ Vagrant.configure("2") do |config|
       :provision        => 'papply',
     },
     :centos6 => {
+      :ip               => network_prefix + '55',
       :box              => 'puppetlabs/centos-6.6-64-puppet',
       :breed            => 'puppetlabs-centos6',
       :provision        => 'puppet_agent',
     },
     :ubuntu1404 => {
+      :ip               => network_prefix + '60',
       :box              => 'puppetlabs/ubuntu-14.04-64-puppet',
       :breed            => 'puppetlabs-apt',
-      :provision        => 'puppet_agent',
+      :provision        => 'papply',
+      # :provision        => 'puppet_agent',
     },
     :ubuntu1204 => {
+      :ip               => network_prefix + '61',
       :box              => 'puppetlabs/ubuntu-12.04-64-puppet',
       :breed            => 'puppetlabs-ubuntu1204',
       :provision        => 'puppet_agent',
@@ -70,7 +77,8 @@ Vagrant.configure("2") do |config|
     :debian8_puppet3 => {
       :box              => 'oar-team/debian8',
       :breed            => 'debian8',
-      :provision        => 'puppet_agent',
+      # :provision        => 'puppet_agent',
+      :provision        => 'papply',
     },
     :debian7 => {
       :box              => 'puppetlabs/debian-7.8-64-puppet',
@@ -101,7 +109,7 @@ Vagrant.configure("2") do |config|
       local.vm.box = cfg[:box]
       local.vm.box_url = cfg[:box_url] if cfg[:box_url]
       # local.vm.host_name = ENV['VAGRANT_HOSTNAME'] || name.to_s.downcase.gsub(/_/, '-').concat(".example42.dev")
-      #local.vm.host_name = ENV['VAGRANT_HOSTNAME'] || name.to_s.downcase.gsub(/_/, '-').concat(".@default_domain")
+      #local.vm.host_name = ENV['VAGRANT_HOSTNAME'] || node.to_s.concat(".@default_domain")
       local.vm.host_name = :node.to_s.concat("." + default_domain)
       local.vm.provision "shell", path: 'bin/vagrant-setup.sh', args: cfg[:breed]
 #      local.vm.boot_mode = :gui
