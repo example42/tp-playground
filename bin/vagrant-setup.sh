@@ -79,5 +79,16 @@ setup_opensuse12(){
   zypper install -y puppet
 }
 
+setup_alpine(){
+  echo "## Installing Puppet gem and its prerequisites"
+  echo http://dl-4.alpinelinux.org/alpine/edge/testing/ >> /etc/apk/repositories
+  apk update
+  apk add shadow ruby less bash
+  gem install puppet --no-rdoc -no-ri
+  ln -s $(gem content puppet | grep 'bin/puppet') /usr/bin/puppet
+  ln -s $(gem content facter | grep 'bin/facter') /usr/bin/facter
+  puppet module install puppetlabs/apk
+}
+
 # Run setup only the first time
 [ -f $lock_file ] || setup_$breed && touch $lock_file

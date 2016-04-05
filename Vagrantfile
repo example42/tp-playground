@@ -94,6 +94,12 @@ Vagrant.configure("2") do |config|
       :provision_puppet => false,
       :provision_shell  => true,
     },
+    :Alpine3 => {
+      :box              => 'maier/alpine-3.3.1-x86_64',
+      :breed            => 'alpine',
+      :provision_puppet => false,
+      :provision_shell  => true,
+    },
   }.each do |name,cfg|
 
     config.vm.define name do |local|
@@ -102,8 +108,8 @@ Vagrant.configure("2") do |config|
       local.vm.provider "virtualbox" do |v|
         v.customize [ 'modifyvm', :id, '--memory', memory.to_s ]
         v.customize [ 'modifyvm', :id, '--cpus', cpu.to_s ]
-        # v.customize [ 'setextradata', :id, 'VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root', '1']
       end
+      local.vm.synced_folder ".", "/vagrant", type: "rsync", rsync__exclude: ".git/"
       local.vm.box = cfg[:box]
       local.vm.box_url = cfg[:box_url] if cfg[:box_url]
 #      local.vm.boot_mode = :gui
