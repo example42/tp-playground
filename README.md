@@ -1,3 +1,10 @@
+## Deprecation notice
+
+This repo is no longer maintained.
+
+Check [example42 control-repo](https://github.com/example42/control-repo) for a complete Puppet control repository where you can test Tiny Puppet and other Pupept modules..
+
+
 # Tiny Puppet Playground
 
 ## A place where to test and play with [Tiny Puppet](http://www.tiny-puppet.com)
